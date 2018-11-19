@@ -38,6 +38,13 @@ This application allows users to maintain a digital record of their *Magic The G
 ### Collection Tracking
 - Inventory
   - Complete listing of all owned cards
+  - Add cards to inventory through textbox
+    - If a single card name is entered add one of that card to the inventory 
+      - > Raging Goblin
+    - Multiple copies a card can be added by including the amount before the name
+      - > 4 Raging Goblin
+
+
 - Deckbuilding
 - Wishlist
 
