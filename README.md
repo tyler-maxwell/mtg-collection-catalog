@@ -63,6 +63,8 @@ This application allows users to maintain a digital catalog of their *Magic The 
     2 Fireball
     10 Mountain
     ```
+  - Add card to deck via checkbox and dropdown action
+    - See [Deckbox](https://deckbox.org/) for example
 
 #### Wishlist
 - Tabled list of cards
