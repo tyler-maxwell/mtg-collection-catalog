@@ -51,5 +51,6 @@ This application allows users to maintain a digital record of their *Magic The G
     - [Nicol Bolas, The Ravager](https://scryfall.com/card/m19/218/nicol-bolas-the-ravager-nicol-bolas-the-arisen)
 - Use the following websites for inspiration
   - [Deckbox](https://deckbox.org/) for collection management
+    - Use samepleInventory.txt to quickly add cards to your account for testing purposes
   - [Scryfall](https://scryfall.com/) for card search
   - [Previous version of this project](https://tyler-maxwell.github.io/project1/)
