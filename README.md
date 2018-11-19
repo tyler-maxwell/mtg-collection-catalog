@@ -106,6 +106,74 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - See [Deckbox](https://deckbox.org/) for example
 
 #### Deckbuilding
+- Display deck meta information
+  - Deck name
+  - Deck type
+  - Whether deck is built or not
+- Tabled list of cards in deck
+  - Table Columns
+    - Count
+      - Can edit directly and update database
+    - Owned Count 
+      - Can edit directly and update database
+    - Wish Count
+      - Can edit directly and update database
+    - Name
+      - Mouse hover displays card image
+      - Mouse click displays card in card search with full card information
+    - Type
+    - Note
+      - Can edit directly and update database
+- Tabled list of cards in sideboard
+  - Table Columns
+    - Count
+      - Can edit directly and update database
+    - Owned Count 
+      - Can edit directly and update database
+    - Wish Count
+      - Can edit directly and update database
+    - Name
+      - Mouse hover displays card image
+      - Mouse click displays card in card search with full card information
+    - Type
+    - Note
+      - Can edit directly and update database
+- Tabled list of cards in scratchpad
+  - Table Columns
+    - Count
+      - Can edit directly and update database
+    - Owned Count 
+      - Can edit directly and update database
+    - Wish Count
+      - Can edit directly and update database
+    - Name
+      - Mouse hover displays card image
+      - Mouse click displays card in card search with full card information
+    - Type
+    - Note
+      - Can edit directly and update database
+- Add cards to deck, sideboard, or scratchpad through textbox
+  - If a single card name is entered add one of that card to the inventory 
+    ```
+    Raging Goblin
+    ```
+  - Multiple copies a card can be added by including the amount before the name
+    ```
+    4 Raging Goblin
+    ```
+  - Multiple cards can be added at once by writing each card on its own line
+    ```
+    4 Raging Goblin
+    2 Fireball
+    10 Mountain
+    ```
+- Remove card from deck, sideboard, or scratchpad via checkbox and dropdown action
+  - Removes card from array
+  - See [Deckbox](https://deckbox.org/) for example
+- Move card to and from deck, sideboard, or scratchpad via checkbox and dropdown action
+  - Removes card from previous array and adds card to other array
+  - See [Deckbox](https://deckbox.org/) for example
+- Display textarea with notes on deck
 
 ## Application Structure
 ### Database Models
@@ -158,6 +226,8 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - used to get [card image](https://www.reddit.com/r/magicTCG/comments/31v0n4/website_or_api_to_get_mtg_card_images/cq57ihi/)
 - count
   - number
+- note
+  - string
 
 ## Development Notes
 - Card Information
