@@ -12,6 +12,7 @@ This application allows users to maintain a digital record of their *Magic The G
     - Card Image
     - Name
     - Type and Subtype
+    - Color Identity
   - Card information sourced from [MTGJSON 4](https://mtgjson.com/v4/)
   - Can search without an account
   - If logged in, can add cards to collection or decks from card search
@@ -20,3 +21,8 @@ This application allows users to maintain a digital record of their *Magic The G
     - Complete listing of all owned cards
   - Deckbuilding
   - Wishlist
+
+## Development Notes
+- User the following websites for inspiration
+  - [Deckbox](https://deckbox.org/) for collection management
+  - [Scryfall](https://scryfall.com/) for card search
