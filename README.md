@@ -1,22 +1,18 @@
 # *Magic The Gathering*: Collection Catalog
 ## Purpose
 This application allows users to maintain a digital catalog of their *Magic The Gathering* playing card collection to assist with card collection organization and management.
-
 ## Features
 ### User Accounts
 - User collections stored in database
 - Password protected
-
 ### Card Search
 #### MVP
 - Retrieve information on any *Magic The Gathering* card
 - Can use search without an account
 - If logged in, can add cards to inventory, wishlist, or deck from card search
-
 #### Strech Goals
 - Display different printings of individual cards and associated variations in card information
 - Search by set
-
 ### Collection Catalog
 #### Inventory
 - Tabled list of all owned cards
@@ -51,7 +47,6 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - See [Deckbox](https://deckbox.org/) for example
 - Add card to deck via checkbox and dropdown action
   - See [Deckbox](https://deckbox.org/) for example
-
 #### Wishlist
 - Tabled list of cards
   - Only lists cards with **_wish count greater than 0_**
@@ -87,7 +82,6 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - See [Deckbox](https://deckbox.org/) for example
 - Add card to deck via checkbox and dropdown action
   - See [Deckbox](https://deckbox.org/) for example
-
 #### Deckbuilding
 - Display deck meta information
   - Deck name
@@ -160,7 +154,6 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - Removes card from previous array and adds card to other array
   - See [Deckbox](https://deckbox.org/) for example
 - Display textarea with notes on deck
-
 ## Application Structure
 ### Database Models
 #### User Model
@@ -172,7 +165,6 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - array of CardInvs
 - decks
   - array of Decks
-
 #### CardInv Model
 - metaverseId
   - number
@@ -186,7 +178,6 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - number
   - this is **_never directly edited by user_**; it is only edited when the amount of a card in a deck is changed
 - **_if ownedCount, wishCount, and neededCount all equal zero when CardInv is updated the card is removed from the collection in User model_**
-
 #### Deck Model
 - name
   - string
@@ -204,7 +195,6 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - does not factor into needed counted
 - note
   - string
-
 #### CardDeck Model
 - metaverseId
   - number
@@ -215,7 +205,6 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - **_if count equals zero when CardDeck is updated the card is removed from its associated array in Deck model_**
 - note
   - string
-
 ### Front-end View
 #### Logged Out View
 - Navigation
@@ -269,9 +258,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
     - Card symbols in svg format provided by [slightlymagic.net](https://www.slightlymagic.net/forum/viewtopic.php?t=4430)
     - Here is an example of a particularly complex card to display
       - [Nicol Bolas, The Ravager // Nicol Bolas, The Arisen](https://scryfall.com/card/m19/218/nicol-bolas-the-ravager-nicol-bolas-the-arisen)
-
 #### Logged In View  
-
 ## Development Notes
 - Card Information
   - All card information is provided by [MTGJSON 4](https://mtgjson.com/v4/)
