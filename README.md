@@ -98,9 +98,8 @@ This application allows users to maintain a digital catalog of their *Magic The 
 #### Deckbuilding
 
 ## Application Structure
-### Back-end
-#### Database Models
-##### User Model
+### Database Models
+#### User Model
 - username
   - string
 - password
@@ -110,7 +109,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
 - decks
   - array of Decks
 
-##### CardInv Model
+#### CardInv Model
 - metaverseId
   - number
   - used to get card information from [MTGJSON 4](https://mtgjson.com/v4/)
@@ -123,7 +122,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - number
   - this is **_never directly edited by user_**; it is only edited when the amount of a card in a deck is changed
 
-##### Deck Model
+#### Deck Model
 - name
   - string
 - type
@@ -141,15 +140,13 @@ This application allows users to maintain a digital catalog of their *Magic The 
 - note
   - string
 
-##### CardDeck Model
+#### CardDeck Model
 - metaverseId
   - number
   - used to get card information from [MTGJSON 4](https://mtgjson.com/v4/)
   - used to get [card image](https://www.reddit.com/r/magicTCG/comments/31v0n4/website_or_api_to_get_mtg_card_images/cq57ihi/)
 - count
   - number
-
-### Front-end
 
 ## Development Notes
 - Card Information
