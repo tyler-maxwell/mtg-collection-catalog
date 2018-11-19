@@ -63,6 +63,9 @@ This application allows users to maintain a digital catalog of their *Magic The 
     2 Fireball
     10 Mountain
     ```
+- Remove card via checkbox and dropdown action
+  - Sets owned count to zero for all checked cards
+  - See [Deckbox](https://deckbox.org/) for example
 - Add card to deck via checkbox and dropdown action
   - See [Deckbox](https://deckbox.org/) for example
 
@@ -96,6 +99,11 @@ This application allows users to maintain a digital catalog of their *Magic The 
     2 Fireball
     10 Mountain
     ```
+- Remove card via checkbox and dropdown action
+  - Sets wish count to zero for all checked cards
+  - See [Deckbox](https://deckbox.org/) for example
+- Add card to deck via checkbox and dropdown action
+  - See [Deckbox](https://deckbox.org/) for example
 
 #### Deckbuilding
 
@@ -123,6 +131,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
 - neededCount
   - number
   - this is **_never directly edited by user_**; it is only edited when the amount of a card in a deck is changed
+- **_if ownedCount, wishCount, and neededCount all equal zero when CardInv is updated the card is removed from the collection in User model_**
 
 #### Deck Model
 - name
