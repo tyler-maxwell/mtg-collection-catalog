@@ -1,1 +1,3 @@
 # mtg-collection-tracker
+
+## Purpose
