@@ -1,3 +1,3 @@
-# mtg-collection-tracker
+# *Magic The Gathering*: Collection Tracker
 
 ## Purpose
