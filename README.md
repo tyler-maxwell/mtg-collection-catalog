@@ -241,12 +241,12 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - create user form
   - successful user creation automatically logs user in and routes to /
 - /seach/card-name
-  - if search results for card-name includes more than one card
+  - If search results for card-name includes more than one card
     - *this happens if you type "goblin" for example, whereas "raging goblin" results in a single card*
     - display all card images without description
     - on click of a particular card that card's information is loaded
-  - if search results for card-name includes a single card
-    - display card information
+  - If search results for card-name includes a single card
+    - Display card information
       - Card Image
         - Actual card image can be retrieved by using multiverseId
         - [Example](https://www.reddit.com/r/magicTCG/comments/31v0n4/website_or_api_to_get_mtg_card_images/cq57ihi/)
