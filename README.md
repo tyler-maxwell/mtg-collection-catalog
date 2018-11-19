@@ -4,33 +4,36 @@
 This application allows users to maintain a digital record of their *Magic The Gathering* playing card collection to assist with card collection organization and management.
 
 ## Features
-- User Accounts
-  - User collections stored in database
-  - Password protected
-- Card Search
-  - Retrieve information on any *Magic The Gathering* card
-    - Conditionally render card information if it is available for particular card
-      - This is usually dependent upon card type
-    - MVP
-      - Card Image
-      - Artist
-      - Name
-      - Mana Cost
-      - Color Identity
-      - Type and Subtype
-      - Loyalty
-      - Flavor Text
-      - Legalities
-    - Strech Goals
-      - Display different printings of individual cards and associated variations in card information
-  - Card information sourced from 
-  - Can search without an account
-  - If logged in, can add cards to collection or decks from card search
-- Collection Tracking
-  - Inventory
-    - Complete listing of all owned cards
-  - Deckbuilding
-  - Wishlist
+
+### User Accounts
+- User collections stored in database
+- Password protected
+
+### Card Search
+- Retrieve information on any *Magic The Gathering* card
+  - Conditionally render card information if it is available for particular card
+    - This is usually dependent upon card type
+  - MVP
+    - Card Image
+    - Artist
+    - Name
+    - Mana Cost
+    - Color Identity
+    - Type and Subtype
+    - Loyalty
+    - Flavor Text
+    - Legalities
+  - Strech Goals
+    - Display different printings of individual cards and associated variations in card information
+- Card information sourced from 
+- Can search without an account
+- If logged in, can add cards to collection or decks from card search
+
+### Collection Tracking
+- Inventory
+  - Complete listing of all owned cards
+- Deckbuilding
+- Wishlist
 
 ## Development Notes
 - Card Information
