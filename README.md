@@ -225,26 +225,26 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - Top right
     - Login link that routes to /login
 - /
-  - about page
-  - describe features
-  - technologies used
+  - About page
+  - Describe features
+  - Technologies used
     - [React](https://reactjs.org/)
     - [MongoDB](https://www.mongodb.com/)
     - [MTGJSON 4](https://mtgjson.com/v4/)
-  - contributers
+  - Contributers
 - /login
-  - user login form
-  - successful login routes to /
-    - / will display differently when logged in
-  - link at bottom to create new account that routes to /newaccount
+  - User login form
+  - Successful login routes to /
+    - / Will display differently when logged in
+  - Link at bottom to create new account that routes to /newaccount
 - /newaccount
-  - create user form
-  - successful user creation automatically logs user in and routes to /
+  - Create user form
+  - Successful user creation automatically logs user in and routes to /
 - /seach/card-name
   - If search results for card-name includes more than one card
-    - *this happens if you type "goblin" for example, whereas "raging goblin" results in a single card*
-    - display all card images without description
-    - on click of a particular card that card's information is loaded
+    - *This happens if you type "goblin" for example, whereas "raging goblin" results in a single card*
+    - Display all card images without description
+    - On click of a particular card that card's information is loaded
   - If search results for card-name includes a single card
     - Display card information
       - Card Image
@@ -266,6 +266,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
     - Conditionally render card information if it is available for particular card
       - This is usually dependent upon card type
     - Card information provided by [MTGJSON 4](https://mtgjson.com/v4/)
+    - Card symbols in svg format provided by [slightlymagic.net](https://www.slightlymagic.net/forum/viewtopic.php?t=4430)
     - Here is an example of a particularly complex card to display
       - [Nicol Bolas, The Ravager // Nicol Bolas, The Arisen](https://scryfall.com/card/m19/218/nicol-bolas-the-ravager-nicol-bolas-the-arisen)
 
