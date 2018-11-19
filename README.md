@@ -9,14 +9,17 @@ This application allows users to maintain a digital record of their *Magic The G
   - Password protected
 - Card Search
   - Retrieve information on any *Magic The Gathering* card
+    - **Conditionally render card information if it is available for particular card (this is usually dependent upon card type)**
     - MVP
       - Card Image
+      - Artist
       - Name
       - Mana Cost
-      - Type and Subtype
       - Color Identity
+      - Type and Subtype
+      - Loyalty (if type is planeswalker)
       - Flavor Text
-      - Artist
+      - Legalities
     - Strech Goals
       - Display different printings of individual cards and associated variations in card information
   - Card information sourced from 
