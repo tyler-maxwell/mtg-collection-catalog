@@ -242,6 +242,13 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - Top right
     - Login link that routes to /login
 - /
+  - about page
+  - describes features
+  - technologies used
+    - [React](https://reactjs.org/)
+    - [MongoDB](https://www.mongodb.com/)
+    - [MTGJSON 4](https://mtgjson.com/v4/)
+  - contributers
 - /login
   - user login form
   - successful login routes to /
