@@ -38,7 +38,7 @@ This application allows users to maintain a digital record of their *Magic The G
   - Actual card image can be retrieved by using multiverseId
     - [Example](https://www.reddit.com/r/magicTCG/comments/31v0n4/website_or_api_to_get_mtg_card_images/cq57ihi/)
   - Here is an example of a particularly complex card to display
-    - [Nicol Bolas, The Ravager](https://scryfall.com/card/m19/218/nicol-bolas-the-ravager-nicol-bolas-the-arisen?back)
+    - [Nicol Bolas, The Ravager](https://scryfall.com/card/m19/218/nicol-bolas-the-ravager-nicol-bolas-the-arisen)
 - Use the following websites for inspiration
   - [Deckbox](https://deckbox.org/) for collection management
   - [Scryfall](https://scryfall.com/) for card search
