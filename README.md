@@ -26,4 +26,4 @@ This application allows users to maintain a digital record of their *Magic The G
 - User the following websites for inspiration
   - [Deckbox](https://deckbox.org/) for collection management
   - [Scryfall](https://scryfall.com/) for card search
-  - [Previous Version of this Project](https://tyler-maxwell.github.io/project1/)
+  - [Previous version of this project](https://tyler-maxwell.github.io/project1/)
