@@ -10,7 +10,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
 - Retrieve information on any *Magic The Gathering* card
 - Can use search without an account
 - If logged in, can add cards to inventory, wishlist, or deck from card search
-#### Strech Goals
+#### Stretch Goals
 - Display different printings of individual cards and associated variations in card information
 - Search by set
 ### Collection Catalog
