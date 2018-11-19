@@ -226,8 +226,10 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - used to get [card image](https://www.reddit.com/r/magicTCG/comments/31v0n4/website_or_api_to_get_mtg_card_images/cq57ihi/)
 - count
   - number
+  - **_if count equals zero when CardDeck is updated the card is removed from its associated array in Deck model_**
 - note
   - string
+  
 
 ## Development Notes
 - Card Information
