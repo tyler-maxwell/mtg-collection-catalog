@@ -34,7 +34,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
 - Display different printings of individual cards and associated variations in card information
 - Search by set
 
-### Collection Tracking
+### Collection Catalog
 #### Inventory
 - Tabled list of all owned cards
   - Only lists cards with **_owned count greater than 0_**
