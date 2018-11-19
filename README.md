@@ -9,7 +9,7 @@ This application allows users to maintain a digital record of their *Magic The G
   - Password protected
 - Card Search
   - Retrieve information on any *Magic The Gathering* card
-    - **Conditionally render card information if it is available for particular card**
+    - Conditionally render card information if it is available for particular card
       - This is usually dependent upon card type
     - MVP
       - Card Image
