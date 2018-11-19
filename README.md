@@ -108,8 +108,11 @@ This application allows users to maintain a digital catalog of their *Magic The 
 #### Deckbuilding
 - Display deck meta information
   - Deck name
+    - Can edit directly and update database
   - Deck type
+    - Can edit directly and update database
   - Whether deck is built or not
+    - Can edit directly and update database
 - Tabled list of cards in deck
   - Table Columns
     - Count
