@@ -40,9 +40,13 @@ This application allows users to maintain a digital record of their *Magic The G
   - Complete listing of all owned cards
   - Add cards to inventory through textbox
     - If a single card name is entered add one of that card to the inventory 
-      > Raging Goblin
+      ```
+      Raging Goblin
+      ```
     - Multiple copies a card can be added by including the amount before the name
-      > 4 Raging Goblin
+      ```
+      4 Raging Goblin
+      ```
     - Multiple cards can be added at once by writing each card on its own line
       ```
       4 Raging Goblin
