@@ -101,6 +101,17 @@ This application allows users to maintain a digital catalog of their *Magic The 
 ### Back-end
 #### Database Models
 ##### User Model
+- username
+- password
+  - encrypted
+- collection
+  - array of cards
+- decks
+  - array of decks
+
+##### Card Model
+
+##### Deck Model
 
 ### Front-end
 
