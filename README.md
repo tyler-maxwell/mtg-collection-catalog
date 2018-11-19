@@ -232,7 +232,19 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - **_if count equals zero when CardDeck is updated the card is removed from its associated array in Deck model_**
 - note
   - string
-  
+
+### Front-end View
+#### Logged Out View
+- Navigation
+  - Top left
+    - Home link that routes to /
+    - Card search textarea
+  - Top right
+    - Login link that routes to /login
+- /
+- /login
+
+#### Logged In View  
 
 ## Development Notes
 - Card Information
