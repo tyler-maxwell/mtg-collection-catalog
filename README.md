@@ -37,7 +37,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
 ### Collection Tracking
 #### Inventory
 - Tabled list of all owned cards
-  - Only lists cards with owned count greater than 0
+  - Only lists cards with **_owned count greater than 0_**
 - Table Columns
   - Owned Count 
     - Can edit directly and update database
@@ -66,7 +66,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
 
 #### Wishlist
 - Tabled list of cards
-  - Only lists cards with wish count greater than 0
+  - Only lists cards with **_wish count greater than 0_**
 - Table Columns
   - Wish Count
     - Can edit directly and update database
