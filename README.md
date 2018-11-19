@@ -1,42 +1,40 @@
-# *Magic The Gathering*: Collection Tracker
-
+# *Magic The Gathering*: Collection Catalog
 ## Purpose
-This application allows users to maintain a digital record of their *Magic The Gathering* playing card collection to assist with card collection organization and management.
+This application allows users to maintain a digital catalog of their *Magic The Gathering* playing card collection to assist with card collection organization and management.
 
 ## Features
-
 ### User Accounts
 - User collections stored in database
 - Password protected
 
 ### Card Search
+#### MVP
 - Retrieve information on any *Magic The Gathering* card
-  - Conditionally render card information if it is available for particular card
-    - This is usually dependent upon card type
-  - MVP
-    - Card Image
-    - Artist
-    - Name(s)
-    - Mana Cost
-    - Color Identity
-    - Type, Subtype, and Supertype
-    - Rarity
-    - Text
-    - Flavor Text
-    - Power
-    - Toughness
-    - Loyalty
-    - Legalities
-    - Rulings
-  - Strech Goals
-    - Display different printings of individual cards and associated variations in card information
-    - Search by set
-- Card information provided by [MTGJSON 4](https://mtgjson.com/v4/)
+  - Card Image
+  - Artist
+  - Name(s)
+  - Mana Cost
+  - Color Identity
+  - Type, Subtype, and Supertype
+  - Rarity
+  - Text
+  - Flavor Text
+  - Power
+  - Toughness
+  - Loyalty
+  - Legalities
+  - Rulings
+- Conditionally render card information if it is available for particular card
+  - This is usually dependent upon card type
 - Can use search without an account
 - If logged in, can add cards to collection or decks from card search
+- Card information provided by [MTGJSON 4](https://mtgjson.com/v4/)
+
+#### Strech Goals
+- Display different printings of individual cards and associated variations in card information
+- Search by set
 
 ### Collection Tracking
-
 #### Inventory
 - Tabled list of all owned cards
   - Only lists cards with owned count greater than 0
@@ -78,9 +76,7 @@ This application allows users to maintain a digital record of their *Magic The G
     - Mana Cost
 
 ## Application Structure
-
 ### Back-end
-
 ### Front-end
 
 ## Development Notes
