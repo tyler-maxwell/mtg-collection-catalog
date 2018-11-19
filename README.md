@@ -60,7 +60,6 @@ This application allows users to maintain a digital catalog of their *Magic The 
     10 Mountain
     ```
 
-#### Deckbuilding
 #### Wishlist
 - Tabled list of cards
   - Only lists cards with wish count greater than 0
@@ -74,6 +73,8 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - Name (mouse hover displays card image, mouse click display card in card search with full card information)
   - Type
   - Mana Cost
+
+#### Deckbuilding
 
 ## Application Structure
 ### Back-end
