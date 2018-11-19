@@ -99,6 +99,9 @@ This application allows users to maintain a digital catalog of their *Magic The 
 
 ## Application Structure
 ### Back-end
+#### Database Models
+##### User Model
+
 ### Front-end
 
 ## Development Notes
