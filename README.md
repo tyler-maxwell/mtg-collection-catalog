@@ -106,11 +106,11 @@ This application allows users to maintain a digital catalog of their *Magic The 
 - password
   - encrypted string
 - collection
-  - array of cards
+  - array of CardInvs
 - decks
-  - array of decks
+  - array of Decks
 
-##### Card Model
+##### CardInv Model
 - metaverseId
   - number
   - used to get card information from [MTGJSON 4](https://mtgjson.com/v4/)
@@ -124,6 +124,29 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - this is **_never directly edited by user_**; it is only edited when the amount of a card in a deck is changed
 
 ##### Deck Model
+- name
+  - string
+- type
+  - string
+- built
+  - bool
+- cards
+  - array of CardDecks
+- scratchpad
+  - array of CardDecks
+  - list of cards that you are considering for this deck
+  - does not factor into needed counted
+- note
+  - string
+
+##### CardDeck Model
+- metaverseId
+  - number
+  - used to get card information from [MTGJSON 4](https://mtgjson.com/v4/)
+  - used to get [card image](https://www.reddit.com/r/magicTCG/comments/31v0n4/website_or_api_to_get_mtg_card_images/cq57ihi/)
+- isSideboard
+  - bool
+
 
 ### Front-end
 
@@ -137,6 +160,6 @@ This application allows users to maintain a digital catalog of their *Magic The 
     - [Nicol Bolas, The Ravager](https://scryfall.com/card/m19/218/nicol-bolas-the-ravager-nicol-bolas-the-arisen)
 - Use the following websites for inspiration
   - [Deckbox](https://deckbox.org/) for collection management
-    - Use samepleInventory.txt to quickly add cards to your account for testing purposes
+    - Use samepleInventory.txt and sampleDeck.txt to quickly add cards to your account for testing purposes
   - [Scryfall](https://scryfall.com/) for card search
   - [Previous version of this project](https://tyler-maxwell.github.io/project1/)
