@@ -25,8 +25,8 @@ This application allows users to maintain a digital record of their *Magic The G
     - Legalities
   - Strech Goals
     - Display different printings of individual cards and associated variations in card information
-- Card information sourced from 
-- Can search without an account
+- Card information provided by [MTGJSON 4](https://mtgjson.com/v4/)
+- Can use search without an account
 - If logged in, can add cards to collection or decks from card search
 
 ### Collection Tracking
