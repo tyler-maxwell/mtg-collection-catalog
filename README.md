@@ -267,7 +267,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
       - This is usually dependent upon card type
     - Card information provided by [MTGJSON 4](https://mtgjson.com/v4/)
     - Here is an example of a particularly complex card to display
-      - [Nicol Bolas, The Ravager](https://scryfall.com/card/m19/218/nicol-bolas-the-ravager-nicol-bolas-the-arisen)
+      - [Nicol Bolas, The Ravager // Nicol Bolas, The Arisen](https://scryfall.com/card/m19/218/nicol-bolas-the-ravager-nicol-bolas-the-arisen)
 
 #### Logged In View  
 
