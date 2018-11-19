@@ -62,18 +62,18 @@ This application allows users to maintain a digital catalog of their *Magic The 
 
 ####Deckbuilding
 ####Wishlist
-  - Tabled list of cards
-    - Only lists cards with wish count greater than 0
-  - Table Columns
-    - Wish Count
-      - Can edit directly and update database
-    - Owned Count 
-      - Can edit directly and update database
-    - Needed Count
-      - Amount needed to have enough copies for all decks
-    - Name (mouse hover displays card image, mouse click display card in card search with full card information)
-    - Type
-    - Mana Cost
+- Tabled list of cards
+  - Only lists cards with wish count greater than 0
+- Table Columns
+  - Wish Count
+    - Can edit directly and update database
+  - Owned Count 
+    - Can edit directly and update database
+  - Needed Count
+    - Amount needed to have enough copies for all decks
+  - Name (mouse hover displays card image, mouse click display card in card search with full card information)
+  - Type
+  - Mana Cost
 
 ## Application Structure
 ### Back-end
