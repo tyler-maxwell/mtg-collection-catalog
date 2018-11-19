@@ -39,9 +39,13 @@ This application allows users to maintain a digital catalog of their *Magic The 
 - Tabled list of all owned cards
   - Only lists cards with owned count greater than 0
 - Table Columns
-  - Count (can edit directly and update database)
-  - Count needed to have enough copies for all decks
-  - Name (mouse hover displays card image, mouse click display card in card search with full card information)
+  - Owned Count 
+    - Can edit directly and update database
+  - Needed Count
+    - Amount needed to have enough copies for all decks
+  - Name
+    - Mouse hover displays card image
+    - Mouse click displays card in card search with full card information
   - Type
   - Mana Cost
 - Add cards to inventory through textbox
@@ -70,9 +74,26 @@ This application allows users to maintain a digital catalog of their *Magic The 
     - Can edit directly and update database
   - Needed Count
     - Amount needed to have enough copies for all decks
-  - Name (mouse hover displays card image, mouse click display card in card search with full card information)
+  - Name
+    - Mouse hover displays card image
+    - Mouse click displays card in card search with full card information
   - Type
   - Mana Cost
+- Add cards to inventory through textbox
+  - If a single card name is entered add one of that card to the inventory 
+    ```
+    Raging Goblin
+    ```
+  - Multiple copies a card can be added by including the amount before the name
+    ```
+    4 Raging Goblin
+    ```
+  - Multiple cards can be added at once by writing each card on its own line
+    ```
+    4 Raging Goblin
+    2 Fireball
+    10 Mountain
+    ```
 
 #### Deckbuilding
 
