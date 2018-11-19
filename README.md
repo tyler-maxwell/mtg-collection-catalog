@@ -44,6 +44,7 @@ This application allows users to maintain a digital record of their *Magic The G
 ## Development Notes
 - Card Information
   - All card information is provided by [MTGJSON 4](https://mtgjson.com/v4/)
+  - Card symbols in svg format provided by [slightlymagic.net](https://www.slightlymagic.net/forum/viewtopic.php?t=4430)
   - Actual card image can be retrieved by using multiverseId
     - [Example](https://www.reddit.com/r/magicTCG/comments/31v0n4/website_or_api_to_get_mtg_card_images/cq57ihi/)
   - Here is an example of a particularly complex card to display
