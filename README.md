@@ -38,6 +38,7 @@ This application allows users to maintain a digital record of their *Magic The G
 ### Collection Tracking
 - Inventory
   - Complete listing of all owned cards
+    - 
   - Add cards to inventory through textbox
     - If a single card name is entered add one of that card to the inventory 
       ```
@@ -55,6 +56,12 @@ This application allows users to maintain a digital record of their *Magic The G
       ```
 - Deckbuilding
 - Wishlist
+
+## Application Structure
+
+### Back-end
+
+### Front-end
 
 ## Development Notes
 - Card Information
