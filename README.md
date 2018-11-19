@@ -102,8 +102,9 @@ This application allows users to maintain a digital catalog of their *Magic The 
 #### Database Models
 ##### User Model
 - username
+  - string
 - password
-  - encrypted
+  - encrypted string
 - collection
   - array of cards
 - decks
@@ -111,8 +112,16 @@ This application allows users to maintain a digital catalog of their *Magic The 
 
 ##### Card Model
 - metaverseId
+  - number
   - used to get card information from [MTGJSON 4](https://mtgjson.com/v4/)
   - used to get [card image](https://www.reddit.com/r/magicTCG/comments/31v0n4/website_or_api_to_get_mtg_card_images/cq57ihi/)
+- ownedCount
+  - number
+- wishCount
+  - number
+- neededCount
+  - number
+  - this is **_never directly edited by user_**; it is only edited when the amount of a card in a deck is changed
 
 ##### Deck Model
 
