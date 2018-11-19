@@ -161,3 +161,5 @@ This application allows users to maintain a digital catalog of their *Magic The 
     - Use samepleInventory.txt and sampleDeck.txt to quickly add cards to your account for testing purposes
   - [Scryfall](https://scryfall.com/) for card search
   - [Previous version of this project](https://tyler-maxwell.github.io/project1/)
+    - username: demo
+    - password: password
