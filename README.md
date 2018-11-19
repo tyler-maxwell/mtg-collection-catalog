@@ -243,6 +243,13 @@ This application allows users to maintain a digital catalog of their *Magic The 
     - Login link that routes to /login
 - /
 - /login
+  - user login form
+  - successful login routes to /
+    - / will display differently when logged in
+  - link at bottom to create new account that routes to /newaccount
+- /newaccount
+  - create user form
+  - successful user creation automatically logs user in and routes to /
 
 #### Logged In View  
 
