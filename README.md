@@ -27,7 +27,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
 - Conditionally render card information if it is available for particular card
   - This is usually dependent upon card type
 - Can use search without an account
-- If logged in, can add cards to collection or decks from card search
+- If logged in, can add cards to inventory, wishlist, or deck from card search
 - Card information provided by [MTGJSON 4](https://mtgjson.com/v4/)
 
 #### Strech Goals
