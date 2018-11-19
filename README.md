@@ -44,9 +44,9 @@ This application allows users to maintain a digital record of their *Magic The G
     - Multiple copies a card can be added by including the amount before the name
       > 4 Raging Goblin
     - Multiple cards can be added at once by writing each card on its own line
-      > 4 Raging Goblin
-      > 2 Fireball
-      > 10 Mountain
+      - 4 Raging Goblin
+        2 Fireball
+        10 Mountain
 
 - Deckbuilding
 - Wishlist
