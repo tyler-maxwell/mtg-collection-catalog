@@ -16,15 +16,21 @@ This application allows users to maintain a digital record of their *Magic The G
   - MVP
     - Card Image
     - Artist
-    - Name
+    - Name(s)
     - Mana Cost
     - Color Identity
-    - Type and Subtype
-    - Loyalty
+    - Type, Subtype, and Supertype
+    - Rarity
+    - Text
     - Flavor Text
+    - Power
+    - Toughness
+    - Loyalty
     - Legalities
+    - Rulings
   - Strech Goals
     - Display different printings of individual cards and associated variations in card information
+    - Search by set
 - Card information provided by [MTGJSON 4](https://mtgjson.com/v4/)
 - Can use search without an account
 - If logged in, can add cards to collection or decks from card search
