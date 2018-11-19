@@ -243,7 +243,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
     - Login link that routes to /login
 - /
   - about page
-  - describes features
+  - describe features
   - technologies used
     - [React](https://reactjs.org/)
     - [MongoDB](https://www.mongodb.com/)
@@ -257,6 +257,12 @@ This application allows users to maintain a digital catalog of their *Magic The 
 - /newaccount
   - create user form
   - successful user creation automatically logs user in and routes to /
+- /seach/card-name
+  - if search results for card-name includes more than one card
+    - *this happens if you type "goblin" for example, whereas "raging goblin" results in a single card*
+    - display all card images without description
+    - on click of a particular card that card's information is loaded
+  - if search results for card-name includes a single card
 
 #### Logged In View  
 
