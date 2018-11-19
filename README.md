@@ -60,8 +60,8 @@ This application allows users to maintain a digital catalog of their *Magic The 
     10 Mountain
     ```
 
-####Deckbuilding
-####Wishlist
+#### Deckbuilding
+#### Wishlist
 - Tabled list of cards
   - Only lists cards with wish count greater than 0
 - Table Columns
