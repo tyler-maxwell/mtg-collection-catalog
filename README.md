@@ -317,6 +317,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - Card symbols in svg format provided by [slightlymagic.net](https://www.slightlymagic.net/forum/viewtopic.php?t=4430)
   - Actual card image can be retrieved by using multiverseId
     - [Example](https://www.reddit.com/r/magicTCG/comments/31v0n4/website_or_api_to_get_mtg_card_images/cq57ihi/)
+    - [Alternate Method](https://scryfall.com/blog/high-resolution-png-images-119)
 - Use the following websites for inspiration
   - [Deckbox](https://deckbox.org/) for collection management
     - Use samepleInventory.txt and sampleDeck.txt to quickly add cards to your account for testing purposes
