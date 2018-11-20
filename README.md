@@ -82,9 +82,10 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - Describe features
   - Technologies used
     - [React](https://reactjs.org/)
+    - [Material UI](https://material-ui.com/)
+    - [Chart.js](https://www.chartjs.org/)
     - [MongoDB](https://www.mongodb.com/)
     - [MTGJSON 4](https://mtgjson.com/v4/)
-    - [Chart.js](https://www.chartjs.org/)
   - Contributers
 - /login
   - User login form
