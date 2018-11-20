@@ -34,6 +34,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - number
   - used to get card information from [MTGJSON 4](https://mtgjson.com/v4/)
   - used to get [card image](https://www.reddit.com/r/magicTCG/comments/31v0n4/website_or_api_to_get_mtg_card_images/cq57ihi/)
+    - [Alternate Method](https://scryfall.com/blog/high-resolution-png-images-119)
 - ownedCount
   - number
 - wishCount
@@ -64,6 +65,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
   - number
   - used to get card information from [MTGJSON 4](https://mtgjson.com/v4/)
   - used to get [card image](https://www.reddit.com/r/magicTCG/comments/31v0n4/website_or_api_to_get_mtg_card_images/cq57ihi/)
+    - [Alternate Method](https://scryfall.com/blog/high-resolution-png-images-119)
 - count
   - number
   - **_if count equals zero when CardDeck is updated the card is removed from its associated array in Deck model_**
@@ -105,6 +107,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
       - Card Image
         - Actual card image can be retrieved by using multiverseId
         - [Example](https://www.reddit.com/r/magicTCG/comments/31v0n4/website_or_api_to_get_mtg_card_images/cq57ihi/)
+        - [Alternate Method](https://scryfall.com/blog/high-resolution-png-images-119)
       - Artist
       - Name(s)
       - Mana Cost
@@ -291,6 +294,7 @@ This application allows users to maintain a digital catalog of their *Magic The 
       - Card Image
         - Actual card image can be retrieved by using multiverseId
         - [Example](https://www.reddit.com/r/magicTCG/comments/31v0n4/website_or_api_to_get_mtg_card_images/cq57ihi/)
+        - [Alternate Method](https://scryfall.com/blog/high-resolution-png-images-119)
       - Artist
       - Name(s)
       - Mana Cost
