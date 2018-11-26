@@ -9,10 +9,10 @@ This application allows users to maintain a digital catalog of their *Magic The 
 #### MVP
 - Retrieve information on any *Magic The Gathering* card
 - Can use search without an account
-- If logged in, can add cards to inventory, wishlist, or deck from card search
 #### Stretch Goals
 - Display different printings of individual cards and associated variations in card information
 - Search by sets
+- If logged in, can add cards to inventory, wishlist, or deck from card search
 ### Collection Catalog
 #### MVP
 - View a tabled list of cards in inventory, wishlist, and individual decks
