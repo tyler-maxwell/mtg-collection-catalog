@@ -1,17 +1,13 @@
 // React Imports
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-// Grid Imports
-import Row from "../../../components/shared/Grid/Row";
+// grid Imports
+import Row from "../../../components/shared/grid/Row";
 // Component Imports
 import Nav from "../../../components/shared/Nav";
-import Users from "../Users";
-import AccountInfoCard from "../../../components/private/AccountInfo/Card";
-import AccountInfoForm from "../../../components/private/AccountInfo/Form";
+import AccountInfoCard from "../../../components/private/accountInfo/Card";
 //API Imports
 import UsersAPI from "../../../utils/usersAPI";
-// CSS Imports
-import "./account.css";
 
 class Account extends Component {
   constructor() {

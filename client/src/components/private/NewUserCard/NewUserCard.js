@@ -1,6 +1,5 @@
 import React from "react";
 import Col from "../../grid/Col";
-import "./NewUserCard.css";
 
 const NewUserCard = props => (
   <Col size="9">

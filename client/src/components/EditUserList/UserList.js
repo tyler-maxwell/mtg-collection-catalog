@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import Row from "../../components/shared/Grid/Row";
-import Col from "../../components/shared/Grid/Col";
+import Row from "../../components/shared/grid/Row";
+import Col from "../../components/shared/grid/Col";
 import UsersAPI from "../../utils/usersAPI";
-import "./UserList.css";
 
 class UserList extends Component {
   constructor(props) {

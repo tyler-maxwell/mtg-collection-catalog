@@ -1,17 +1,13 @@
 // React Imports
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-// Grid Imports
-import Row from "../../../components/shared/Grid/Row";
+// grid Imports
+import Row from "../../../components/shared/grid/Row";
 // Component Imports
 import Nav from "../../../components/shared/Nav";
-import Users from "../Users";
-import PasswordInfoCard from "../../../components/private/PasswordReset/Card";
-import PasswordInfoForm from "../../../components/private/PasswordReset/Form";
+import PasswordInfoCard from "../../../components/private/passwordReset/Card";
 //API Imports
 import UsersAPI from "../../../utils/usersAPI";
-// CSS Imports
-import "./password.css";
 
 class Password extends Component {
   constructor() {

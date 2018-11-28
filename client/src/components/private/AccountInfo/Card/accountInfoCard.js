@@ -1,6 +1,4 @@
 import React from "react";
-// import Col from "../../../shared/Grid/Col";
-import "./AccountInfoCard.css";
 import AccountInfoDisplay from "../Display";
 import AccountInfoForm from "../Form";
 

@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import Row from "../../../components/shared/Grid/Row";
-import Col from "../../../components/shared/Grid/Col";
+import Row from "../../../components/shared/grid/Row";
+import Col from "../../../components/shared/grid/Col";
 import { Redirect, Link } from "react-router-dom";
 import Nav from "../../../components/shared/Nav";
 import UsersAPI from "../../../utils/usersAPI";
-import "./login.css";
 
 class Login extends Component {
   constructor() {

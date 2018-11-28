@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Col from "../../../components/shared/Grid/Col";
+import Col from "../../../components/shared/grid/Col";
 import UsersAPI from "../../../utils/usersAPI";
 import UserList from "../../../components/EditUserList";
 
