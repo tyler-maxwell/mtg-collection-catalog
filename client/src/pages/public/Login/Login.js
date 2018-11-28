@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import Row from "../../../components/shared/grid/Row";
-import Col from "../../../components/shared/grid/Col";
+import {Row, Col, Container} from "../../../components/shared/grid"
 import { Redirect, Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 import Nav from "../../../components/shared/Nav";
 import UsersAPI from "../../../utils/usersAPI";
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 class Login extends Component {
   constructor() {
@@ -77,11 +79,13 @@ class Login extends Component {
   }
 
   render() {
+    const { classes } = this.props;
+
     if (this.state.redirectTo) {
       return <Redirect to={{ pathname: this.state.redirectTo }} />;
     } else {
       return (
-        <div className="Container">
+        <Container>
           <Nav isPublic={true} />
           <Row>
             <Col size="4" />
@@ -89,39 +93,63 @@ class Login extends Component {
               <div className="signIn">
                 <h4>Login</h4>
                 <form id="loginForm">
-                  <input
-                    type="text"
+                <Row>
+                  <Col size={6} mSize={12}>
+                  <TextField
+                    required
                     id="username"
+                    label="Username"
                     name="username"
-                    placeholder="Username"
-                    value={this.state.username}
+                    className="textField"
                     onChange={this.handleChange}
+                    margin="normal"
+                    variant="filled"
                   />
-
-                  <input
-                    placeholder="Password"
-                    type="password"
+                  </Col>
+                  <Col size={6} mSize={12}>
+                  <TextField
+                    required
+                    id="password"
+                    label="Password"
                     name="password"
-                    value={this.state.password}
+                    className="textField"
+                    type="password"
+                    autoComplete="current-password"
                     onChange={this.handleChange}
+                    margin="normal"
+                    variant="filled"
                   />
-                  <button
+                  </Col>
+                </Row>
+                  <Button
                     className="btn"
                     id="btn1"
                     onClick={this.handleLogin}
                     type="submit"
+                    variant="contained" 
+                    disabled={this.state.username && this.state.password ? false : true} 
+                    size="large" 
                   >
                     Login
-                  </button>
+                  </Button>
                 </form>
                 <p>
                   Don't have an account?{" "}
-                  <Link to="/signup">Click here to sign up.</Link>
+                  <div />
+                  <Button
+                    className="btn"
+                    id="btn1"
+                    type="submit"
+                    variant="contained" 
+                    size="large"
+                    href="/signup" 
+                  >Click Here to Sign Up!</Button>
+                 
                 </p>
               </div>
             </Col>
           </Row>
-        </div>
+        </Container>
       );
     }
   }

@@ -12,6 +12,7 @@ import SignUp from "./pages/public/SignUp";
 import PrivateMaster from "./pages/private/PrivateMaster";
 import Account from "./pages/private/Account";
 import Password from "./pages/private/Password";
+import Test from "./pages/test/"
 // Import Private Route
 import PrivateRoute from "./components/private/PrivateRoute";
 // Import API
@@ -113,6 +114,12 @@ class App extends React.Component {
                 <SignUp updateUser={this.updateUser} {...props} />
               )}
             />
+            <Route
+              exact path="/test"
+              render={props => (
+                <Test updateUser={this.updateUser} {...props} />
+              )}
+             />
             <PrivateRoute
               path="/dashboard"
               component={PrivateMaster}
