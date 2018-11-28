@@ -1,14 +1,12 @@
 import React from "react";
 import Grid from '@material-ui/core/Grid';
 
-const Row = props => (
+const Container = props => (
 <Grid
     container
-    direction="row"
-    justify="flex-start"
-    alignItems="flex-start"
+    spacing={props.spacing ? props.spacing : 24}
 >
   {props.children}
 </Grid>
 )
-export default Row;
+export default Container;
