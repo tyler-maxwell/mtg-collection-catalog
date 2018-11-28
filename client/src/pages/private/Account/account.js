@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 // Grid Imports
-import Row from "../../../components/shared/grid/Row";
+import Row from "../../../components/shared/Grid/Row";
 // Component Imports
 import Nav from "../../../components/shared/Nav";
 import Users from "../Users";

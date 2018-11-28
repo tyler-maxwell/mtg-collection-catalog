@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Row from "../../components/shared/grid/Row";
-import Col from "../../components/shared/grid/Col";
+import Row from "../../components/shared/Grid/Row";
+import Col from "../../components/shared/Grid/Col";
 import UsersAPI from "../../utils/usersAPI";
 import "./UserList.css";
 
@@ -21,7 +21,6 @@ class UserList extends Component {
 
   updateUserInfo(id, data) {
     UsersAPI.updateUser(id, data).then(res => {
-
       if (!res.data.error) {
         alert(`Successfully updated user: ${res.data.username}.`);
       } else {
@@ -42,37 +41,43 @@ class UserList extends Component {
     }
   };
 
-    onChange = (event) => {
-        event.preventDefault();
-        const { name, value } = event.target;
-        this.setState({
-            user: {
-                ...this.state.user,
-            [name]: value
-            }   
-        })
-        console.log(this.state.user);
-    }
-
-    handleActiveChange = event => {
-      console.log(event.target.value);
-    }
-
-    onDisable = (event) => {
-      event.preventDefault();
-
-      if (this.state.user.isActive === true ){
-      this.setState({ user: {
+  onChange = event => {
+    event.preventDefault();
+    const { name, value } = event.target;
+    this.setState({
+      user: {
         ...this.state.user,
-        isActive: false }})
-      } else {
-        this.setState({ user: {
-          ...this.state.user,
-          isActive: true }})
+        [name]: value
       }
-     
-      this.updateUserInfo(event.target.value, this.state.user)
+    });
+    console.log(this.state.user);
+  };
+
+  handleActiveChange = event => {
+    console.log(event.target.value);
+  };
+
+  onDisable = event => {
+    event.preventDefault();
+
+    if (this.state.user.isActive === true) {
+      this.setState({
+        user: {
+          ...this.state.user,
+          isActive: false
+        }
+      });
+    } else {
+      this.setState({
+        user: {
+          ...this.state.user,
+          isActive: true
+        }
+      });
     }
+
+    this.updateUserInfo(event.target.value, this.state.user);
+  };
 
   render() {
     return (
@@ -90,15 +95,15 @@ class UserList extends Component {
           </Col>
           <Col s={1}>
             <label htmlFor="password">Password</label>
-            <input 
-                type="text"
-                className="form-control"
-                name="password"
-                placeholder="Enter new password"
-                onChange={this.onChange}
+            <input
+              type="text"
+              className="form-control"
+              name="password"
+              placeholder="Enter new password"
+              onChange={this.onChange}
             />
-        </Col>
-        <Col s={1}>
+          </Col>
+          <Col s={1}>
             <label htmlFor="firstname">Firstname</label>
             <input
               type="text"
@@ -108,8 +113,8 @@ class UserList extends Component {
               onChange={this.onChange}
             />
           </Col>
-          </Row>
-          <Row>
+        </Row>
+        <Row>
           <Col s={1}>
             <label htmlFor="lastname">Lastname</label>
             <input
@@ -134,17 +139,17 @@ class UserList extends Component {
             <input
               type="checkbox"
               name="disable"
-              value = { this.state.user.isActive }
-              checked = { this.state.user.isActive === true }
+              value={this.state.user.isActive}
+              checked={this.state.user.isActive === true}
               onClick={this.onDisable}
-              readOnly = { true }
-              />
+              readOnly={true}
+            />
             <label htmlFor="disable">Active</label>
           </Col>
-          </Row>
-          <Row>
+        </Row>
+        <Row>
           <Col>
-            <button 
+            <button
               className="btn"
               onClick={this.onClick}
               name="id"
@@ -154,13 +159,15 @@ class UserList extends Component {
             </button>
           </Col>
           <Col>
-            <button 
+            <button
               className="btn"
               onClick={this.onDisable}
               name="id"
               value={this.props.user._id}
             >
-            {this.state.user.isActive === true ? "Disable User" : "Enable User" }
+              {this.state.user.isActive === true
+                ? "Disable User"
+                : "Enable User"}
             </button>
           </Col>
         </Row>

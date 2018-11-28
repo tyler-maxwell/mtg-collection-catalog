@@ -1,5 +1,5 @@
 import React from "react";
-import Col from "../../../components/shared/grid/Col";
+import Col from "../../../components/shared/Grid/Col";
 import "./UsersSidebar.css";
 
 const UsersSidebar = props => (
