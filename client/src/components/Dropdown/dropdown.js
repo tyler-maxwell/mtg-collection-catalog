@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./dropdown.css";
+import "./Dropdown.css";
 
 class Dropdown extends React.Component {
   constructor() {

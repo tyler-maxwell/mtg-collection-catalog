@@ -1,1 +1,1 @@
-export { default } from "./passwordInfoCard";
+export { default } from "./PasswordInfoCard";

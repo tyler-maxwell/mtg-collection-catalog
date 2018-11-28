@@ -1,1 +1,1 @@
-export { default } from "./accountInfoDisplay";
+export { default } from "./AccountInfoDisplay";

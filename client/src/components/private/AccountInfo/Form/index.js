@@ -1,1 +1,1 @@
-export { default } from "./accountInfoForm";
+export { default } from "./AccountInfoForm";

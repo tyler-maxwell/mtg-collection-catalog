@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./nav.css";
+import "./Nav.css";
 import Dropdown from "../../Dropdown/";
 
 const Nav = props => (

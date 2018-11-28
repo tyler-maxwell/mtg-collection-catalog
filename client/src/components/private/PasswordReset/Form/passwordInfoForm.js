@@ -1,5 +1,5 @@
 import React from "react";
-import "./passwordInfoForm.css";
+import "./PasswordInfoForm.css";
 
 const PasswordInfoForm = props => (
   <form>
