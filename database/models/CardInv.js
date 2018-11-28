@@ -1,13 +1,13 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const CardInvSchema = new Schema({
-    multiverseld: { type: Number },
-    ownedCount: { type: Number, required: true },
-    wishCount: { type: Number, required: true },
-    neededCount: { type: Number, required: true },
-})
+  multiverseld: { type: Number },
+  ownedCount: { type: Number, required: true },
+  wishCount: { type: Number, required: true },
+  neededCount: { type: Number, required: true }
+});
 
-const CardInv = mongoose.Model("CardInv", CardInvSchema);
+const CardInv = mongoose.model("CardInv", CardInvSchema);
 
 module.exports = CardInv;

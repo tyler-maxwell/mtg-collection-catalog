@@ -1,6 +1,6 @@
 module.exports = {
-  User: require("./User"),
-  CardDeck: require("./CardDeck"),
-  CardInv: require("./CardInv"),
-  Deck: require("./Deck")
+  User: require("./user"),
+  CardDeck: require("./cardDeck"),
+  CardInv: require("./cardInv"),
+  Deck: require("./deck")
 };
