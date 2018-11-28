@@ -1,4 +1,4 @@
-// Import React
+// React
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -6,15 +6,17 @@ import {
   Switch,
   Redirect
 } from "react-router-dom";
-// Import Pages
+// Redux
+import { connect } from "react-redux";
+// Pages
 import Login from "./pages/public/Login";
 import SignUp from "./pages/public/SignUp";
 import PrivateMaster from "./pages/private/PrivateMaster";
 import Account from "./pages/private/Account";
 import Password from "./pages/private/Password";
-// Import Private Route
+// Private Route
 import PrivateRoute from "./components/private/PrivateRoute";
-// Import API
+// API
 import UsersAPI from "./utils/usersAPI";
 import "./App.css";
 
@@ -85,7 +87,7 @@ class App extends React.Component {
         if (response.status === 200) {
           this.updateUser({
             loggedIn: false,
-            username: null
+            user: null
           });
         }
       })
@@ -96,7 +98,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <React.Fragment>
         <Router>
           <Switch>
             <Route
@@ -136,9 +138,22 @@ class App extends React.Component {
             <Route render={() => <Redirect to="/dashboard" />} />
           </Switch>
         </Router>
-      </div>
+      </React.Fragment>
     );
   }
 }
 
-export default App;
+// const mapStateToProps = state => {
+//   return {
+//     isLoggedIn: state.isLoggedIn,
+//     userInfo: state.userInfo
+//   };
+// };
+
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     getUser: () => dispatch({ type: "GETUSER" })
+//   };
+// };
+
+export default connect()(App);
