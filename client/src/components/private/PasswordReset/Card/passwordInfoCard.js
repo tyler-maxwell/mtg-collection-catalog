@@ -1,5 +1,4 @@
 import React from "react";
-import "./PasswordInfoCard.css";
 import PasswordInfoForm from "../Form";
 
 const PasswordInfoCard = props => (

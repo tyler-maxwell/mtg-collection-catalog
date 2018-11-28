@@ -1,1 +1,1 @@
-export { default } from "./password.js";
+export { default } from "./Password.js";

@@ -1,6 +1,4 @@
 import React from "react";
-import Col from "../../../shared/Grid/Col";
-import "./AccountInfoDisplay.css";
 
 const AccountInfoDisplay = props => (
   <form>

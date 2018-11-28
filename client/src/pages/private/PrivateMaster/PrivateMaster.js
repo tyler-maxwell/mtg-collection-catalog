@@ -1,15 +1,11 @@
 // React Imports
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-// Grid Imports
-import Row from "../../../components/shared/Grid/Row";
+// grid Imports
+import Row from "../../../components/shared/grid/Row";
 // Component Imports
 import Nav from "../../../components/shared/Nav";
 import Users from "../Users";
-//API Imports
-import UsersAPI from "../../../utils/usersAPI";
-// CSS Imports
-import "./PrivateMaster.css";
 
 class PrivateMaster extends Component {
   constructor() {
