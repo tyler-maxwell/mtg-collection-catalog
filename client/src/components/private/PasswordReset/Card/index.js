@@ -1,1 +1,1 @@
-export { default } from "./PasswordInfoCard";
+export { default } from "./PasswordResetCard";
