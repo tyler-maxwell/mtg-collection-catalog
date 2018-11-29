@@ -14,6 +14,7 @@ import SignUp from "./pages/public/SignUp";
 import PrivateMaster from "./pages/private/PrivateMaster";
 import Account from "./pages/private/Account";
 import Password from "./pages/private/Password";
+import Test from "./pages/test/";
 // Private Route
 import PrivateRoute from "./components/private/PrivateRoute";
 // API
@@ -114,6 +115,11 @@ class App extends React.Component {
               render={props => (
                 <SignUp updateUser={this.updateUser} {...props} />
               )}
+            />
+            <Route
+              exact
+              path="/test"
+              render={props => <Test updateUser={this.updateUser} {...props} />}
             />
             <PrivateRoute
               path="/dashboard"
