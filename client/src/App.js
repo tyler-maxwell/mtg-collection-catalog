@@ -1,4 +1,4 @@
-// Import React
+// React
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -6,16 +6,19 @@ import {
   Switch,
   Redirect
 } from "react-router-dom";
-// Import Pages
+// Redux
+import { connect } from "react-redux";
+import * as actions from "./store/actions";
+// Pages
 import Login from "./pages/public/Login";
 import SignUp from "./pages/public/SignUp";
 import PrivateMaster from "./pages/private/PrivateMaster";
 import Account from "./pages/private/Account";
 import Password from "./pages/private/Password";
-import Test from "./pages/test/"
-// Import Private Route
+import Test from "./pages/test/";
+// Private Route
 import PrivateRoute from "./components/private/PrivateRoute";
-// Import API
+// API
 import UsersAPI from "./utils/usersAPI";
 import "./App.css";
 
@@ -34,43 +37,43 @@ class App extends React.Component {
       }
     };
 
-    this.getUser = this.getUser.bind(this);
+    // this.getUser = this.getUser.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
     this.updateUser = this.updateUser.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
   }
 
   componentDidMount() {
-    this.getUser();
+    this.props.getUser();
   }
 
-  getUser() {
-    // Get JWT from local storage.
-    const token = localStorage.getItem("token");
-    console.log("getUser, token:", token);
-    // Pass token to secured route
-    UsersAPI.getCurrentUser(token).then(response => {
-      if (response.data.user) {
-        console.table(response.data.user);
-        this.setState({
-          loggedIn: true,
-          user: {
-            id: response.data.user._id,
-            username: response.data.user.username,
-            firstName: response.data.user.firstName,
-            lastName: response.data.user.lastName,
-            email: response.data.user.email
-          }
-        });
-      } else {
-        console.log("There is no user: ", response.data);
-        this.handleLogout();
-        this.setState({
-          user: null
-        });
-      }
-    });
-  }
+  // getUser() {
+  //   // Get JWT from local storage.
+  //   const token = localStorage.getItem("token");
+  //   console.log("getUser, token:", token);
+  //   // Pass token to secured route
+  //   UsersAPI.getCurrentUser(token).then(response => {
+  //     if (response.data.user) {
+  //       console.table(response.data.user);
+  //       this.setState({
+  //         loggedIn: true,
+  //         user: {
+  //           id: response.data.user._id,
+  //           username: response.data.user.username,
+  //           firstName: response.data.user.firstName,
+  //           lastName: response.data.user.lastName,
+  //           email: response.data.user.email
+  //         }
+  //       });
+  //     } else {
+  //       console.log("There is no user: ", response.data);
+  //       this.handleLogout();
+  //       this.setState({
+  //         user: null
+  //       });
+  //     }
+  //   });
+  // }
 
   updateUser(userObject) {
     this.setState(userObject);
@@ -86,7 +89,7 @@ class App extends React.Component {
         if (response.status === 200) {
           this.updateUser({
             loggedIn: false,
-            username: null
+            user: null
           });
         }
       })
@@ -97,7 +100,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <React.Fragment>
         <Router>
           <Switch>
             <Route
@@ -115,11 +118,10 @@ class App extends React.Component {
               )}
             />
             <Route
-              exact path="/test"
-              render={props => (
-                <Test updateUser={this.updateUser} {...props} />
-              )}
-             />
+              exact
+              path="/test"
+              render={props => <Test updateUser={this.updateUser} {...props} />}
+            />
             <PrivateRoute
               path="/dashboard"
               component={PrivateMaster}
@@ -143,9 +145,25 @@ class App extends React.Component {
             <Route render={() => <Redirect to="/dashboard" />} />
           </Switch>
         </Router>
-      </div>
+      </React.Fragment>
     );
   }
 }
 
-export default App;
+// const mapStateToProps = state => {
+//   return {
+//     isLoggedIn: state.isLoggedIn,
+//     userInfo: state.userInfo
+//   };
+// };
+
+const mapDispatchToProps = dispatch => {
+  return {
+    getUser: () => dispatch(actions.authCheckState())
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(App);
