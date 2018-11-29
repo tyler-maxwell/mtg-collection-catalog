@@ -1,9 +1,11 @@
-// React Imports
+// React
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-// grid Imports
+// Redux
+import { connect } from "react-redux";
+// grid
 import Row from "../../../components/shared/grid/Row";
-// Component Imports
+// Component
 import Nav from "../../../components/shared/Nav";
 import Users from "../Users";
 
@@ -182,35 +184,18 @@ class PrivateMaster extends Component {
   render() {
     return (
       <div>
-        <Nav
-          isPublic={false}
-          loadPage={this.loadPage}
-          handleLogout={this.props.handleLogout}
-          loggedIn={this.props.loggedIn}
-          user={this.props.user}
-        />
-        <Row>
-          {this.state.metadata.currentPage === "users" ? (
-            <Users
-              // State props
-              subpage={this.state.metadata.userSubpage}
-              newUsername={this.state.newData.newUser.username}
-              newPassword={this.state.newData.newUser.password}
-              newFirstName={this.state.newData.newUser.firstName}
-              newLastName={this.state.newData.newUser.lastName}
-              newEmail={this.state.newData.newUser.email}
-              // Functions
-              loadUserSubpage={this.loadUserSubpage}
-              handleInputChange={this.handleInputChange}
-              handleSignUp={this.handleSignUp}
-            />
-          ) : (
-            <h3>This is the dashboard</h3>
-          )}
-        </Row>
+        <Nav isPublic={true} />
+        <h3>Hello, {this.props.userInfo.firstName}! This is the dashboard</h3>
       </div>
     );
   }
 }
 
-export default withRouter(PrivateMaster);
+const mapStateToProps = state => {
+  return {
+    isLoggedIn: state.isLoggedIn,
+    userInfo: state.userInfo
+  };
+};
+
+export default connect(mapStateToProps)(withRouter(PrivateMaster));
