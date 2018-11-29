@@ -23,7 +23,7 @@ export const authFail = error => {
   };
 };
 
-export const auth = (firstName, lastName, email, username, password) => {
+export const authSignup = (firstName, lastName, email, username, password) => {
   return dispatch => {
     dispatch(authStart());
     const user = {
@@ -36,32 +36,52 @@ export const auth = (firstName, lastName, email, username, password) => {
     console.log("Signing up user", user);
     UsersAPI.signupUser(user)
       .then(res => {
-        console.log(res);
-        dispatch(authSuccess(res));
-        // if (!response.data.error) {
-        //   alert(`Successful signup for new user: ${response.data.username}.`);
-        //   this.setState({
-        //     firstName: "",
-        //     lastName: "",
-        //     email: "",
-        //     username: "",
-        //     password: "",
-        //     redirectTo: "/"
-        //   });
-        // } else {
-        //   alert(response.data.error);
-        //   this.setState({
-        //     firstName: "",
-        //     lastName: "",
-        //     email: "",
-        //     username: "",
-        //     password: ""
-        //   });
-        // }
+        console.log(res.data);
+        UsersAPI.loginUser({
+          username: res.data.username,
+          password: password
+        })
+          .then(response => {
+            if (response.status === 200) {
+              console.log("response data table:");
+              console.table(response.data);
+              // If an error message is returned, display the error. Otherwise, continue with user info
+              if (response.data.message) {
+                alert(response.data.message);
+              } else {
+                // Udate App.js state
+                dispatch(authSuccess(response));
+              }
+            }
+          })
+          .catch(error => {
+            console.log("login fail");
+            console.log(error);
+            dispatch(authFail(error));
+          });
       })
       .catch(error => {
+        console.log("signup fail");
         console.log(error);
         dispatch(authFail(error));
       });
+  };
+};
+
+export const authCheckState = () => {
+  return dispatch => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      return null;
+    } else {
+      UsersAPI.getCurrentUser(token).then(response => {
+        if (response.data.user) {
+          console.table(response.data.user);
+          dispatch(authSuccess(response));
+        } else {
+          console.log("There is no user: ", response.data);
+        }
+      });
+    }
   };
 };

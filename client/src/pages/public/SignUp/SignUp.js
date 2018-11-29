@@ -159,7 +159,9 @@ class SignUp extends Component {
 const mapDispatchToProps = dispatch => {
   return {
     onAuth: (firstName, lastName, email, username, password) =>
-      dispatch(actions.auth(firstName, lastName, email, username, password))
+      dispatch(
+        actions.authSignup(firstName, lastName, email, username, password)
+      )
   };
 };
 

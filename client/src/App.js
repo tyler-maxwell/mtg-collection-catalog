@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 // Redux
 import { connect } from "react-redux";
+import * as actions from "./store/actions";
 // Pages
 import Login from "./pages/public/Login";
 import SignUp from "./pages/public/SignUp";
@@ -36,43 +37,43 @@ class App extends React.Component {
       }
     };
 
-    this.getUser = this.getUser.bind(this);
+    // this.getUser = this.getUser.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
     this.updateUser = this.updateUser.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
   }
 
   componentDidMount() {
-    this.getUser();
+    this.props.getUser();
   }
 
-  getUser() {
-    // Get JWT from local storage.
-    const token = localStorage.getItem("token");
-    console.log("getUser, token:", token);
-    // Pass token to secured route
-    UsersAPI.getCurrentUser(token).then(response => {
-      if (response.data.user) {
-        console.table(response.data.user);
-        this.setState({
-          loggedIn: true,
-          user: {
-            id: response.data.user._id,
-            username: response.data.user.username,
-            firstName: response.data.user.firstName,
-            lastName: response.data.user.lastName,
-            email: response.data.user.email
-          }
-        });
-      } else {
-        console.log("There is no user: ", response.data);
-        this.handleLogout();
-        this.setState({
-          user: null
-        });
-      }
-    });
-  }
+  // getUser() {
+  //   // Get JWT from local storage.
+  //   const token = localStorage.getItem("token");
+  //   console.log("getUser, token:", token);
+  //   // Pass token to secured route
+  //   UsersAPI.getCurrentUser(token).then(response => {
+  //     if (response.data.user) {
+  //       console.table(response.data.user);
+  //       this.setState({
+  //         loggedIn: true,
+  //         user: {
+  //           id: response.data.user._id,
+  //           username: response.data.user.username,
+  //           firstName: response.data.user.firstName,
+  //           lastName: response.data.user.lastName,
+  //           email: response.data.user.email
+  //         }
+  //       });
+  //     } else {
+  //       console.log("There is no user: ", response.data);
+  //       this.handleLogout();
+  //       this.setState({
+  //         user: null
+  //       });
+  //     }
+  //   });
+  // }
 
   updateUser(userObject) {
     this.setState(userObject);
@@ -156,10 +157,13 @@ class App extends React.Component {
 //   };
 // };
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     getUser: () => dispatch({ type: "GETUSER" })
-//   };
-// };
+const mapDispatchToProps = dispatch => {
+  return {
+    getUser: () => dispatch(actions.authCheckState())
+  };
+};
 
-export default connect()(App);
+export default connect(
+  null,
+  mapDispatchToProps
+)(App);
