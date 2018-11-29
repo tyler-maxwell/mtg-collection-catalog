@@ -1,5 +1,7 @@
+// Authorization Actions
+
 import UsersAPI from "../../utils/usersAPI";
-import * as actionTypes from "./actionTypes";
+import * as actionTypes from "../actionTypes/auth";
 
 export const authStart = () => {
   return {
@@ -7,10 +9,10 @@ export const authStart = () => {
   };
 };
 
-export const authSuccess = authData => {
+export const authSuccess = res => {
   return {
     type: actionTypes.AUTH_SUCCESS,
-    authData: authData
+    authData: res.data
   };
 };
 
@@ -33,9 +35,9 @@ export const auth = (firstName, lastName, email, username, password) => {
     };
     console.log("Signing up user", user);
     UsersAPI.signupUser(user)
-      .then(response => {
-        console.log(response);
-        dispatch(authSuccess(response));
+      .then(res => {
+        console.log(res);
+        dispatch(authSuccess(res));
         // if (!response.data.error) {
         //   alert(`Successful signup for new user: ${response.data.username}.`);
         //   this.setState({

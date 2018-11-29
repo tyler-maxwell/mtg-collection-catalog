@@ -1,4 +1,7 @@
-import * as actionTypes from "../actions/actionTypes";
+// Authorization Reducers
+
+import { updateObject } from "../utility";
+import * as actionTypes from "../actionTypes/auth";
 
 const initialState = {
   isLoggedIn: false,
@@ -8,11 +11,11 @@ const initialState = {
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.AUTH_START:
-      return {};
+      return updateObject(state, {});
     case actionTypes.AUTH_SUCCESS:
-      return {};
+      return updateObject(state, {});
     case actionTypes.AUTH_FAIL:
-      return {};
+      return updateObject(state, {});
     default:
       return state;
   }
