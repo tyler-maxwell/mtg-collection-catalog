@@ -35,7 +35,7 @@ router.route("/login").post(
   passport.authenticate("local"),
   // Handle success
   (req, res) => {
-    var userInfo = {
+    var user = {
       id: req.user.id,
       username: req.user.username,
       firstName: req.user.firstName,
@@ -44,18 +44,13 @@ router.route("/login").post(
       isActive: req.user.isActive
     };
     // Sign a JSON web token, send along with user data in response.
-    jwt.sign(
-      { userInfo },
-      "disco-panda",
-      { expiresIn: "30m" },
-      (err, token) => {
-        if (err) throw err;
-        res.json({
-          token,
-          userInfo
-        });
-      }
-    );
+    jwt.sign({ user }, "disco-panda", { expiresIn: "30m" }, (err, token) => {
+      if (err) throw err;
+      res.json({
+        token,
+        user
+      });
+    });
   }
 );
 
