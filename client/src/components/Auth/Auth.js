@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 
-const PrivateRoute = ({
+const Auth = ({
   component: Component,
   path: url,
   handleLogout,
@@ -31,4 +31,4 @@ const PrivateRoute = ({
   );
 };
 
-export default PrivateRoute;
+export default Auth;

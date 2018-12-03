@@ -16,8 +16,8 @@ import PrivateMaster from "./pages/private/PrivateMaster";
 import Account from "./pages/private/Account";
 import Password from "./pages/private/Password";
 import Test from "./pages/test/";
-// Private Route
-import PrivateRoute from "./components/private/PrivateRoute";
+// Auth Route
+import AuthRoute from "./components/Auth";
 // API
 import UsersAPI from "./utils/usersAPI";
 import "./App.css";
@@ -122,7 +122,7 @@ class App extends React.Component {
               path="/test"
               render={props => <Test updateUser={this.updateUser} {...props} />}
             />
-            <PrivateRoute
+            <AuthRoute
               path="/dashboard"
               component={PrivateMaster}
               loggedIn={this.state.loggedIn}
@@ -130,13 +130,13 @@ class App extends React.Component {
               getUser={this.getUser}
               user={this.state.user}
             />
-            <PrivateRoute
+            <AuthRoute
               path="/account"
               component={Account}
               user={this.state.user}
               handleLogout={this.handleLogout}
             />
-            <PrivateRoute
+            <AuthRoute
               path="/password"
               component={Password}
               user={this.state.user}
