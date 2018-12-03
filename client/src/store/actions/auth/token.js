@@ -11,7 +11,7 @@ export const authTokenStart = () => {
 
 export const authTokenSuccess = user => {
   return {
-    type: actionTypes.AUTH_TOKEN_CHECK,
+    type: actionTypes.AUTH_TOKEN_SUCCESS,
     user: user
   };
 };

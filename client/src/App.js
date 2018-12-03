@@ -152,7 +152,7 @@ class App extends React.Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    getUser: () => dispatch(actions.authCheckState())
+    getUser: () => dispatch(actions.authToken())
   };
 };
 
