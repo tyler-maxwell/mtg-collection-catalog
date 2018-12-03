@@ -1,31 +1,31 @@
-// Authorization Actions
+// Signup Authorization Actions
 
-import UsersAPI from "../../utils/usersAPI";
-import * as actionTypes from "../actionTypes/auth";
+import UsersAPI from "../../../utils/usersAPI";
+import * as actionTypes from "../../actionTypes/auth";
 
-export const authStart = () => {
+export const authSignupStart = () => {
   return {
-    type: actionTypes.AUTH_START
+    type: actionTypes.AUTH_SIGNUP_START
   };
 };
 
-export const authSuccess = res => {
+export const authSignupSuccess = res => {
   return {
-    type: actionTypes.AUTH_SUCCESS,
+    type: actionTypes.AUTH_SIGNUP_SUCCESS,
     authData: res.data
   };
 };
 
-export const authFail = error => {
+export const authSignupFail = error => {
   return {
-    type: actionTypes.AUTH_FAIL,
+    type: actionTypes.AUTH_SIGNUP_FAIL,
     error: error
   };
 };
 
 export const authSignup = (firstName, lastName, email, username, password) => {
   return dispatch => {
-    dispatch(authStart());
+    dispatch(authSignupStart());
     const user = {
       firstName: firstName,
       lastName: lastName,
@@ -50,38 +50,20 @@ export const authSignup = (firstName, lastName, email, username, password) => {
                 alert(response.data.message);
               } else {
                 // Udate App.js state
-                dispatch(authSuccess(response));
+                dispatch(authSignupSuccess(response));
               }
             }
           })
           .catch(error => {
             console.log("login fail");
             console.log(error);
-            dispatch(authFail(error));
+            dispatch(authSignupFail(error));
           });
       })
       .catch(error => {
         console.log("signup fail");
         console.log(error);
-        dispatch(authFail(error));
+        dispatch(authSignupFail(error));
       });
-  };
-};
-
-export const authCheckState = () => {
-  return dispatch => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-      return null;
-    } else {
-      UsersAPI.getCurrentUser(token).then(response => {
-        if (response.data.user) {
-          console.table(response.data.user);
-          dispatch(authSuccess(response));
-        } else {
-          console.log("There is no user: ", response.data);
-        }
-      });
-    }
   };
 };

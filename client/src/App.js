@@ -15,32 +15,30 @@ import SignUp from "./pages/public/SignUp";
 import PrivateMaster from "./pages/private/PrivateMaster";
 import Account from "./pages/private/Account";
 import Password from "./pages/private/Password";
-import Test from "./pages/test/";
 // Auth Route
 import AuthRoute from "./components/Auth";
-// API
-import UsersAPI from "./utils/usersAPI";
+// CSS
 import "./App.css";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      loggedIn: false,
-      // Current user data
-      user: {
-        id: "",
-        username: "",
-        firstName: "",
-        lastName: "",
-        email: ""
-      }
+      // loggedIn: false,
+      // // Current user data
+      // user: {
+      //   id: "",
+      //   username: "",
+      //   firstName: "",
+      //   lastName: "",
+      //   email: ""
+      // }
     };
 
     // this.getUser = this.getUser.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
-    this.updateUser = this.updateUser.bind(this);
-    this.handleLogout = this.handleLogout.bind(this);
+    // this.updateUser = this.updateUser.bind(this);
+    // this.handleLogout = this.handleLogout.bind(this);
   }
 
   componentDidMount() {
@@ -75,28 +73,28 @@ class App extends React.Component {
   //   });
   // }
 
-  updateUser(userObject) {
-    this.setState(userObject);
-  }
+  // updateUser(userObject) {
+  //   this.setState(userObject);
+  // }
 
-  handleLogout(event) {
-    // event.preventDefault();
-    // Remove JWTs from local storage.
-    localStorage.removeItem("token");
-    localStorage.removeItem("refreshToken");
-    UsersAPI.logoutUser({ user: this.state.username })
-      .then(response => {
-        if (response.status === 200) {
-          this.updateUser({
-            loggedIn: false,
-            user: null
-          });
-        }
-      })
-      .catch(error => {
-        console.log("Logout error", error);
-      });
-  }
+  // handleLogout(event) {
+  //   // event.preventDefault();
+  //   // Remove JWTs from local storage.
+  //   localStorage.removeItem("token");
+  //   localStorage.removeItem("refreshToken");
+  // UsersAPI.logoutUser({ user: this.state.username })
+  //   .then(response => {
+  //     if (response.status === 200) {
+  //       this.updateUser({
+  //         loggedIn: false,
+  //         user: null
+  //       });
+  //     }
+  //   })
+  //   .catch(error => {
+  //     console.log("Logout error", error);
+  //   });
+  // }
 
   render() {
     return (
@@ -116,11 +114,6 @@ class App extends React.Component {
               render={props => (
                 <SignUp updateUser={this.updateUser} {...props} />
               )}
-            />
-            <Route
-              exact
-              path="/test"
-              render={props => <Test updateUser={this.updateUser} {...props} />}
             />
             <AuthRoute
               path="/dashboard"
@@ -159,7 +152,7 @@ class App extends React.Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    getUser: () => dispatch(actions.authCheckState())
+    getUser: () => dispatch(actions.authToken())
   };
 };
 
