@@ -1,14 +1,17 @@
+// Packages
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const session = require("express-session");
-const dbConnection = require("./database/mongo");
 const MongoStore = require("connect-mongo")(session);
+const flash = require("connect-flash");
+// Folders
+const dbConnection = require("./database/mongo");
 const passport = require("./passport");
 const routes = require("./routes");
+
 const app = express();
-const flash = require("connect-flash");
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here
