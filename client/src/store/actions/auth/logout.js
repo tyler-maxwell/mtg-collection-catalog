@@ -31,11 +31,7 @@ export const authLogout = username => {
     localStorage.removeItem("refreshToken");
     UsersAPI.logoutUser({ user: username })
       .then(response => {
-        if (response.status === 200) {
-          dispatch(authLogoutSuccess(response.status));
-        } else {
-          dispatch(authLogoutSuccess(response.status));
-        }
+        dispatch(authLogoutSuccess(response.status));
       })
       .catch(error => {
         dispatch(authLogoutFail(error));

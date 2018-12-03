@@ -10,14 +10,35 @@ const initialState = {
 
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
+    // Signup
     case actionTypes.AUTH_SIGNUP_START:
       return updateObject(state, {});
     case actionTypes.AUTH_SIGNUP_SUCCESS:
       return loginUser(state, action.authData);
     case actionTypes.AUTH_SIGNUP_FAIL:
       return updateObject(state, {});
-    // case actionTypes.AUTH_LOGOUT:
-    //   return logoutUser(state);
+    // Login
+    case actionTypes.AUTH_LOGIN_START:
+      return updateObject(state, {});
+    case actionTypes.AUTH_LOGIN_SUCCESS:
+      return loginUser(state, action.authData);
+    case actionTypes.AUTH_LOGIN_FAIL:
+      return updateObject(state, {});
+    // Logout
+    case actionTypes.AUTH_LOGOUT_START:
+      return updateObject(state, {});
+    case actionTypes.AUTH_LOGOUT_SUCCESS:
+      return logoutUser(state, action.status);
+    case actionTypes.AUTH_LOGOUT_FAIL:
+      return updateObject(state, {});
+    // Token
+    case actionTypes.AUTH_TOKEN_START:
+      return updateObject(state, {});
+    case actionTypes.AUTH_TOKEN_SUCCESS:
+      return loginUserFromToken(state, action.user);
+    case actionTypes.AUTH_TOKEN_FAIL:
+      return updateObject(state, {});
+    // Default
     default:
       return state;
   }
@@ -39,22 +60,28 @@ const loginUser = (state, authData) => {
   return updateObject(state, updatedValues);
 };
 
-const logoutUser = state => {
-  localStorage.removeItem("token");
-  localStorage.removeItem("refreshToken");
-  // UsersAPI.logoutUser({ user: this.state.username })
-  //     .then(response => {
-  //       if (response.status === 200) {
-  //         this.updateUser({
-  //           loggedIn: false,
-  //           user: null
-  //         });
-  //       }
-  //     })
-  //     .catch(error => {
-  //       console.log("Logout error", error);
-  //     });
-  return updateObject(state, { isLoggedIn: false, user: null });
+const loginUserFromToken = (state, user) => {
+  console.log("userFromToken", user);
+  const updatedValues = {
+    isLoggedIn: true,
+    user: {
+      id: user._id,
+      username: user.username,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email
+    }
+  };
+  return updateObject(state, updatedValues);
+};
+
+const logoutUser = (state, status) => {
+  if (status === 200) {
+    return updateObject(state, { isLoggedIn: false, user: null });
+  } else {
+    // handle error
+    return updateObject(state, {});
+  }
 };
 
 export default authReducer;
