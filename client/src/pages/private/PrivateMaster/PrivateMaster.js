@@ -185,7 +185,7 @@ class PrivateMaster extends Component {
     return (
       <div>
         <Nav isPublic={true} />
-        <h3>Hello, {this.props.userInfo.firstName}! This is the dashboard</h3>
+        <h3>Hello, {this.props.user.firstName}! This is the dashboard</h3>
       </div>
     );
   }
