@@ -1,15 +1,13 @@
 // React
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 // Redux
 import { connect } from "react-redux";
-import * as actions from "../../../store/actions";
+import * as actions from "../../store/actions";
 // Components
-import Row from "../../../components/shared/grid/Row";
-import Col from "../../../components/shared/grid/Col";
-import { Redirect } from "react-router-dom";
-import Nav from "../../../components/shared/Nav";
-// API
-import UsersAPI from "../../../utils/usersAPI";
+import Row from "../../components/grid/Row";
+import Col from "../../components/grid/Col";
+import Nav from "../../components/Nav";
 
 class SignUp extends Component {
   constructor() {
@@ -19,8 +17,7 @@ class SignUp extends Component {
       lastName: "",
       email: "",
       username: "",
-      password: "",
-      redirectTo: null
+      password: ""
     };
     this.handleSignUp = this.handleSignUp.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -33,57 +30,22 @@ class SignUp extends Component {
     this.setState({
       [event.target.name]: event.target.value
     });
-    console.log("State:", this.state);
   }
 
   handleSignUp(event) {
     event.preventDefault();
-    this.props.onAuth(
+    this.props.authSignup(
       this.state.firstName,
       this.state.lastName,
       this.state.email,
       this.state.username,
       this.state.password
     );
-    // const user = {
-    //   firstName: this.state.firstName,
-    //   lastName: this.state.lastName,
-    //   email: this.state.email,
-    //   username: this.state.username,
-    //   password: this.state.password
-    // };
-    // console.log("Signing up user", user);
-    // UsersAPI.signupUser(user)
-    //   .then(response => {
-    //     if (!response.data.error) {
-    //       alert(`Successful signup for new user: ${response.data.username}.`);
-    //       this.setState({
-    //         firstName: "",
-    //         lastName: "",
-    //         email: "",
-    //         username: "",
-    //         password: "",
-    //         redirectTo: "/"
-    //       });
-    //     } else {
-    //       alert(response.data.error);
-    //       this.setState({
-    //         firstName: "",
-    //         lastName: "",
-    //         email: "",
-    //         username: "",
-    //         password: ""
-    //       });
-    //     }
-    //   })
-    //   .catch(error => {
-    //     console.log(error);
-    //   });
   }
 
   render() {
-    if (this.state.redirectTo) {
-      return <Redirect to={{ pathname: this.state.redirectTo }} />;
+    if (this.props.isLoggedIn) {
+      return <Redirect to="/authorized" />;
     } else {
       return (
         <div className="Container">
@@ -156,9 +118,15 @@ class SignUp extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    isLoggedIn: state.auth.isLoggedIn
+  };
+};
+
 const mapDispatchToProps = dispatch => {
   return {
-    onAuth: (firstName, lastName, email, username, password) =>
+    authSignup: (firstName, lastName, email, username, password) =>
       dispatch(
         actions.authSignup(firstName, lastName, email, username, password)
       )
@@ -166,6 +134,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(SignUp);
