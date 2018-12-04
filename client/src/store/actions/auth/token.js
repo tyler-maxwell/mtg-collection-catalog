@@ -33,6 +33,7 @@ export const authToken = () => {
         if (response.data.user) {
           dispatch(authTokenSuccess(response.data.user));
         } else {
+          localStorage.removeItem("token");
           dispatch(authTokenFail());
         }
       });

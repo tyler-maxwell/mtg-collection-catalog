@@ -28,7 +28,6 @@ export const authLogout = username => {
     dispatch(authLogoutStart());
     // Remove JWTs from local storage.
     localStorage.removeItem("token");
-    localStorage.removeItem("refreshToken");
     UsersAPI.logoutUser({ user: username })
       .then(response => {
         dispatch(authLogoutSuccess(response.status));
