@@ -1,32 +1,14 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 
-const AuthRoute = ({
-  component: Component,
-  path: url,
-  handleLogout,
-  user,
-  modUser,
-  getUser
-}) => {
+const AuthRoute = ({ component: Component, path: url }) => {
   // Get JWT from local storage.
   const token = localStorage.getItem("token");
 
   return (
     <Route
       path={url}
-      render={props =>
-        token ? (
-          <Component
-            handleLogout={handleLogout}
-            user={user}
-            getUser={getUser}
-            {...props}
-          />
-        ) : (
-          <Redirect to="/" />
-        )
-      }
+      render={props => (token ? <Component {...props} /> : <Redirect to="/" />)}
     />
   );
 };
