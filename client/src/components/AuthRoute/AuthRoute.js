@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 
-const Auth = ({
+const AuthRoute = ({
   component: Component,
   path: url,
   handleLogout,
@@ -31,4 +31,4 @@ const Auth = ({
   );
 };
 
-export default Auth;
+export default AuthRoute;

@@ -10,13 +10,14 @@ import {
 import { connect } from "react-redux";
 import * as actions from "./store/actions";
 // Pages
-import Login from "./pages/public/Login";
-import SignUp from "./pages/public/SignUp";
-import PrivateMaster from "./pages/private/PrivateMaster";
-import Account from "./pages/private/Account";
-import Password from "./pages/private/Password";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Authorized from "./pages/Authorized";
+// Tyler has commented out the following two imports for the sake of getting signup, login, and logout working with Redux. Sam can fix these later.
+// import Account from "./pages/private/Account";
+// import Password from "./pages/private/Password";
 // Auth Route
-import AuthRoute from "./components/Auth";
+import AuthRoute from "./components/AuthRoute";
 // CSS
 import "./App.css";
 
@@ -42,10 +43,10 @@ class App extends React.Component {
               path="/signup"
               render={props => <SignUp {...props} />}
             />
-            <AuthRoute path="/dashboard" component={PrivateMaster} />
-            <AuthRoute path="/account" component={Account} />
-            <AuthRoute path="/password" component={Password} />
-            <Route render={() => <Redirect to="/dashboard" />} />
+            <AuthRoute path="/authorized" component={Authorized} />
+            {/* <AuthRoute path="/account" component={Account} />
+            <AuthRoute path="/password" component={Password} /> */}
+            <Route render={() => <Redirect to="/authorized" />} />
           </Switch>
         </Router>
       </React.Fragment>
