@@ -17,8 +17,10 @@ class SignUp extends Component {
       lastName: "",
       email: "",
       username: "",
-      password: ""
+      password: "",
+      signupError: ""
     };
+
     this.handleSignUp = this.handleSignUp.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.componentWillMount = this.componentWillMount.bind(this);
@@ -51,10 +53,15 @@ class SignUp extends Component {
         <div className="Container">
           <Nav isPublic={true} />
           <Row>
-            <Col size="4" />
-            <Col size="4">
+            <Col size={4} />
+            <Col size={4}>
               <div className="signIn">
                 <h4>Sign Up</h4>
+                {this.props.signupError ? (
+                  <span>{this.props.signupError}</span>
+                ) : (
+                  ""
+                )}
                 <form id="loginForm">
                   <label htmlFor="firstName">First Name:</label>
                   <input
@@ -120,7 +127,8 @@ class SignUp extends Component {
 
 const mapStateToProps = state => {
   return {
-    isLoggedIn: state.auth.isLoggedIn
+    isLoggedIn: state.auth.isLoggedIn,
+    signupError: state.auth.signupError
   };
 };
 

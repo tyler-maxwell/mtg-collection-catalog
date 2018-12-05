@@ -37,6 +37,9 @@ export const authSignup = (firstName, lastName, email, username, password) => {
     UsersAPI.signupUser(user)
       .then(res => {
         console.log(res.data);
+        if (res.data.error) {
+          dispatch(authSignupFail(res.data.error));
+        }
         UsersAPI.loginUser({
           username: res.data.username,
           password: password
@@ -57,13 +60,13 @@ export const authSignup = (firstName, lastName, email, username, password) => {
           .catch(error => {
             console.log("login fail");
             console.log(error);
-            dispatch(authSignupFail(error));
+            // dispatch(authSignupFail(error));
           });
       })
       .catch(error => {
         console.log("signup fail");
         console.log(error);
-        dispatch(authSignupFail(error));
+        // dispatch(authSignupFail(error));
       });
   };
 };

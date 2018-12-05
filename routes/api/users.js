@@ -44,6 +44,7 @@ router.route("/login").post(
       isActive: req.user.isActive
     };
     // Sign a JSON web token, send along with user data in response.
+    // TODO: store secret in env
     jwt.sign({ user }, "disco-panda", { expiresIn: "30m" }, (err, token) => {
       if (err) throw err;
       res.json({
