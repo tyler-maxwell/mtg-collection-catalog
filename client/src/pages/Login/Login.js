@@ -16,7 +16,8 @@ class Login extends Component {
     super();
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      loginMessage: ""
     };
     this.handleLogin = this.handleLogin.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -47,6 +48,7 @@ class Login extends Component {
             <Col size="4" />
             <Col size="4">
               <div className="signIn">
+                <span id="loginMessage">{this.state.loginMessage}</span>
                 <h4>Login</h4>
                 <form id="loginForm">
                   <Row>
