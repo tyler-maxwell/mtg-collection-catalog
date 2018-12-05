@@ -37,6 +37,7 @@ export const authSignup = (firstName, lastName, email, username, password) => {
     UsersAPI.signupUser(user)
       .then(res => {
         console.log(res.data);
+        // If an error message is returned, display the error. Otherwise, continue with user info
         if (res.data.error) {
           dispatch(authSignupFail(res.data.error));
         }
@@ -48,7 +49,7 @@ export const authSignup = (firstName, lastName, email, username, password) => {
             if (response.status === 200) {
               console.log("response data table:");
               console.table(response.data);
-              // If an error message is returned, display the error. Otherwise, continue with user info
+
               if (response.data.message) {
                 alert(response.data.message);
               } else {

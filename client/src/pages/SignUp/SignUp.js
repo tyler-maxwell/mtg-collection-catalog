@@ -17,8 +17,7 @@ class SignUp extends Component {
       lastName: "",
       email: "",
       username: "",
-      password: "",
-      signupError: ""
+      password: ""
     };
 
     this.handleSignUp = this.handleSignUp.bind(this);
