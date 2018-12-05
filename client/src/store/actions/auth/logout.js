@@ -31,6 +31,7 @@ export const authLogout = username => {
     UsersAPI.logoutUser({ user: username })
       .then(response => {
         dispatch(authLogoutSuccess(response.status));
+        window.location.reload();
       })
       .catch(error => {
         dispatch(authLogoutFail(error));
