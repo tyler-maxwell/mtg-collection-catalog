@@ -46,7 +46,7 @@ export const authLogin = (username, password) => {
       .catch(error => {
         console.log("login fail");
         console.log(error);
-        dispatch(authLoginFail(error));
+        dispatch(authLoginFail("Login failed"));
       });
   };
 };

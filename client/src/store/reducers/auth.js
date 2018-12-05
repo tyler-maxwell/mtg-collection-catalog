@@ -16,14 +16,14 @@ const authReducer = (state = initialState, action) => {
     case actionTypes.AUTH_SIGNUP_SUCCESS:
       return loginUser(state, action.authData);
     case actionTypes.AUTH_SIGNUP_FAIL:
-      return updateObject(state, {});
+      return updateObject(state, { signupError: action.error });
     // Login
     case actionTypes.AUTH_LOGIN_START:
       return updateObject(state, {});
     case actionTypes.AUTH_LOGIN_SUCCESS:
       return loginUser(state, action.authData);
     case actionTypes.AUTH_LOGIN_FAIL:
-      return updateObject(state, {});
+      return updateObject(state, { loginError: action.error });
     // Logout
     case actionTypes.AUTH_LOGOUT_START:
       return updateObject(state, {});

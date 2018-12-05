@@ -34,6 +34,10 @@ class Login extends Component {
   handleLogin(event) {
     event.preventDefault();
     this.props.authLogin(this.state.username, this.state.password);
+    console.log("loginError:", this.props);
+    setTimeout(function() {
+      console.log("loginError:", this.props);
+    }, 5000);
   }
 
   render() {
@@ -44,10 +48,15 @@ class Login extends Component {
         <Container>
           <Nav isPublic={true} />
           <Row>
-            <Col size="4" />
-            <Col size="4">
+            <Col size={4} />
+            <Col size={4}>
               <div className="signIn">
                 <h4>Login</h4>
+                {this.props.loginError ? (
+                  <span>{this.props.loginError}</span>
+                ) : (
+                  ""
+                )}
                 <form id="loginForm">
                   <Row>
                     <Col size={6} mSize={12}>
@@ -115,7 +124,8 @@ class Login extends Component {
 
 const mapStateToProps = state => {
   return {
-    isLoggedIn: state.auth.isLoggedIn
+    isLoggedIn: state.auth.isLoggedIn,
+    loginError: state.auth.loginError
   };
 };
 
