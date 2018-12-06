@@ -52,6 +52,11 @@ class Login extends Component {
             <Col size={4}>
               <div className="signIn">
                 <h4 className="header">Login</h4>
+                {this.props.loginError ? (
+                  <span>{this.props.loginError}</span>
+                ) : (
+                  ""
+                )}
                 <form id="loginForm">
                 <Row>
                   <Col size={6} mSize={12}>
@@ -87,7 +92,9 @@ class Login extends Component {
                     onClick={this.handleLogin}
                     type="submit"
                     variant="contained" 
-                    disabled={this.state.username && this.state.password ? false : true} 
+                    disabled={
+                      this.state.username && this.state.password ? false : true
+                    } 
                     size="large" 
                     color="primary"
                   >
@@ -95,7 +102,7 @@ class Login extends Component {
                   </Button>
                 </form>
                 <p>
-                  Don't have an account?{" "}
+                  Don't have an account?
                   <div />
                   <Button
                     className="btn"
