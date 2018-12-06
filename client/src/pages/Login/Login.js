@@ -51,67 +51,62 @@ class Login extends Component {
             <Col size={4} />
             <Col size={4}>
               <div className="signIn">
-                <h4>Login</h4>
-                {this.props.loginError ? (
-                  <span>{this.props.loginError}</span>
-                ) : (
-                  ""
-                )}
+                <h4 className="header">Login</h4>
                 <form id="loginForm">
-                  <Row>
-                    <Col size={6} mSize={12}>
-                      <TextField
-                        required
-                        id="username"
-                        label="Username"
-                        name="username"
-                        className="textField"
-                        onChange={this.handleChange}
-                        margin="normal"
-                        variant="filled"
-                      />
-                    </Col>
-                    <Col size={6} mSize={12}>
-                      <TextField
-                        required
-                        id="password"
-                        label="Password"
-                        name="password"
-                        className="textField"
-                        type="password"
-                        autoComplete="current-password"
-                        onChange={this.handleChange}
-                        margin="normal"
-                        variant="filled"
-                      />
-                    </Col>
-                  </Row>
+                <Row>
+                  <Col size={6} mSize={12}>
+                  <TextField
+                    required
+                    id="username"
+                    label="Username"
+                    name="username"
+                    className="textField"
+                    onChange={this.handleChange}
+                    margin="normal"
+                    variant="filled"
+                  />
+                  </Col>
+                  <Col size={6} mSize={12}>
+                  <TextField
+                    required
+                    id="password"
+                    label="Password"
+                    name="password"
+                    className="textField"
+                    type="password"
+                    autoComplete="current-password"
+                    onChange={this.handleChange}
+                    margin="normal"
+                    variant="filled"
+                  />
+                  </Col>
+                </Row>
                   <Button
                     className="btn"
                     id="btn1"
                     onClick={this.handleLogin}
                     type="submit"
-                    variant="contained"
-                    disabled={
-                      this.state.username && this.state.password ? false : true
-                    }
-                    size="large"
+                    variant="contained" 
+                    disabled={this.state.username && this.state.password ? false : true} 
+                    size="large" 
+                    color="primary"
                   >
                     Login
                   </Button>
                 </form>
                 <p>
-                  Don't have an account? <div />
+                  Don't have an account?{" "}
+                  <div />
                   <Button
                     className="btn"
                     id="btn1"
                     type="submit"
-                    variant="contained"
+                    variant="contained" 
                     size="large"
                     href="/signup"
-                  >
-                    Click Here to Sign Up!
-                  </Button>
+                    color="primary" 
+                  >Click Here to Sign Up!</Button>
+                 
                 </p>
               </div>
             </Col>
