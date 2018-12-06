@@ -6,6 +6,7 @@ import Nav from "../../../components/shared/Nav";
 import UsersAPI from "../../../utils/usersAPI";
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import "./Login.css"
 
 class Login extends Component {
   constructor() {
@@ -88,10 +89,10 @@ class Login extends Component {
         <Container>
           <Nav isPublic={true} />
           <Row>
-            <Col size="4" />
-            <Col size="4">
+            <Col size={4} />
+            <Col size={4}>
               <div className="signIn">
-                <h4>Login</h4>
+                <h4 className="header">Login</h4>
                 <form id="loginForm">
                 <Row>
                   <Col size={6} mSize={12}>
@@ -129,6 +130,7 @@ class Login extends Component {
                     variant="contained" 
                     disabled={this.state.username && this.state.password ? false : true} 
                     size="large" 
+                    color="primary"
                   >
                     Login
                   </Button>
@@ -142,7 +144,8 @@ class Login extends Component {
                     type="submit"
                     variant="contained" 
                     size="large"
-                    href="/signup" 
+                    href="/signup"
+                    color="primary" 
                   >Click Here to Sign Up!</Button>
                  
                 </p>

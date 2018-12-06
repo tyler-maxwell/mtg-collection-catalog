@@ -4,10 +4,11 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../../../store/actions";
 // Components
-import Row from "../../../components/shared/grid/Row";
-import Col from "../../../components/shared/grid/Col";
+import {Row, Col} from "../../../components/shared/grid";
 import { Redirect } from "react-router-dom";
 import Nav from "../../../components/shared/Nav";
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 // API
 import UsersAPI from "../../../utils/usersAPI";
 
@@ -89,63 +90,84 @@ class SignUp extends Component {
         <div className="Container">
           <Nav isPublic={true} />
           <Row>
-            <Col size="4" />
-            <Col size="4">
+            <Col size={4} />
+            <Col size={4}>
               <div className="signIn">
                 <h4>Sign Up</h4>
                 <form id="loginForm">
-                  <label htmlFor="firstName">First Name:</label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    placeholder="First Name (required)"
-                    value={this.state.firstName}
-                    onChange={this.handleChange}
-                  />
-                  <label htmlFor="lastName">Last Name:</label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    placeholder="Last Name (required)"
-                    value={this.state.lastName}
-                    onChange={this.handleChange}
-                  />
-                  <label htmlFor="email">Email:</label>
-                  <input
-                    type="text"
+                <Row>
+                  <Col size={6}>
+                    <TextField
+                      required
+                      id="firstName"
+                      label="First Name"
+                      name="firstName"
+                      className="textField"
+                      onChange={this.handleChange}
+                      margin="normal"
+                      variant="filled"
+                    />
+                  </Col>
+                  <Col size={6}>
+                    <TextField
+                      required
+                      id="lastName"
+                      label="Last Name"
+                      name="lastName"
+                      className="textField"
+                      onChange={this.handleChange}
+                      margin="normal"
+                      variant="filled"
+                    />
+                  </Col>
+                </Row>
+                  
+                <Row>
+                    <Col size={6}>
+                      <TextField
+                        required
+                        id="username"
+                        label="Username"
+                        name="username"
+                        className="textField"
+                        onChange={this.handleChange}
+                        margin="normal"
+                        variant="filled"
+                      />
+                    </Col>
+                    <Col size={6}>
+                      <TextField
+                        required
+                        id="password"
+                        label="Password"
+                        name="password"
+                        className="textField"
+                        onChange={this.handleChange}
+                        margin="normal"
+                        variant="filled"
+                      />
+                    </Col>
+                </Row>
+                <Row>
+                  <Col size={12}></Col>
+                  <TextField
                     id="email"
+                    label="Email(Optional)"
                     name="email"
-                    placeholder="Email (optional)"
-                    value={this.state.email}
+                    className="textField"
                     onChange={this.handleChange}
+                    margin="normal"
+                    variant="filled"
                   />
-                  <label htmlFor="username">Username:</label>
-                  <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    placeholder="Username (required)"
-                    value={this.state.username}
-                    onChange={this.handleChange}
-                  />
-                  <label htmlFor="password">Password:</label>
-                  <input
-                    placeholder="Password (required)"
-                    type="password"
-                    name="password"
-                    value={this.state.password}
-                    onChange={this.handleChange}
-                  />
-                  <button
+                </Row>
+                  <Button
                     id="btn2"
-                    disabled={!(this.state.username && this.state.password)}
+                    disabled={!(this.state.username && this.state.password && this.state.firstName && this.state.lastName)}
                     onClick={this.handleSignUp}
                     type="submit"
                   >
                     Sign up
-                  </button>
+                  </Button>
                 </form>
               </div>
             </Col>
