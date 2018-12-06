@@ -24,19 +24,70 @@ module.exports = {
   },
   create: function(req, res) {
     // ADD VALIDATION
-    db.User.findOne({ username: req.body.username }, (err, user) => {
-      if (err) {
-        console.log("User.js post error: ", err);
-      } else if (user) {
-        res.json({
-          error: `Sorry, already a user with the username: ${req.body.username}`
-        });
-      } else {
-        db.User.create(req.body)
-          .then(dbModel => res.json(dbModel))
-          .catch(err => res.status(422).json(err));
-      }
-    });
+
+    // Two cases
+    /* Case 1: Both username and email are provided in the POST request
+    --Find a db entry that has either the username OR the email.
+    --Check which match was found.
+    --If username matches, send message that the username is already taken.
+    --If email matches, send message that the email is already taken.
+    --If no matches found, create the new user. */
+    if (req.body.username && req.body.email) {
+      db.User.findOne(
+        { $or: [{ username: req.body.username }, { email: req.body.email }] },
+        (err, user) => {
+          if (err) {
+            console.log("User.js post error: ", err);
+          } else if (user) {
+            if (
+              user.username === req.body.username &&
+              user.email === req.body.email
+            ) {
+              res.json({
+                error: `Sorry, already a user with the username: ${
+                  req.body.username
+                } and email: ${req.body.email}`
+              });
+            } else if (user.username === req.body.username) {
+              res.json({
+                error: `Sorry, already a user with the username: ${
+                  req.body.username
+                }`
+              });
+            } else if (user.email === req.body.email) {
+              res.json({
+                error: `Sorry, already a user with the email: ${req.body.email}`
+              });
+            }
+          } else {
+            db.User.create(req.body)
+              .then(dbModel => res.json(dbModel))
+              .catch(err => res.status(422).json(err));
+          }
+        }
+      );
+    }
+
+    /* Case 2: Only the username is provided in the PUT request.
+    --Find db entry that has the same username.
+    --If a match is found, send message that the username is taken, otherwise create the new user. */
+    if (req.body.username && !req.body.email) {
+      db.User.findOne({ username: req.body.username }, (err, user) => {
+        if (err) {
+          console.log("User.js post error: ", err);
+        } else if (user) {
+          res.json({
+            error: `Sorry, already a user with the username: ${
+              req.body.username
+            }`
+          });
+        } else {
+          db.User.create(req.body)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+        }
+      });
+    }
   },
   update: function(req, res) {
     console.log(
