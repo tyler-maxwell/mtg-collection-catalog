@@ -69,13 +69,6 @@ class Authorized extends Component {
           ) : (
             "404"
           )}
-          <button
-            id="logoutBtn"
-            onClick={() => this.props.authLogout(this.props.user.username)}
-            type="submit"
-          >
-            Logout
-          </button>
         </div>
       );
     }
