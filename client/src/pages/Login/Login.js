@@ -34,10 +34,6 @@ class Login extends Component {
   handleLogin(event) {
     event.preventDefault();
     this.props.authLogin(this.state.username, this.state.password);
-    console.log("loginError:", this.props);
-    setTimeout(function() {
-      console.log("loginError:", this.props);
-    }, 5000);
   }
 
   render() {
