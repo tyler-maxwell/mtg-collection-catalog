@@ -97,7 +97,7 @@ class Login extends Component {
                   </Button>
                 </form>
                 <p>
-                  Don't have an account? <div />
+                  Don't have an account?
                   <Button
                     className="btn"
                     id="btn1"

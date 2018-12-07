@@ -10,8 +10,30 @@ import Nav from "../../components/Nav";
 class Authorized extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      currentPage: "default"
+    };
   }
+
+  loadPage = page => {
+    switch (page) {
+      case "default":
+        this.setState({
+          currentPage: "default"
+        });
+        break;
+      case "account":
+        this.setState({
+          currentPage: "account"
+        });
+        break;
+      case "password":
+        this.setState({
+          currentPage: "password"
+        });
+        break;
+    }
+  };
 
   render() {
     if (!this.props.isLoggedIn) {
@@ -19,19 +41,61 @@ class Authorized extends Component {
     } else {
       return (
         <div>
-          <Nav />
-          <h3>Hello, {this.props.user.firstName}!</h3>
-          <h3>This is the primary authorized page.</h3>
-          <p>
-            Using components embedded in this page you will be able to edit your
-            user account information and manage your personal card collection.
-          </p>
-          <p>
-            The only other part of this application that will require a login
-            will be a subsection of the card search page where you can add cards
-            to your collection directly from the card search. This feature is
-            not planned for MVP release however.
-          </p>
+          <Nav loadPage={this.loadPage} />
+          <button
+            id="default"
+            onClick={event => {
+              event.preventDefault();
+              this.loadPage("default");
+            }}
+            type="submit"
+          >
+            Default
+          </button>
+          <button
+            id="account"
+            onClick={event => {
+              event.preventDefault();
+              console.log(this.loadPage);
+              this.loadPage("account");
+            }}
+            type="submit"
+          >
+            Account Info
+          </button>
+          <button
+            id="password"
+            onClick={event => {
+              event.preventDefault();
+              this.loadPage("password");
+            }}
+            type="submit"
+          >
+            Reset Password
+          </button>
+          {this.state.currentPage === "default" ? (
+            <div>
+              <h3>Hello, {this.props.user.firstName}!</h3>
+              <h3>This is the primary authorized page.</h3>
+              <p>
+                Using components embedded in this page you will be able to edit
+                your user account information and manage your personal card
+                collection.
+              </p>
+              <p>
+                The only other part of this application that will require a
+                login will be a subsection of the card search page where you can
+                add cards to your collection directly from the card search. This
+                feature is not planned for MVP release however.
+              </p>
+            </div>
+          ) : this.state.currentPage === "account" ? (
+            <p>This is the account info page.</p>
+          ) : this.state.currentPage === "password" ? (
+            <p>This is the password reset page.</p>
+          ) : (
+            "404"
+          )}
           <button
             id="logoutBtn"
             onClick={() => this.props.authLogout(this.props.user.username)}

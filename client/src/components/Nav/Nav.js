@@ -7,6 +7,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
+import SimpleMenu from "../SimpleMenu";
 
 const styles = theme => ({
   root: {
@@ -75,7 +76,8 @@ const styles = theme => ({
 });
 
 function SimpleAppBar(props) {
-  const { classes } = props;
+  const { classes, loadPage } = props;
+  console.log(loadPage);
 
   return (
     <div className={classes.root}>
@@ -94,6 +96,7 @@ function SimpleAppBar(props) {
             />
           </div>
         </Toolbar>
+        <SimpleMenu loadPage={loadPage} />
       </AppBar>
     </div>
   );
