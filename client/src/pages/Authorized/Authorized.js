@@ -42,37 +42,6 @@ class Authorized extends Component {
       return (
         <div>
           <Nav isPublic={false} loadPage={this.loadPage} />
-          <button
-            id="default"
-            onClick={event => {
-              event.preventDefault();
-              this.loadPage("default");
-            }}
-            type="submit"
-          >
-            Default
-          </button>
-          <button
-            id="account"
-            onClick={event => {
-              event.preventDefault();
-              console.log(this.loadPage);
-              this.loadPage("account");
-            }}
-            type="submit"
-          >
-            Account Info
-          </button>
-          <button
-            id="password"
-            onClick={event => {
-              event.preventDefault();
-              this.loadPage("password");
-            }}
-            type="submit"
-          >
-            Reset Password
-          </button>
           {this.state.currentPage === "default" ? (
             <div>
               <h3>Hello, {this.props.user.firstName}!</h3>
