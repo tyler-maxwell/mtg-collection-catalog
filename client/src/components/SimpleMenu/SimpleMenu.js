@@ -73,7 +73,7 @@ class SimpleMenu extends React.Component {
             onClick={event => {
               event.preventDefault();
               this.handleClose();
-              this.props.loadPage("default");
+              this.props.logOut();
             }}
           >
             Log Out

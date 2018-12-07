@@ -41,7 +41,11 @@ class Authorized extends Component {
     } else {
       return (
         <div>
-          <Nav isPublic={false} loadPage={this.loadPage} />
+          <Nav
+            isPublic={false}
+            loadPage={this.loadPage}
+            logOut={() => this.props.authLogout(this.props.user.username)}
+          />
           {this.state.currentPage === "default" ? (
             <div>
               <h3>Hello, {this.props.user.firstName}!</h3>
