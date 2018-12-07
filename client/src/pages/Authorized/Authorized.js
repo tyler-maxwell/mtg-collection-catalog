@@ -41,7 +41,7 @@ class Authorized extends Component {
     } else {
       return (
         <div>
-          <Nav loadPage={this.loadPage} />
+          <Nav isPublic={false} loadPage={this.loadPage} />
           <button
             id="default"
             onClick={event => {
