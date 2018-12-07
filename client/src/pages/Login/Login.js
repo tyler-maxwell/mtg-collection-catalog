@@ -34,10 +34,6 @@ class Login extends Component {
   handleLogin(event) {
     event.preventDefault();
     this.props.authLogin(this.state.username, this.state.password);
-    console.log("loginError:", this.props);
-    setTimeout(function() {
-      console.log("loginError:", this.props);
-    }, 5000);
   }
 
   render() {
@@ -101,7 +97,7 @@ class Login extends Component {
                   </Button>
                 </form>
                 <p>
-                  Don't have an account? <div />
+                  Don't have an account?
                   <Button
                     className="btn"
                     id="btn1"
