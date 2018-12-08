@@ -76,8 +76,7 @@ const styles = theme => ({
 });
 
 function SimpleAppBar(props) {
-  const { classes, loadPage, isPublic, logOut } = props;
-  console.log(loadPage);
+  const { classes, loadPage, isPublic, logOut, username } = props;
 
   return (
     <div className={classes.root}>
@@ -97,7 +96,7 @@ function SimpleAppBar(props) {
           </div>
         </Toolbar>
         {isPublic === false ? (
-          <SimpleMenu loadPage={loadPage} logOut={logOut} />
+          <SimpleMenu username={username} loadPage={loadPage} logOut={logOut} />
         ) : (
           ""
         )}

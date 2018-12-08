@@ -8,10 +8,15 @@ const AccountInfoCard = props => (
       <div className="card-content white-text">
         <span className="card-title">Account Information</span>
         {!props.editMode ? (
-          <AccountInfoDisplay user={props.user} />
+          <AccountInfoDisplay
+            editMode={props.editMode}
+            user={props.user}
+            toggleEditMode={props.toggleEditMode}
+          />
         ) : (
           <AccountInfoForm
             user={props.user}
+            editMode={props.editMode}
             modUser={props.modUser}
             submitUpdate={props.submitUpdate}
             handleInputChange={props.handleInputChange}

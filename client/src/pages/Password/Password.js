@@ -2,12 +2,11 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 // grid Imports
-import Row from "../../../components/shared/grid/Row";
+import Row from "../../components/grid/Row";
 // Component Imports
-import Nav from "../../../components/shared/Nav";
-import PasswordInfoCard from "../../../components/private/passwordReset/Card";
+import PasswordResetCard from "../../components/passwordReset/Card";
 //API Imports
-import UsersAPI from "../../../utils/usersAPI";
+import UsersAPI from "../../utils/usersAPI";
 
 class Password extends Component {
   constructor() {
@@ -17,7 +16,8 @@ class Password extends Component {
         current: "",
         new: "",
         confirm: ""
-      }
+      },
+      submitMessage: ""
     };
     this.handleInputChange = this.handleInputChange.bind(this);
   }
@@ -32,11 +32,20 @@ class Password extends Component {
       )
     ) {
       if (this.state.password.current.trim() === "") {
-        alert("Please enter your current password.");
+        this.setState({
+          ...this.state,
+          submitMessage: "Please enter your current password."
+        });
       } else if (this.state.password.new.trim() === "") {
-        alert("Please enter your new password.");
+        this.setState({
+          ...this.state,
+          submitMessage: "Please enter your new password."
+        });
       } else if (this.state.password.confirm.trim() === "") {
-        alert("Please confirm your new password.");
+        this.setState({
+          ...this.state,
+          submitMessage: "Please confirm your new password."
+        });
       } else if (
         this.state.password.new.trim() != this.state.password.confirm.trim()
       ) {
@@ -74,19 +83,12 @@ class Password extends Component {
   render() {
     return (
       <div>
-        <Nav
-          isPublic={false}
-          loadPage={this.loadPage}
-          handleLogout={this.props.handleLogout}
-          loggedIn={this.props.loggedIn}
-          user={this.props.user}
-        />
         <Row>
-          <PasswordInfoCard
-            editMode={this.state.editMode}
-            toggleEditMode={this.toggleEditMode}
+          <PasswordResetCard
+            loadPage={this.props.loadPage}
             user={this.props.user}
             password={this.state.password}
+            submitMessage={this.state.submitMessage}
             updatePassword={this.updatePassword}
             handleInputChange={this.handleInputChange}
           />

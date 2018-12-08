@@ -27,7 +27,7 @@ class SimpleMenu extends React.Component {
           aria-haspopup="true"
           onClick={this.handleClick}
         >
-          Open Menu
+          <i className="material-icons">person</i> {this.props.username}
         </Button>
         <Menu
           id="simple-menu"
