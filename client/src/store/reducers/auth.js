@@ -49,7 +49,7 @@ const loginUser = (state, authData) => {
   const updatedValues = {
     isLoggedIn: true,
     user: {
-      id: authData.user._id,
+      id: authData.user.id,
       username: authData.user.username,
       firstName: authData.user.firstName,
       lastName: authData.user.lastName,

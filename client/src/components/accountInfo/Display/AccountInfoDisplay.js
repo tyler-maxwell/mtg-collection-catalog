@@ -2,6 +2,9 @@ import React from "react";
 
 const AccountInfoDisplay = props => (
   <form>
+    <button className="right" onClick={props.toggleEditMode}>
+      Make Changes <i className="material-icons">edit</i>
+    </button>
     <label htmlFor="username">Username:</label>
     <p id="username">{props.user.username}</p>
     <label htmlFor="firstName">First Name:</label>

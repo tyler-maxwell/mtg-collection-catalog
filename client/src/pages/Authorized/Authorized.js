@@ -6,6 +6,8 @@ import { connect } from "react-redux";
 import * as actions from "../../store/actions";
 // Components
 import Nav from "../../components/Nav";
+// Sub-pages
+import MyAccount from "../MyAccount";
 
 class Authorized extends Component {
   constructor() {
@@ -43,6 +45,7 @@ class Authorized extends Component {
         <div>
           <Nav
             isPublic={false}
+            username={this.props.user.username}
             loadPage={this.loadPage}
             logOut={() => this.props.authLogout(this.props.user.username)}
           />
@@ -63,7 +66,7 @@ class Authorized extends Component {
               </p>
             </div>
           ) : this.state.currentPage === "account" ? (
-            <p>This is the account info page.</p>
+            <MyAccount user={this.props.user} />
           ) : this.state.currentPage === "password" ? (
             <p>This is the password reset page.</p>
           ) : (
