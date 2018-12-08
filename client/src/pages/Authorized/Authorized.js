@@ -69,7 +69,7 @@ class Authorized extends Component {
           ) : this.state.currentPage === "account" ? (
             <MyAccount user={this.props.user} />
           ) : this.state.currentPage === "password" ? (
-            <Password user={this.props.user} />
+            <Password user={this.props.user} loadPage={this.loadPage} />
           ) : (
             "404"
           )}

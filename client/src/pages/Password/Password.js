@@ -16,7 +16,8 @@ class Password extends Component {
         current: "",
         new: "",
         confirm: ""
-      }
+      },
+      submitMessage: ""
     };
     this.handleInputChange = this.handleInputChange.bind(this);
   }
@@ -31,11 +32,20 @@ class Password extends Component {
       )
     ) {
       if (this.state.password.current.trim() === "") {
-        alert("Please enter your current password.");
+        this.setState({
+          ...this.state,
+          submitMessage: "Please enter your current password."
+        });
       } else if (this.state.password.new.trim() === "") {
-        alert("Please enter your new password.");
+        this.setState({
+          ...this.state,
+          submitMessage: "Please enter your new password."
+        });
       } else if (this.state.password.confirm.trim() === "") {
-        alert("Please confirm your new password.");
+        this.setState({
+          ...this.state,
+          submitMessage: "Please confirm your new password."
+        });
       } else if (
         this.state.password.new.trim() != this.state.password.confirm.trim()
       ) {
@@ -75,10 +85,10 @@ class Password extends Component {
       <div>
         <Row>
           <PasswordResetCard
-            editMode={this.state.editMode}
-            toggleEditMode={this.toggleEditMode}
+            loadPage={this.props.loadPage}
             user={this.props.user}
             password={this.state.password}
+            submitMessage={this.state.submitMessage}
             updatePassword={this.updatePassword}
             handleInputChange={this.handleInputChange}
           />
