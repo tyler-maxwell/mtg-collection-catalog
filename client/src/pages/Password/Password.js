@@ -2,12 +2,11 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 // grid Imports
-import Row from "../../../components/shared/grid/Row";
+import Row from "../../components/grid/Row";
 // Component Imports
-import Nav from "../../../components/shared/Nav";
-import PasswordInfoCard from "../../../components/private/passwordReset/Card";
+import PasswordResetCard from "../../components/passwordReset/Card";
 //API Imports
-import UsersAPI from "../../../utils/usersAPI";
+import UsersAPI from "../../utils/usersAPI";
 
 class Password extends Component {
   constructor() {
@@ -74,15 +73,8 @@ class Password extends Component {
   render() {
     return (
       <div>
-        <Nav
-          isPublic={false}
-          loadPage={this.loadPage}
-          handleLogout={this.props.handleLogout}
-          loggedIn={this.props.loggedIn}
-          user={this.props.user}
-        />
         <Row>
-          <PasswordInfoCard
+          <PasswordResetCard
             editMode={this.state.editMode}
             toggleEditMode={this.toggleEditMode}
             user={this.props.user}

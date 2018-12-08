@@ -8,6 +8,7 @@ import * as actions from "../../store/actions";
 import Nav from "../../components/Nav";
 // Sub-pages
 import MyAccount from "../MyAccount";
+import Password from "../Password";
 
 class Authorized extends Component {
   constructor() {
@@ -68,7 +69,7 @@ class Authorized extends Component {
           ) : this.state.currentPage === "account" ? (
             <MyAccount user={this.props.user} />
           ) : this.state.currentPage === "password" ? (
-            <p>This is the password reset page.</p>
+            <Password user={this.props.user} />
           ) : (
             "404"
           )}
