@@ -4,7 +4,8 @@ import { withStyles } from "@material-ui/core/styles";
 import { fade } from "@material-ui/core/styles/colorManipulator";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
 import SimpleMenu from "../SimpleMenu";
@@ -16,11 +17,12 @@ const styles = theme => ({
   grow: {
     flexGrow: 1
   },
-  title: {
-    display: "none",
-    [theme.breakpoints.up("sm")]: {
-      display: "block"
-    }
+  appBar: {
+    zIndex: theme.zIndex.drawer + 1
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20
   },
   search: {
     position: "relative",
@@ -60,28 +62,25 @@ const styles = theme => ({
     [theme.breakpoints.up("md")]: {
       width: 200
     }
-  },
-  sectionDesktop: {
-    display: "none",
-    [theme.breakpoints.up("md")]: {
-      display: "flex"
-    }
-  },
-  sectionMobile: {
-    display: "flex",
-    [theme.breakpoints.up("md")]: {
-      display: "none"
-    }
   }
 });
 
 function SimpleAppBar(props) {
-  const { classes, loadPage, isPublic, logOut, username } = props;
+  const { classes, isPublic, logOut, username } = props;
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static" color="primary">
+    <div>
+      <AppBar className={classes.appBar} position="fixed" color="primary">
         <Toolbar>
+          {/* {!isPublic && (
+            <IconButton
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="Menu"
+            >
+              <MenuIcon />
+            </IconButton>
+          )} */}
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -94,12 +93,9 @@ function SimpleAppBar(props) {
               }}
             />
           </div>
+          <div className={classes.grow} />
+          {!isPublic && <SimpleMenu username={username} logOut={logOut} />}
         </Toolbar>
-        {isPublic === false ? (
-          <SimpleMenu username={username} loadPage={loadPage} logOut={logOut} />
-        ) : (
-          ""
-        )}
       </AppBar>
     </div>
   );
@@ -110,42 +106,3 @@ SimpleAppBar.propTypes = {
 };
 
 export default withStyles(styles)(SimpleAppBar);
-
-// import React from "react";
-// import { Link } from "react-router-dom";
-// import Dropdown from "../../private/Dropdown";
-
-// const Nav = props => (
-//   <nav id="topNav">
-//     {props.isPublic ? (
-//       <div className="nav-wrapper">
-//         <a className="brand-logo">Passport-JWT-MERN</a>
-//         <ul id="nav-mobile" className="right hide-on-med-and-down">
-//           <li>
-//             <Link to="/">Login</Link>
-//           </li>
-//           <li>
-//             <Link to="/dashboard">Dashboard</Link>
-//           </li>
-//         </ul>
-//       </div>
-//     ) : (
-//       <div className="nav-wrapper">
-//         <a href="/" className="brand-logo">
-//           Logged in as <strong>{props.user.username}</strong>
-//         </a>
-//         <ul id="nav-mobile" className="right hide-on-med-and-down">
-//           <li>
-//             <Link to="/dashboard">Dashboard</Link>
-//           </li>
-//           <Dropdown
-//             name={`${props.user.firstName} ${props.user.lastName}`}
-//             handleLogout={props.handleLogout}
-//           />
-//         </ul>
-//       </div>
-//     )}
-//   </nav>
-// );
-
-// export default Nav;

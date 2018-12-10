@@ -85,7 +85,6 @@ class Password extends Component {
       <div>
         <Row>
           <PasswordResetCard
-            loadPage={this.props.loadPage}
             user={this.props.user}
             password={this.state.password}
             submitMessage={this.state.submitMessage}

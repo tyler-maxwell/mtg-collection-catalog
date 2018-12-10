@@ -32,6 +32,14 @@ class SimpleMenu extends React.Component {
         <Menu
           id="simple-menu"
           anchorEl={anchorEl}
+          anchorOrigin={{
+            vertical: "top",
+            horizontal: "right"
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "right"
+          }}
           open={Boolean(anchorEl)}
           onClose={this.handleClose}
           PaperProps={{
@@ -46,7 +54,7 @@ class SimpleMenu extends React.Component {
             onClick={event => {
               event.preventDefault();
               this.handleClose();
-              this.props.loadPage("default");
+              // this.props.loadPage("default");
             }}
           >
             Default
@@ -55,7 +63,7 @@ class SimpleMenu extends React.Component {
             onClick={event => {
               event.preventDefault();
               this.handleClose();
-              this.props.loadPage("account");
+              // this.props.loadPage("account");
             }}
           >
             My Account
@@ -64,7 +72,7 @@ class SimpleMenu extends React.Component {
             onClick={event => {
               event.preventDefault();
               this.handleClose();
-              this.props.loadPage("password");
+              // this.props.loadPage("password");
             }}
           >
             Reset Password
