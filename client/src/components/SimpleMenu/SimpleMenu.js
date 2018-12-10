@@ -1,4 +1,7 @@
+// React
 import React from "react";
+import { Route } from "react-router-dom";
+// Material UI
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -32,6 +35,14 @@ class SimpleMenu extends React.Component {
         <Menu
           id="simple-menu"
           anchorEl={anchorEl}
+          anchorOrigin={{
+            vertical: "top",
+            horizontal: "right"
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "right"
+          }}
           open={Boolean(anchorEl)}
           onClose={this.handleClose}
           PaperProps={{
@@ -42,33 +53,33 @@ class SimpleMenu extends React.Component {
             }
           }}
         >
-          <MenuItem
-            onClick={event => {
-              event.preventDefault();
-              this.handleClose();
-              this.props.loadPage("default");
-            }}
-          >
-            Default
-          </MenuItem>
-          <MenuItem
-            onClick={event => {
-              event.preventDefault();
-              this.handleClose();
-              this.props.loadPage("account");
-            }}
-          >
-            My Account
-          </MenuItem>
-          <MenuItem
-            onClick={event => {
-              event.preventDefault();
-              this.handleClose();
-              this.props.loadPage("password");
-            }}
-          >
-            Reset Password
-          </MenuItem>
+          <Route
+            render={({ history }) => (
+              <MenuItem
+                onClick={event => {
+                  event.preventDefault();
+                  this.handleClose();
+                  history.push(`/authorized/account`);
+                }}
+              >
+                My Account
+              </MenuItem>
+            )}
+          />
+          <Route
+            render={({ history }) => (
+              <MenuItem
+                onClick={event => {
+                  event.preventDefault();
+                  this.handleClose();
+                  history.push(`/authorized/reset`);
+                  // this.props.loadPage("password");
+                }}
+              >
+                Reset Password
+              </MenuItem>
+            )}
+          />
           <MenuItem
             onClick={event => {
               event.preventDefault();

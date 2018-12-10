@@ -36,7 +36,7 @@ const PasswordInfoForm = props => (
       type="submit"
       onClick={event => {
         event.preventDefault();
-        props.loadPage("default");
+        // props.loadPage("default");
       }}
     >
       Cancel

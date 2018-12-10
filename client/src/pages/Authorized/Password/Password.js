@@ -2,11 +2,11 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 // grid Imports
-import Row from "../../components/grid/Row";
+import Row from "../../../components/grid/Row";
 // Component Imports
-import PasswordResetCard from "../../components/passwordReset/Card";
+import PasswordResetCard from "../../../components/passwordReset/Card";
 //API Imports
-import UsersAPI from "../../utils/usersAPI";
+import UsersAPI from "../../../utils/usersAPI";
 
 class Password extends Component {
   constructor() {
@@ -85,7 +85,6 @@ class Password extends Component {
       <div>
         <Row>
           <PasswordResetCard
-            loadPage={this.props.loadPage}
             user={this.props.user}
             password={this.state.password}
             submitMessage={this.state.submitMessage}

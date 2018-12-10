@@ -18,7 +18,6 @@ const PasswordInfoCard = props => (
           password={props.password}
           updatePassword={props.updatePassword}
           handleInputChange={props.handleInputChange}
-          loadPage={props.loadPage}
         />
       </div>
     </div>

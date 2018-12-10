@@ -1,83 +1,135 @@
 // React
-import React, { Component } from "react";
-import { Redirect, withRouter } from "react-router-dom";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  Redirect,
+  withRouter
+} from "react-router-dom";
 // Redux
 import { connect } from "react-redux";
 import * as actions from "../../store/actions";
+// Material UI
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import Drawer from "@material-ui/core/Drawer";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import List from "@material-ui/core/List";
+import Divider from "@material-ui/core/Divider";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import InboxIcon from "@material-ui/icons/MoveToInbox";
+import MailIcon from "@material-ui/icons/Mail";
+import Typography from "@material-ui/core/Typography";
 // Components
 import Nav from "../../components/Nav";
+import SidebarButton from "../../components/SidebarButton";
 // Sub-pages
-import MyAccount from "../MyAccount";
-import Password from "../Password";
+import About from "./About";
+import Inventory from "./Inventory";
+import Wishlist from "./Wishlist";
+import MyAccount from "./MyAccount";
+import Password from "./Password";
 
-class Authorized extends Component {
-  constructor() {
-    super();
-    this.state = {
-      currentPage: "default"
-    };
+const styles = theme => ({
+  root: {
+    display: "flex"
+  },
+  drawer: {
+    width: 240,
+    flexShrink: 0
+  },
+  drawerPaper: {
+    width: 240
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing.unit * 3
+  },
+  toolbar: theme.mixins.toolbar
+});
+
+const Authorized = props => {
+  const { classes } = props;
+
+  if (!props.isLoggedIn) {
+    return "Waiting for data to load from Redux";
+  } else {
+    return (
+      <div className={classes.root}>
+        <CssBaseline />
+        <Nav
+          isPublic={false}
+          username={props.user.username}
+          logOut={() => props.authLogout(props.user.username)}
+        />
+        <Drawer
+          className={classes.drawer}
+          variant="permanent"
+          classes={{
+            paper: classes.drawerPaper
+          }}
+        >
+          <div className={classes.toolbar} />
+          <List>
+            <SidebarButton text="Inventory" path="inventory" />
+            <SidebarButton text="Wishlist" path="wishlist" />
+          </List>
+          <Divider />
+          <List>
+            {["Deck 1", "Deck 2", "Deck 3"].map((text, index) => (
+              <ListItem button key={text}>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
+          </List>
+          <Divider />
+          <List>
+            <SidebarButton text="About" path="about" />
+          </List>
+        </Drawer>
+        {/* {this.state.currentPage === "default" ? ( */}
+        <main className={classes.content}>
+          <div className={classes.toolbar} />
+          <Switch>
+            <Route
+              exact
+              path="/authorized/inventory"
+              render={props => <Inventory {...props} />}
+            />
+            <Route
+              exact
+              path="/authorized/wishlist"
+              render={props => <Wishlist {...props} />}
+            />
+            <Route
+              exact
+              path="/authorized/about"
+              render={props => <About {...props} />}
+            />
+            <Route
+              exact
+              path="/authorized/account"
+              render={props => <MyAccount {...props} />}
+            />
+            <Route
+              exact
+              path="/authorized/reset"
+              render={props => <Password {...props} />}
+            />
+            <Route render={() => <Redirect to="/authorized/about" />} />
+          </Switch>
+        </main>
+      </div>
+    );
   }
-
-  loadPage = page => {
-    switch (page) {
-      case "default":
-        this.setState({
-          currentPage: "default"
-        });
-        break;
-      case "account":
-        this.setState({
-          currentPage: "account"
-        });
-        break;
-      case "password":
-        this.setState({
-          currentPage: "password"
-        });
-        break;
-    }
-  };
-
-  render() {
-    if (!this.props.isLoggedIn) {
-      return <Redirect to="/" />;
-    } else {
-      return (
-        <div>
-          <Nav
-            isPublic={false}
-            username={this.props.user.username}
-            loadPage={this.loadPage}
-            logOut={() => this.props.authLogout(this.props.user.username)}
-          />
-          {this.state.currentPage === "default" ? (
-            <div>
-              <h3>Hello, {this.props.user.firstName}!</h3>
-              <h3>This is the primary authorized page.</h3>
-              <p>
-                Using components embedded in this page you will be able to edit
-                your user account information and manage your personal card
-                collection.
-              </p>
-              <p>
-                The only other part of this application that will require a
-                login will be a subsection of the card search page where you can
-                add cards to your collection directly from the card search. This
-                feature is not planned for MVP release however.
-              </p>
-            </div>
-          ) : this.state.currentPage === "account" ? (
-            <MyAccount user={this.props.user} />
-          ) : this.state.currentPage === "password" ? (
-            <Password user={this.props.user} loadPage={this.loadPage} />
-          ) : (
-            "404"
-          )}
-        </div>
-      );
-    }
-  }
-}
+};
 
 const mapStateToProps = state => {
   return {
@@ -92,7 +144,11 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
+Authorized.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withRouter(Authorized));
+)(withRouter(withStyles(styles)(Authorized)));
