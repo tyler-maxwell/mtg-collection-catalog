@@ -6,7 +6,7 @@ module.exports = {
     const foundCards = [];
     allSets.forEach(set => {
       set.cards.forEach(card => {
-        if (card.name.toLowerCase().includes(req.params.name)) {
+        if (card.name.toLowerCase().includes(req.params.name.toLowerCase())) {
           card.set = {};
           card.set.code = set.code;
           card.set.mtgoCode = set.mtgoCode;
