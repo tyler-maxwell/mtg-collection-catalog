@@ -72,15 +72,6 @@ function SimpleAppBar(props) {
     <div>
       <AppBar className={classes.appBar} position="fixed" color="primary">
         <Toolbar>
-          {/* {!isPublic && (
-            <IconButton
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="Menu"
-            >
-              <MenuIcon />
-            </IconButton>
-          )} */}
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />

@@ -26,11 +26,13 @@ import MailIcon from "@material-ui/icons/Mail";
 import Typography from "@material-ui/core/Typography";
 // Components
 import Nav from "../../components/Nav";
+import SidebarButton from "../../components/SidebarButton";
 // Sub-pages
 import About from "./About";
 import Inventory from "./Inventory";
-import MyAccount from "../MyAccount";
-import Password from "../Password";
+import Wishlist from "./Wishlist";
+import MyAccount from "./MyAccount";
+import Password from "./Password";
 
 const styles = theme => ({
   root: {
@@ -73,18 +75,8 @@ const Authorized = props => {
         >
           <div className={classes.toolbar} />
           <List>
-            <ListItem button key="Inventory">
-              <ListItemIcon>
-                <InboxIcon />
-              </ListItemIcon>
-              <ListItemText primary="Inventory" />
-            </ListItem>
-            <ListItem button key="Wishlist">
-              <ListItemIcon>
-                <InboxIcon />
-              </ListItemIcon>
-              <ListItemText primary="Wishlist" />
-            </ListItem>
+            <SidebarButton text="Inventory" path="inventory" />
+            <SidebarButton text="Wishlist" path="wishlist" />
           </List>
           <Divider />
           <List>
@@ -99,12 +91,7 @@ const Authorized = props => {
           </List>
           <Divider />
           <List>
-            <ListItem button key="About">
-              <ListItemIcon>
-                <InboxIcon />
-              </ListItemIcon>
-              <ListItemText primary="About" />
-            </ListItem>
+            <SidebarButton text="About" path="about" />
           </List>
         </Drawer>
         {/* {this.state.currentPage === "default" ? ( */}
@@ -113,24 +100,32 @@ const Authorized = props => {
           <Switch>
             <Route
               exact
+              path="/authorized/inventory"
+              render={props => <Inventory {...props} />}
+            />
+            <Route
+              exact
+              path="/authorized/wishlist"
+              render={props => <Wishlist {...props} />}
+            />
+            <Route
+              exact
               path="/authorized/about"
               render={props => <About {...props} />}
             />
             <Route
               exact
-              path="/authorized/inventory"
-              render={props => <Inventory {...props} />}
+              path="/authorized/account"
+              render={props => <MyAccount {...props} />}
+            />
+            <Route
+              exact
+              path="/authorized/reset"
+              render={props => <Password {...props} />}
             />
             <Route render={() => <Redirect to="/authorized/about" />} />
           </Switch>
         </main>
-        {/* // ) : this.state.currentPage === "account" ? (
-          //   <MyAccount user={props.user} />
-          // ) : this.state.currentPage === "password" ? (
-          //   <Password user={props.user} />
-          // ) : (
-          //   "404"
-          // )} */}
       </div>
     );
   }

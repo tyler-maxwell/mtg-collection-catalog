@@ -1,12 +1,14 @@
 // React Imports
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+// Redux
+import { connect } from "react-redux";
 // grid Imports
-import Row from "../../components/grid/Row";
+import Row from "../../../components/grid/Row";
 // Component Imports
-import AccountInfoCard from "../../components/accountInfo/Card";
+import AccountInfoCard from "../../../components/accountInfo/Card";
 //API Imports
-import UsersAPI from "../../utils/usersAPI";
+import UsersAPI from "../../../utils/usersAPI";
 
 class MyAccount extends Component {
   constructor() {
@@ -99,4 +101,11 @@ class MyAccount extends Component {
   }
 }
 
-export default withRouter(MyAccount);
+const mapStateToProps = state => {
+  return {
+    isLoggedIn: state.auth.isLoggedIn,
+    user: state.auth.user
+  };
+};
+
+export default connect(mapStateToProps)(withRouter(MyAccount));
