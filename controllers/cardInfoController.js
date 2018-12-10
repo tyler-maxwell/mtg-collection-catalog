@@ -7,6 +7,7 @@ module.exports = {
     allSets.forEach(set => {
       set.cards.forEach(card => {
         if (card.name.toLowerCase().includes(req.params.name)) {
+          card.setCode = set.code;
           foundCards.push(card);
         }
       });

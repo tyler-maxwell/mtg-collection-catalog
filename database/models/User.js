@@ -14,7 +14,7 @@ const userSchema = new Schema({
   title: { type: String, required: false, default: null },
   isActive: { type: Boolean, default: true },
   session: { type: Boolean, default: false },
-  collection: [{ type: Schema.Types.ObjectId, ref: "CardInv" }],
+  inventory: [{ type: Schema.Types.ObjectId, ref: "CardInv" }],
   decks: [{ type: Schema.Types.ObjectId, ref: "Deck" }]
 });
 
