@@ -7,9 +7,11 @@ import * as actions from "../../store/actions";
 // Material UI
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
+import Paper from "@material-ui/core/Paper"
 // Components
 import { Row, Col, Container } from "../../components/grid";
 import Nav from "../../components/Nav";
+import "./Login.css";
 
 class Login extends Component {
   constructor() {
@@ -50,6 +52,7 @@ class Login extends Component {
           <Row>
             <Col size={4} />
             <Col size={4}>
+            <Paper>
               <div className="signIn">
                 <h4 className="header">Login</h4>
                 {this.props.loginError ? (
@@ -116,6 +119,7 @@ class Login extends Component {
                  
                 </p>
               </div>
+              </Paper>
             </Col>
           </Row>
         </Container>

@@ -1,17 +1,19 @@
 // React
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 // Redux
 import { connect } from "react-redux";
 import * as actions from "../../store/actions";
 // Components
-import {Row, Col} from "../../../components/shared/grid";
-import { Redirect } from "react-router-dom";
-import Nav from "../../../components/shared/Nav";
+import {Row, Col} from "../../components/grid";
+import Nav from "../../components/Nav";
+//Material UI 
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import Paper from '@material-ui/core/Paper';
 // API
-import UsersAPI from "../../../utils/usersAPI";
+import UsersAPI from "../../utils/usersAPI";
+// import "./SignUp.css"
 
 class SignUp extends Component {
   constructor() {
@@ -58,8 +60,9 @@ class SignUp extends Component {
           <Row>
             <Col size={4} />
             <Col size={4}>
+              <Paper>
               <div className="signIn">
-                <h4>Sign Up</h4>
+                <h4 className="header">Sign Up</h4>
                 {this.props.signupError ? (
                   <span>{this.props.signupError}</span>
                 ) : (
@@ -139,8 +142,13 @@ class SignUp extends Component {
                   >
                     Sign up
                   </Button>
+                  <Button 
+                    id="btn2"
+                    href="/"
+                  > Go Back</Button>
                 </form>
               </div>
+              </Paper>
             </Col>
           </Row>
         </div>
