@@ -12,10 +12,8 @@ module.exports = {
         if (user.inventory) {
           response.hasInventory = true;
           response.inventory = user.inventory;
-          res.json(response);
-        } else {
-          res.json(response);
         }
+        res.json(response);
       })
       .catch(err => {
         response.err = err;
