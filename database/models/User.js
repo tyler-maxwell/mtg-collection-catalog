@@ -13,7 +13,9 @@ const userSchema = new Schema({
   lastName: { type: String, required: false, default: null },
   title: { type: String, required: false, default: null },
   isActive: { type: Boolean, default: true },
-  session: { type: Boolean, default: false }
+  session: { type: Boolean, default: false },
+  inventory: [{ type: Schema.Types.ObjectId, ref: "CardInv" }],
+  decks: [{ type: Schema.Types.ObjectId, ref: "Deck" }]
 });
 
 // Define schema methods

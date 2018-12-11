@@ -5,7 +5,7 @@ const CardInvSchema = new Schema({
   multiverseld: { type: Number },
   ownedCount: { type: Number, required: true },
   wishCount: { type: Number, required: true },
-  neededCount: { type: Number, required: true }
+  needCount: { type: Number, required: true }
 });
 
 const CardInv = mongoose.model("CardInv", CardInvSchema);

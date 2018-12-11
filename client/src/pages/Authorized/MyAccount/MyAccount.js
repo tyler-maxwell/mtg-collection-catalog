@@ -1,15 +1,16 @@
 // React Imports
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+// Redux
+import { connect } from "react-redux";
 // grid Imports
-import Row from "../../../components/shared/grid/Row";
+import Row from "../../../components/grid/Row";
 // Component Imports
-import Nav from "../../../components/shared/Nav";
-import AccountInfoCard from "../../../components/private/accountInfo/Card";
+import AccountInfoCard from "../../../components/accountInfo/Card";
 //API Imports
 import UsersAPI from "../../../utils/usersAPI";
 
-class Account extends Component {
+class MyAccount extends Component {
   constructor() {
     super();
     this.state = {
@@ -27,6 +28,8 @@ class Account extends Component {
 
   submitUpdate = event => {
     event.preventDefault();
+    console.table(this.state.modUser);
+    console.log("user", this.props.user);
     // Confirm if user wants to continue with updating their data.
     if (
       window.confirm(
@@ -36,6 +39,7 @@ class Account extends Component {
       // Get JWT from local storage.
       const token = localStorage.getItem("token");
       const id = this.props.user.id;
+      console.log("id", id);
       const modUser = this.state.modUser;
       // Data to be sent in PUT request below
       let userData = {};
@@ -82,18 +86,7 @@ class Account extends Component {
   render() {
     return (
       <div>
-        <Nav
-          isPublic={false}
-          loadPage={this.loadPage}
-          handleLogout={this.props.handleLogout}
-          loggedIn={this.props.loggedIn}
-          user={this.props.user}
-        />
         <Row>
-          {/* TODO: this button disrupts the enter functionality of the save changes button, include this in accountinfodisplay */}
-          <button className="right" onClick={this.toggleEditMode}>
-            Make Changes <i className="material-icons">edit</i>
-          </button>
           <AccountInfoCard
             editMode={this.state.editMode}
             toggleEditMode={this.toggleEditMode}
@@ -108,4 +101,11 @@ class Account extends Component {
   }
 }
 
-export default withRouter(Account);
+const mapStateToProps = state => {
+  return {
+    isLoggedIn: state.auth.isLoggedIn,
+    user: state.auth.user
+  };
+};
+
+export default connect(mapStateToProps)(withRouter(MyAccount));
