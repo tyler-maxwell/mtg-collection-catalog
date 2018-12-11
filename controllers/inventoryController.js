@@ -2,6 +2,45 @@ const db = require("../database/models");
 const allSets = require("../json");
 
 module.exports = {
+  findAll: function(req, res) {
+    const response = {
+      hasInventory: false
+    };
+    db.User.findById(req.params.id)
+      .populate("inventory")
+      .then(user => {
+        if (user.inventory) {
+          response.hasInventory = true;
+          response.inventory = user.inventory;
+          // Get card info
+          response.cardInfo = [];
+          let infoFound = false;
+          user.inventory.forEach(card => {
+            infoFound = false;
+            for (let i = 0; i < allSets.length; i++) {
+              let set = allSets[i];
+              for (let j = 0; j < set.cards.length; j++) {
+                let cardInfo = set.cards[j];
+                if (cardInfo.multiverseId === card.multiverseId) {
+                  console.log("cardInfo", cardInfo);
+                  response.cardInfo.push(cardInfo);
+                  infoFound = true;
+                }
+                if (infoFound) break;
+              }
+              if (infoFound) break;
+            }
+          });
+          res.json(response);
+        } else {
+          res.json(response);
+        }
+      })
+      .catch(err => {
+        response.err = err;
+        res.json(response);
+      });
+  },
   submitBatch: function(req, res) {
     // ******************************************
     // req.body: {
