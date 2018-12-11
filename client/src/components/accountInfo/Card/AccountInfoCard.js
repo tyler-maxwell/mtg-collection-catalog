@@ -1,12 +1,15 @@
 import React from "react";
 import AccountInfoDisplay from "../Display";
 import AccountInfoForm from "../Form";
+import {Row, Col} from "../../grid";
 
 const AccountInfoCard = props => (
-  <div className="col m4 offset-m4">
-    <div className="card blue-grey darken-1">
-      <div className="card-content white-text">
-        <span className="card-title">Account Information</span>
+  <Row>
+  <Col size={2}> 
+  <span className="card-title">Account Information</span>
+  </Col>
+  <Col size={9}>
+  
         {!props.editMode ? (
           <AccountInfoDisplay
             editMode={props.editMode}
@@ -23,9 +26,8 @@ const AccountInfoCard = props => (
             toggleEditMode={props.toggleEditMode}
           />
         )}
-      </div>
-    </div>
-  </div>
+  </Col>
+  </Row>
 );
 
 export default AccountInfoCard;
