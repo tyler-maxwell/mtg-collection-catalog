@@ -12,25 +12,6 @@ module.exports = {
         if (user.inventory) {
           response.hasInventory = true;
           response.inventory = user.inventory;
-          // Get card info
-          response.cardInfo = [];
-          let infoFound = false;
-          user.inventory.forEach(card => {
-            infoFound = false;
-            for (let i = 0; i < allSets.length; i++) {
-              let set = allSets[i];
-              for (let j = 0; j < set.cards.length; j++) {
-                let cardInfo = set.cards[j];
-                if (cardInfo.multiverseId === card.multiverseId) {
-                  console.log("cardInfo", cardInfo);
-                  response.cardInfo.push(cardInfo);
-                  infoFound = true;
-                }
-                if (infoFound) break;
-              }
-              if (infoFound) break;
-            }
-          });
           res.json(response);
         } else {
           res.json(response);
