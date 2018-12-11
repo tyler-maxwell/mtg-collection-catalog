@@ -1,13 +1,19 @@
 // React
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 // Redux
 import { connect } from "react-redux";
 import * as actions from "../../store/actions";
 // Components
-import Row from "../../components/grid/Row";
-import Col from "../../components/grid/Col";
+import {Row, Col} from "../../components/grid";
 import Nav from "../../components/Nav";
+//Material UI 
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import Paper from '@material-ui/core/Paper';
+// API
+import UsersAPI from "../../utils/usersAPI";
+// import "./SignUp.css"
 
 class SignUp extends Component {
   constructor() {
@@ -54,68 +60,95 @@ class SignUp extends Component {
           <Row>
             <Col size={4} />
             <Col size={4}>
+              <Paper>
               <div className="signIn">
-                <h4>Sign Up</h4>
+                <h4 className="header">Sign Up</h4>
                 {this.props.signupError ? (
                   <span>{this.props.signupError}</span>
                 ) : (
                   ""
                 )}
                 <form id="loginForm">
-                  <label htmlFor="firstName">First Name:</label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    placeholder="First Name (required)"
-                    value={this.state.firstName}
-                    onChange={this.handleChange}
-                  />
-                  <label htmlFor="lastName">Last Name:</label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    placeholder="Last Name (required)"
-                    value={this.state.lastName}
-                    onChange={this.handleChange}
-                  />
-                  <label htmlFor="email">Email:</label>
-                  <input
-                    type="text"
+                <Row>
+                  <Col size={6}>
+                    <TextField
+                      required
+                      id="firstName"
+                      label="First Name"
+                      name="firstName"
+                      className="textField"
+                      onChange={this.handleChange}
+                      margin="normal"
+                      variant="filled"
+                    />
+                  </Col>
+                  <Col size={6}>
+                    <TextField
+                      required
+                      id="lastName"
+                      label="Last Name"
+                      name="lastName"
+                      className="textField"
+                      onChange={this.handleChange}
+                      margin="normal"
+                      variant="filled"
+                    />
+                  </Col>
+                </Row>
+                  
+                <Row>
+                    <Col size={6}>
+                      <TextField
+                        required
+                        id="username"
+                        label="Username"
+                        name="username"
+                        className="textField"
+                        onChange={this.handleChange}
+                        margin="normal"
+                        variant="filled"
+                      />
+                    </Col>
+                    <Col size={6}>
+                      <TextField
+                        required
+                        id="password"
+                        label="Password"
+                        name="password"
+                        className="textField"
+                        onChange={this.handleChange}
+                        margin="normal"
+                        variant="filled"
+                      />
+                    </Col>
+                </Row>
+                <Row>
+                  <Col size={12}></Col>
+                  <TextField
                     id="email"
+                    label="Email(Optional)"
                     name="email"
-                    placeholder="Email (optional)"
-                    value={this.state.email}
+                    className="textField"
                     onChange={this.handleChange}
+                    margin="normal"
+                    variant="filled"
                   />
-                  <label htmlFor="username">Username:</label>
-                  <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    placeholder="Username (required)"
-                    value={this.state.username}
-                    onChange={this.handleChange}
-                  />
-                  <label htmlFor="password">Password:</label>
-                  <input
-                    placeholder="Password (required)"
-                    type="password"
-                    name="password"
-                    value={this.state.password}
-                    onChange={this.handleChange}
-                  />
-                  <button
+                </Row>
+                  <Button
                     id="btn2"
-                    disabled={!(this.state.username && this.state.password)}
+                    disabled={!(this.state.username && this.state.password && this.state.firstName && this.state.lastName)}
                     onClick={this.handleSignUp}
                     type="submit"
                   >
                     Sign up
-                  </button>
+                  </Button>
+                  <Button 
+                    id="btn2"
+                    href="/"
+                  > Go Back</Button>
                 </form>
               </div>
+              </Paper>
             </Col>
           </Row>
         </div>
