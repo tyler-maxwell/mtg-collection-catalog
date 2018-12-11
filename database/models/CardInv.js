@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const CardInvSchema = new Schema({
-  multiverseld: { type: Number },
+  multiverseId: { type: Number },
   ownedCount: { type: Number, required: true },
   wishCount: { type: Number, required: true },
   needCount: { type: Number, required: true }
