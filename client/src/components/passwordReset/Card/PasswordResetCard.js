@@ -1,10 +1,11 @@
 import React from "react";
 import PasswordResetForm from "../Form";
+// MaaterialUI
+import {Row, Col} from "../../grid"
 
 const PasswordInfoCard = props => (
-  <div className="col m4 offset-m4">
-    <div className="card blue-grey darken-1">
-      <div className="card-content white-text">
+  <Row>
+    <Col size={2}>
         <span className="card-title">Password Information</span>{" "}
         {props.submitMessage === "" ? (
           ""
@@ -13,15 +14,16 @@ const PasswordInfoCard = props => (
             <strong>{props.submitMessage}</strong>
           </span>
         )}
+    </Col>
+    <Col size={9}>
         <PasswordResetForm
           user={props.user}
           password={props.password}
           updatePassword={props.updatePassword}
           handleInputChange={props.handleInputChange}
         />
-      </div>
-    </div>
-  </div>
+    </Col>
+  </Row>
 );
 
 export default PasswordInfoCard;
