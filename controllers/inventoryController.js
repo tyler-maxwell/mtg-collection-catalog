@@ -21,8 +21,13 @@ module.exports = {
         .then(user => {
           if (user) {
             // ******************************************
+            // Returned object if successful
+            const batchResponse = {
+              badCards: []
+            };
+            // ******************************************
             // Sorted storage for cards from req.body.cards
-            const badCards = [];
+            const badCards = batchResponse.badCards;
             const existingCards = [];
             const newCards = [];
             // ******************************************
@@ -158,10 +163,10 @@ module.exports = {
                   },
                   { new: true }
                 ).then(updatedUser => {
-                  res.json(badCards);
+                  res.json(batchResponse);
                 });
               }
-              res.json(badCards);
+              res.json(batchResponse);
             });
           } else {
             res.json("user not found");
