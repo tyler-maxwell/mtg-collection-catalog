@@ -1,0 +1,999 @@
+4 Eager Construct
+5 Earth Elemental
+3 Earthquake
+1 Earthshaker Khenra
+1 Eaten by Spiders
+1 Ebony Horse
+2 Ebony Treefolk
+1 Echo Mage
+3 Echo Tracer
+1 Edgar Markov
+6 Edge of Autumn
+4 Eel Umbra
+2 Ekundu Griffin
+1 El-Hajjâj
+1 Eland Umbra
+1 Eldrazi Conscription
+4 Electrify
+2 Elemental Bond
+1 Elenda, the Dusk Rose
+1 Elfhame Druid
+4 Elfhame Palace
+3 Elite Skirmisher
+1 Elite Vanguard
+1 Eloren Wilds
+1 Elsewhere Flask
+1 Elven Cache
+3 Elven Palisade
+3 Elven Riders
+1 Elven Warhounds
+3 Elvish Berserker
+1 Elvish Eulogist
+3 Elvish Fury
+1 Elvish Guidance
+3 Elvish Herder
+4 Elvish Rejuvenator
+4 Elvish Scrapper
+3 Elvish Visionary
+2 Elvish Warrior
+1 Emancipation Angel
+8 Ember Beast
+1 Ember Gale
+1 Ember Hauler
+1 Embersmith
+6 Emberwilde Augur
+1 Emberwilde Djinn
+3 Emblazoned Golem
+3 Emblem of the Warmind
+1 Emerge Unscathed
+1 Emmara Tandris
+2 Emperor Crocodile
+4 Empty the Warrens
+1 Enchantment Alteration
+1 Enclave Elite
+1 Endangered Armodon
+1 Endemic Plague
+2 Endless Scream
+1 Endless Wurm
+2 Enduring Scalelord
+18 Enemy of the Guildpact
+1 Enervate
+3 Enigma Drake
+1 Enlightened Tutor
+1 Enormous Baloth
+3 Enrage
+3 Enslave
+2 Ensnare
+2 Ensnaring Bridge
+2 Enter the Unknown
+2 Enthralling Victor
+5 Entropic Eidolon
+1 Ephara's Radiance
+5 Epicure of Blood
+1 Epiphany Storm
+1 Erg Raiders
+4 Errant Doomsayers
+3 Errant Ephemeron
+8 Erratic Mutation
+2 Escape Routes
+1 Essence Drain
+1 Essence Flare
+1 Essence Fracture
+4 Essence Scatter
+6 Essence Warden
+1 Etali, Primal Storm
+1 Eternal Warrior
+1 Eternal Witness
+3 Eternity Snare
+1 Ethereal Armor
+2 Ethereal Usher
+1 Etherium-Horn Sorcerer
+2 Evanescent Intellect
+2 Evangel of Heliod
+1 Evasive Action
+2 Everdawn Champion
+6 Evernight Shade
+3 Evil Eye of Orms-by-Gore
+1 Evil Eye of Urborg
+1 Evil Twin
+1 Evincar's Justice
+7 Eviscerate
+6 Evolution Charm
+8 Evolving Wilds
+1 Excavation
+3 Excavation Elephant
+1 Exclusion Mage
+1 Excoriate
+1 Excruciator
+1 Execute
+4 Executioner's Swing
+1 Exile
+1 Exotic Curse
+1 Exotic Orchard
+3 Expedite
+1 Expedition Map
+4 Expedition Raptor
+2 Expel from Orazca
+2 Explorer's Scope
+3 Explosive Apparatus
+2 Explosive Growth
+1 Explosive Vegetation
+1 Expunge
+2 Extirpate
+1 Extruder
+5 Exultant Skymarcher
+1 Eye Gouge
+4 Eyeblight Assassin
+9 Fa'adiyah Seer
+1 Fabricate
+1 Faceless Butcher
+2 Faceless Devourer
+1 Fade Away
+4 Fade into Antiquity
+3 Faerie Squadron
+1 Faerie Swarm
+2 Faith's Shield
+1 Falkenrath Exterminator
+1 Falkenrath Noble
+4 Fall of the Hammer
+1 Fall of the Thran
+5 Fallen Askari
+2 Fallen Cleric
+2 Fallen Ideal
+1 Fallow Wurm
+1 False Demise
+1 False Summoning
+1 Familiar Ground
+2 Famished Paladin
+4 Fan Favorite
+5 Fanatical Firebrand
+1 Fangren Hunter
+2 Fangren Pathcutter
+1 Farhaven Elf
+1 Farm // Market
+1 Farseek
+1 Fastbond
+11 Fatal Attraction
+1 Fatal Mutation
+2 Fate Foretold
+5 Fathom Fleet Boarder
+1 Fathom Fleet Cutthroat
+7 Fathom Seer
+2 Fear
+1 Fearsome Awakening
+1 Fecundity
+5 Feebleness
+1 Feeding Grounds
+1 Felhide Brawler
+1 Felhide Spiritbinder
+1 Fell Specter
+1 Fell the Mighty
+2 Fellwar Stone
+1 Femeref Knight
+1 Femeref Scouts
+1 Fen Stalker
+1 Fencing Ace
+5 Feral Abomination
+3 Feral Contest
+1 Feral Hydra
+4 Feral Invocation
+2 Feral Shadow
+1 Ferocious Charge
+11 Fertile Ground
+2 Fertilid
+4 Fervent Strike
+4 Festering March
+2 Festival of the Guildpact
+4 Fettergeist
+2 Fevered Strength
+2 Field Creeper
+2 Fiery Finish
+5 Fiery Intervention
+3 Fiery Mantle
+1 Fiery Temper
+1 Fight with Fire
+3 Fighting Drake
+1 Figure of Destiny
+3 Fill with Fright
+1 Final Parting
+11 Fire Elemental
+1 Fire Snake
+1 Fire Whip
+3 Fireball
+2 Fireblast
+4 Firebolt
+2 Firebreathing
+1 Firecannon Blast
+2 Firefist Adept
+1 Firefist Striker
+1 Firefly
+10 Firefright Mage
+3 Firemaw Kavu
+2 Fires of Yavimaya
+1 Fireshrieker
+4 Fireslinger
+2 Firewild Borderpost
+1 Firewing Phoenix
+1 Fissure
+3 Fissure Vent
+1 Fist of Suns
+2 Fists of the Anvil
+1 Flailing Drake
+1 Flailing Ogre
+2 Flailing Soldier
+1 Flame Burst
+3 Flame Jet
+1 Flame Rift
+3 Flame Slash
+1 Flame Spirit
+6 Flamecore Elemental
+2 Flamekin Harbinger
+1 Flames of the Firebrand
+1 Flamewave Invoker
+1 Flaming Sword
+2 Flare
+1 Flash of Defiance
+7 Flashfires
+3 Flashfreeze
+2 Fledgling Griffin
+3 Fledgling Mawcor
+2 Fleecemane Lion
+4 Fleetfeather Cockatrice
+3 Fleeting Distraction
+1 Fleshwrither
+4 Flickering Spirit
+1 Flickering Ward
+2 Flight
+1 Flint Golem
+1 Flood of Recollection
+1 Flooded Strand
+1 Flowering Field
+1 Flowstone Armor
+9 Flowstone Channeler
+4 Flowstone Charger
+1 Flowstone Crusher
+14 Flowstone Embrace
+2 Flowstone Flood
+1 Flowstone Giant
+5 Flowstone Hellion
+2 Flowstone Salamander
+1 Flowstone Strike
+1 Flowstone Surge
+1 Flowstone Wall
+1 Flying Crane Technique
+6 Fog
+2 Fog Bank
+1 Fog Elemental
+2 Fog of Gnats
+2 Fog Patch
+3 Folk Medicine
+9 Fomori Nomad
+2 Force Spike
+2 Forced Adaptation
+2 Forebear's Blade
+2 Forerunner of the Coalition
+1 Forerunner of the Empire
+2 Forerunner of the Heralds
+1 Forerunner of the Legion
+11 Foresee
+230 Forest
+1 Forgotten Ancient
+1 Forgotten Cave
+1 Forgotten Lore
+1 Forked Bolt
+1 Form of the Dinosaur
+5 Forsaken Sanctuary
+1 Fortify
+1 Fortitude
+1 Fortunate Few
+1 Fossil Find
+1 Foul Familiar
+2 Foul Imp
+5 Foul Orchard
+3 Foul Presence
+1 Foundry Street Denizen
+2 Fountain of Renewal
+1 Foxfire Oak
+1 Fractured Identity
+2 Frantic Search
+2 Freed from the Real
+2 Frenetic Raptor
+1 Frenzied Goblin
+5 Frenzied Rage
+5 Frenzy Sliver
+6 Frilled Deathspitter
+1 Frilled Oculus
+1 Frilled Sandwalla
+4 Frilled Sea Serpent
+3 Frog Tongue
+10 Frontier Bivouac
+1 Frontier Guide
+1 Frontier Siege
+3 Frost Lynx
+1 Frost Raptor
+3 Frostwind Invoker
+2 Frozen Aether
+1 Frozen Shade
+1 Fruit of the First Tree
+3 Fugitive Wizard
+2 Fumble
+1 Funeral Charm
+5 Fungal Infection
+1 Fungal Plots
+1 Fungal Reaches
+1 Fungal Sprouting
+1 Fungus Elemental
+1 Fungus Sliver
+1 Furious Assault
+9 Furious Resistance
+1 Furnace Brood
+1 Furnace Celebration
+2 Furnace of Rath
+2 Furnace Spirit
+8 Fury Charm
+2 Fury Sliver
+1 Fyndhorn Brownie
+1 Gaea's Anthem
+2 Gaea's Balance
+4 Gaea's Blessing
+1 Gaea's Bounty
+2 Gaea's Embrace
+4 Gaea's Protector
+2 Gaea's Skyfolk
+1 Galecaster Colossus
+1 Gallant Cavalry
+1 Game Plan
+2 Gamekeeper
+10 Gang of Devils
+2 Gang Up
+1 Gargoyle Sentinel
+1 Garna, the Bloodflame
+1 Garruk's Horde
+3 Garruk's Packleader
+1 Gatekeeper of Malakir
+3 Gathan Raiders
+3 Gaze of Justice
+2 Gearsmith Guardian
+4 Gearsmith Prodigy
+1 Gelatinous Genesis
+1 Gemhide Sliver
+1 Gempalm Sorcerer
+1 Gempalm Strider
+1 Generous Patron
+1 Genesis Chamber
+1 Gerrard Capashen
+1 Gerrard's Command
+1 Geyser Glider
+1 Ghalta, Primal Hunger
+1 Ghastbark Twins
+2 Ghastly Discovery
+3 Ghazbán Ogre
+2 Ghirapur Guide
+4 Ghitu Chronicler
+1 Ghitu Encampment
+1 Ghitu Fire-Eater
+4 Ghitu Firebreathing
+5 Ghitu Journeymage
+6 Ghitu Lavarunner
+2 Ghitu Slinger
+1 Ghor-Clan Savage
+6 Ghost Tactician
+2 Ghost Warden
+6 Ghostfire
+3 Ghostflame Sliver
+4 Ghostform
+1 Ghosthelm Courier
+2 Ghostly Possession
+1 Ghostly Touch
+5 Ghoulcaller's Bell
+3 Giant Caterpillar
+3 Giant Crab
+8 Giant Dustwasp
+12 Giant Growth
+4 Giant Octopus
+9 Giant Spider
+10 Giant Strength
+1 Giantbaiting
+1 Gibbering Descent
+1 Gibbering Hyenas
+5 Gideon's Reproach
+5 Gift of Granite
+5 Gift of Growth
+1 Gift of Orzhova
+1 Gigantiform
+2 Gilded Light
+1 Gilt-Leaf Seer
+5 Giltgrove Stalker
+1 Giltspire Avenger
+1 Gishath, Sun's Avatar
+1 Glacial Wall
+2 Glade Gnarr
+1 Glare of Heresy
+3 Glass Asp
+1 Glasses of Urza
+1 Gleam of Battle
+3 Gleaming Barrier
+1 Gleeful Sabotage
+1 Glimpse the Future
+3 Glintwing Invoker
+2 Glittering Wish
+1 Gloom Surgeon
+3 Gloomhunter
+3 Gloomwidow
+1 Gloomwidow's Feast
+7 Glory Seeker
+4 Glowering Rogon
+2 Glowrider
+2 Gnarlid Pack
+1 Gnawing Zombie
+2 Go for the Throat
+1 Goblin Artillery
+1 Goblin Barrage
+2 Goblin Berserker
+1 Goblin Bombardment
+1 Goblin Boom Keg
+2 Goblin Brawler
+1 Goblin Cannon
+1 Goblin Cavaliers
+1 Goblin Chainwhirler
+2 Goblin Chariot
+1 Goblin Chieftain
+1 Goblin Clearcutter
+5 Goblin Digging Team
+1 Goblin Dynamo
+1 Goblin Elite Infantry
+2 Goblin Firebug
+3 Goblin Gardener
+2 Goblin Glider
+3 Goblin Grappler
+4 Goblin Grenade
+7 Goblin Hero
+2 Goblin Instigator
+2 Goblin King
+1 Goblin Lackey
+1 Goblin Lyre
+1 Goblin Marshal
+7 Goblin Matron
+3 Goblin Medics
+3 Goblin Motivator
+2 Goblin Offensive
+5 Goblin Patrol
+2 Goblin Piker
+9 Goblin Raider
+1 Goblin Razerunners
+4 Goblin Recruiter
+1 Goblin Replica
+1 Goblin Rimerunner
+1 Goblin Ringleader
+3 Goblin Roughrider
+1 Goblin Ruinblaster
+1 Goblin Shortcutter
+6 Goblin Shrine
+5 Goblin Sky Raider
+3 Goblin Skycutter
+2 Goblin Soothsayer
+2 Goblin Spelunkers
+2 Goblin Swine-Rider
+1 Goblin Test Pilot
+1 Goblin Tinkerer
+5 Goblin Trailblazer
+1 Goblin Trashmaster
+3 Goblin Tunneler
+1 Goblin Turncoat
+4 Goblin War Buggy
+1 Goblin War Strike
+1 Goblin War Wagon
+4 Goblin Warchief
+1 Goblin Warrens
+1 Gods Willing
+4 Goham Djinn
+1 Gold Myr
+1 Gold-Forged Sentinel
+1 Golden Bear
+2 Golden Demise
+1 Golden Guardian
+1 Goldmeadow Lookout
+2 Goldnight Redeemer
+4 Gorgon Recluse
+1 Gorilla Chieftain
+1 Gorilla Pack
+1 Gorilla War Cry
+3 Gorilla Warrior
+1 Goring Ceratops
+1 Gorm the Great
+10 Gossamer Phantasm
+1 Grab the Reins
+1 Granitic Titan
+4 Grapeshot
+1 Grappler Spider
+1 Grappling Hook
+6 Grasping Scoundrel
+1 Grasslands
+5 Grave Peril
+5 Grave Scrabbler
+1 Grave Servitude
+2 Gravedigger
+1 Gravegouger
+1 Gravelgill Duo
+2 Gravity Well
+1 Graxiplon
+4 Gray Merchant of Asphodel
+1 Graypelt Refuge
+1 Grazing Gladehart
+1 Great Hart
+1 Greater Realm of Preservation
+1 Greed
+1 Greel's Caress
+3 Greenseeker
+1 Greenside Watcher
+1 Greenweaver Druid
+3 Greenwood Sentinel
+1 Gridlock
+1 Griffin Dreamfinder
+2 Griffin Guide
+2 Grim Backwoods
+1 Grim Discovery
+2 Grim Flowering
+6 Grinning Ignus
+2 Grip of Amnesia
+1 Griptide
+2 Grisly Spectacle
+1 Grisly Survivor
+1 Grixis Battlemage
+1 Grixis Grimblade
+1 Grixis Panorama
+5 Grizzly Bears
+2 Grotag Siege-Runner
+3 Grotag Thrasher
+3 Grotesque Mutation
+1 Ground Assault
+4 Ground Rift
+1 Groundbreaker
+3 Groundswell
+5 Grow from the Ashes
+1 Gruesome Discovery
+5 Gruesome Fate
+1 Grunn, the Lonely King
+3 Gruul Guildgate
+1 Gruul Guildmage
+1 Gruul Keyrune
+1 Gruul Nodorog
+2 Gruul Turf
+3 Guard Duty
+4 Guardian Zendikon
+4 Guardians of Koilos
+4 Guardians of Meletis
+3 Gudul Lurker
+1 Guerrilla Tactics
+1 Guided Passage
+1 Guild Feud
+3 Guildscorn Ward
+1 Guilty Conscience
+1 Gurmag Drowner
+1 Gustcloak Cavalier
+1 Gustcloak Sentinel
+6 Gutter Skulk
+1 Guttersnipe
+1 Gwafa Hazid, Profiteer
+1 Hail of Arrows
+2 Halam Djinn
+2 Halimar Excavator
+2 Hallar, the Firefletcher
+1 Hallowed Ground
+1 Hammer of Nazahn
+2 Hammer of Ruin
+1 Hammerhead Shark
+1 Hand of Cruelty
+4 Hand of Silumgar
+3 Hands of Binding
+2 Haphazard Bombardment
+1 Harbinger of the Tides
+5 Hardy Veteran
+1 Harmless Assault
+5 Harmonize
+4 Harrow
+2 Harvest Mage
+3 Harvest Wurm
+1 Hate Weaver
+3 Haunted Guardian
+2 Haunter of Nightveil
+2 Haunting Hymn
+1 Haven of the Spirit Dragon
+1 Havengul Lich
+1 Havengul Vampire
+1 Havenwood Battleground
+3 Havenwood Wurm
+1 Havoc
+2 Havoc Devils
+1 Haze Frog
+3 Haze of Rage
+1 Hazy Homunculus
+3 Headless Skaab
+1 Headlong Rush
+2 Headwater Sentries
+4 Healing Grace
+2 Healing Hands
+4 Healing Leaves
+3 Healing Salve
+4 Heart Sliver
+2 Heart Warden
+1 Heartstabber Mosquito
+1 Heartstone
+1 Heartwood Storyteller
+4 Heat Ray
+1 Heavy Arbalest
+1 Hedge Troll
+1 Hedron Archive
+1 Hedron Crab
+1 Hedron Rover
+2 Heirloom Blade
+3 Heliod's Emissary
+1 Heliod, God of the Sun
+1 Helium Squirter
+1 Hellion Crucible
+2 Hellion Eruption
+1 Hellkite Charger
+1 Helm of the Host
+9 Henchfiend of Ukor
+1 Henge of Ramos
+1 Herald of Dromoka
+1 Herald of Faith
+2 Herald's Horn
+6 Herd Gnarr
+1 Hero's Blade
+1 Hero's Resolve
+2 Heroic Reinforcements
+3 Hexplate Golem
+1 Hibernation Sliver
+1 Hibernation Sliver
+1 Hidden Ancients
+1 Hidden Guerrillas
+1 Hidden Herd
+1 Hidden Spider
+1 Hideous End
+1 Hieromancer's Cage
+1 Hierophant's Chalice
+4 Highland Game
+3 Highland Lake
+1 Highspire Mantis
+2 Highway Robber
+1 Hill Giant
+1 Hindering Touch
+1 Hinterland Harbor
+3 Hired Blade
+1 Hivis of the Scale
+3 Hold at Bay
+2 Hollow Dogs
+1 Hollow Trees
+1 Hollowhenge Scavenger
+1 Hollowsage
+1 Holy Day
+2 Holy Justiciar
+1 Holy Strength
+4 Homarid Explorer
+2 Homicidal Seclusion
+1 Homing Sliver
+1 Homing Sliver
+1 Honed Khopesh
+9 Honor Guard
+2 Honor's Reward
+2 Hooded Kavu
+1 Horde Ambusher
+1 Horizon Drake
+2 Horizon Scholar
+4 Horn of Ramos
+1 Horned Sliver
+1 Horned Troll
+3 Horned Turtle
+1 Hornet Cannon
+3 Hornswoggle
+4 Horror of the Dim
+4 Hostile Minotaur
+4 Howl from Beyond
+2 Howl of the Night Pack
+1 Howlgeist
+1 Howling Golem
+2 Howling Wolf
+1 Huatli, Dinosaur Knight
+1 Huatli, Radiant Champion
+1 Huatli, Warrior Poet
+3 Huddle Up
+3 Hulking Goblin
+1 Hulking Ogre
+3 Hull Breach
+2 Human Frailty
+4 Hundred-Handed One
+2 Hundroog
+1 Hungering Hydra
+1 Hungering Yeti
+1 Hungry Lynx
+1 Hungry Mist
+5 Hunt the Weak
+4 Hunted Wumpus
+8 Hunter Sliver
+1 Hunter's Prowess
+2 Hunting Drake
+1 Hunting Kavu
+1 Hunting Moa
+4 Hunting Wilds
+2 Hurricane
+2 Hush
+1 Hyalopterous Lemure
+4 Hydroform
+2 Hyena Umbra
+1 Hymn to Tourach
+1 Hypergenesis
+1 Hypersonic Dragon
+1 Hypnotic Cloud
+4 Icatian Crier
+1 Icatian Javelineers
+1 Ice Floe
+1 Icefall
+4 Ichor Slick
+3 Icy Manipulator
+3 Ignite Memories
+2 Ikiral Outrider
+5 Ill-Tempered Cyclops
+1 Illusionist's Bracers
+2 Imagecrafter
+1 Immersturm
+1 Imp's Mischief
+3 Impact Tremors
+4 Impale
+1 Imperial Aerosaur
+2 Imperial Ceratops
+1 Imperial Mask
+3 Imperiosaur
+1 Impetuous Protege
+1 Implode
+3 Imposing Visage
+4 Impulse
+2 In Bolas's Clutches
+1 Inalla, Archmage Ritualist
+4 Incinerate
+2 Incite War
+1 Indentured Djinn
+1 Indentured Oaf
+12 Indestructibility
+1 Indestructible Aura
+1 Index
+3 Inescapable Brute
+4 Infectious Horror
+1 Infernal Plunge
+3 Infernal Scarring
+2 Inferno Hellion
+1 Inferno Trap
+6 Infiltrator il-Kor
+1 Inflame
+1 Information Dealer
+4 Initiate of Blood
+1 Initiate's Companion
+1 Inkfathom Witch
+2 Inner Demon
+2 Inquisitor's Snare
+1 Insight
+4 Inspiration
+4 Inspired Charge
+1 Inspiring Call
+1 Inspirit
+1 Insubordination
+1 Intervene
+2 Intervention Pact
+2 Intet, the Dreamer
+1 Intimidator Initiate
+1 Into the North
+1 Into the Roil
+2 Into the Void
+2 Invigorate
+9 Invoke the Divine
+2 Iona's Judgment
+1 Ior Ruin Expedition
+1 Ipnu Rivulet
+1 Iridescent Drake
+1 Iron Myr
+1 Iron Star
+1 Iron Will
+1 Iron-Barb Hellion
+2 Ironclaw Buzzardiers
+2 Ironclaw Orcs
+1 Irresistible Prey
+3 Irrigation Ditch
+249 Island
+1 Isle of Vesuva
+4 Ivory Giant
+1 Ivy Elemental
+2 Ivy Lane Denizen
+1 Ixidor's Will
+1 Izzet Boilerworks
+1 Izzet Chemister
+1 Izzet Chronarch
+1 Jace's Ingenuity
+1 Jackalope Herd
+5 Jade Bearer
+4 Jadecraft Artisan
+1 Jadelight Ranger
+1 Jagged-Scar Archers
+1 Jagwasp Swarm
+1 Jandor's Saddlebags
+1 Jareth, Leonine Titan
+1 Jaya Ballard
+1 Jaya's Immolating Inferno
+2 Jayemdae Tome
+1 Jazal Goldmane
+2 Jedit Ojanen of Efrava
+3 Jelenn Sphinx
+1 Jenara, Asura of War
+1 Jeskai Barricade
+1 Jhoira of the Ghitu
+2 Jhoira's Familiar
+6 Jhoira's Timebug
+1 Jhoira, Weatherlight Captain
+1 Jilt
+3 Jodah's Avenger
+2 Jodah, Archmage Eternal
+1 Johtull Wurm
+1 Join the Ranks
+1 Jolrael's Favor
+2 Jolrael, Empress of Beasts
+1 Jolt
+1 Joraga Bard
+1 Joraga Warcaller
+1 Josu Vess, Lich Knight
+1 Journey to Eternity
+5 Jousting Lance
+2 Jubilant Mascot
+6 Judge Unworthy
+6 Juggernaut
+1 Jund Hackblade
+3 Jungle Barrier
+2 Jungle Creeper
+1 Jungle Hollow
+10 Jungle Shrine
+3 Jungle Wayfinder
+2 Jungle Wurm
+6 Jungleborn Pioneer
+1 Junún Efreet
+1 Juxtapose
+1 Jwar Isle Refuge
+2 Kabira Crossroads
+2 Kabira Vindicator
+3 Kaervek's Torch
+1 Kalonian Tusker
+1 Kamahl's Druidic Vow
+1 Kamahl, Pit Fighter
+1 Karametra's Favor
+1 Kargan Dragonlord
+1 Karona's Zealot
+1 Kavu Aggressor
+3 Kavu Climber
+1 Kavu Mauler
+3 Kavu Predator
+10 Kavu Primarch
+2 Kavu Recluse
+4 Kavu Scout
+1 Kazandu Tuskcaller
+1 Kazarov, Sengir Pureblood
+1 Kazuul, Tyrant of the Cliffs
+2 Keen Sense
+2 Keeneye Aven
+1 Keeper of the Dead
+1 Keeper of the Flame
+1 Keeper of the Mind
+3 Keldon Halberdier
+8 Keldon Marauders
+5 Keldon Overseer
+4 Keldon Raider
+4 Keldon Warcaller
+1 Keldon Warlord
+1 Kemba, Kha Regent
+1 Kemuri-Onna
+1 Kess, Dissident Mage
+7 Kessig Malcontents
+1 Kessig Wolf
+2 Keymaster Rogue
+6 Khalni Garden
+1 Khenra Scrapper
+1 Kheru Mind-Eater
+3 Killer Bees
+1 Killer Whale
+2 Killing Glare
+1 Kiln Fiend
+1 Kindercatch
+4 Kindle
+2 Kindred Boon
+2 Kindred Charge
+1 Kindred Discovery
+1 Kindred Dominance
+2 Kindred Summons
+4 King Cheetah
+5 Kingpin's Pet
+1 Kinjalli's Caller
+1 Kinjalli's Sunwing
+1 Kinscaer Harpoonist
+1 Kiss of the Amesha
+3 Kitesail
+3 Kitesail Apprentice
+8 Kitesail Corsair
+1 Kithkin Rabble
+1 Kithkin Shielddare
+1 Kjeldoran Javelineer
+1 Kjeldoran Phalanx
+1 Kjeldoran Skyknight
+1 Kjeldoran War Cry
+2 Knight of Cliffhaven
+3 Knight of Grace
+1 Knight of Malice
+3 Knight of New Benalia
+1 Knight of Stromgald
+8 Knight of Sursi
+1 Knight of the Hokey Pokey
+2 Knight of the Holy Nimbus
+7 Knight of the Stampede
+4 Knight of the Tusk
+1 Knight Watch
+5 Knight's Pledge
+2 Knightly Valor
+1 Knollspine Invocation
+1 Knotvine Mystic
+2 Kodama's Reach
+1 Kolaghan, the Storm's Fury
+1 Kor Cartographer
+4 Kor Dirge
+1 Kor Duelist
+2 Kor Firewalker
+1 Kor Line-Slinger
+1 Kor Outfitter
+1 Kor Sanctifiers
+1 Kor Skyfisher
+1 Kor Spiritdancer
+2 Kozilek's Predator
+3 Kraken Hatchling
+1 Kraken of the Straits
+1 Kraken's Eye
+2 Krakilin
+1 Krark-Clan Shaman
+2 Krasis Incubation
+3 Kraul Warrior
+1 Krav, the Unredeemed
+2 Krenko's Command
+1 Krenko, Mob Boss
+2 Kris Mage
+1 Krosan Avenger
+1 Krosan Constrictor
+1 Krosan Drover
+2 Krosan Druid
+3 Krosan Grip
+1 Krosan Groundshaker
+4 Krosan Reclamation
+1 Krosan Restorer
+2 Krosan Tusker
+1 Krosan Verge
+5 Krosan Vorine
+1 Krosan Warchief
+1 Krovikan Mist
+2 Krovikan Scoundrel
+1 Krovikan Sorcerer
+1 Kuldotha Flamefiend
+1 Kumena's Awakening
+2 Kwende, Pride of Femeref
+1 Kyren Glider
+1 Kyren Legate
+4 Kyren Sniper
+1 Kyscu Drake
+1 Lab Rats
+1 Laccolith Grunt
+1 Laccolith Rig
+1 Laccolith Titan
+4 Lagac Lizard
+2 Last Breath
+3 Last Gasp
+2 Last Kiss
+1 Last One Standing
+20 Latch Seeker
+1 Lathliss, Dragon Queen
+9 Lava Axe
+2 Lava Burst
+1 Lava-Field Overlord
+4 Lavacore Elemental
+5 Lavafume Invoker
+1 Lavamancer's Skill
