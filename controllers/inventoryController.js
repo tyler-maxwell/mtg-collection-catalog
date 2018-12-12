@@ -63,6 +63,7 @@ module.exports = {
                     // Store only multiverseId and releaseDate
                     const foundCard = {
                       multiverseId: cardInfo.multiverseId,
+                      name: cardInfo.name,
                       releaseDate: new Date(set.releaseDate) // Only used to get the latest edition of card if card does not already exist in user's inventory
                     };
                     // Store all editions of card info
@@ -84,8 +85,6 @@ module.exports = {
                     ) {
                       cardExists = true;
                       // Create and push existing card to existingCards array
-                      console.log("inventory[i]", user.inventory[i]);
-                      console.log("foundCardInfo[j]", foundCardInfo[j]);
                       existingCard = {
                         id: user.inventory[i]._id,
                         ownedCount:
@@ -116,6 +115,7 @@ module.exports = {
                   for (let i = foundCardInfo.length - 1; i >= 0; i--) {
                     if (foundCardInfo[i].multiverseId) {
                       newCard.multiverseId = foundCardInfo[i].multiverseId;
+                      newCard.name = foundCardInfo[i].name;
                       newCard.ownedCount = card.ownedCount;
                       newCard.wishCount = card.wishCount;
                     }
@@ -123,15 +123,13 @@ module.exports = {
                   // Store new cards and/or bad cards
                   let isEmpty = true;
                   for (var key in newCard) {
-                    if (obj.hasOwnProperty(key)) {
+                    if (newCard.hasOwnProperty(key)) {
                       isEmpty = false;
                     }
                   }
                   if (isEmpty) {
-                    console.log("badcard", newCard);
                     badCards.push(card);
                   } else {
-                    console.log("goodcard", newCard);
                     newCards.push(newCard);
                   }
                 }
@@ -140,7 +138,6 @@ module.exports = {
             const entries = [];
             // Create bulk commands for updating existing cards
             existingCards.forEach(existingCard => {
-              console.log("existingCard", existingCard);
               const entry = {
                 updateOne: {
                   filter: { _id: existingCard.id },
@@ -154,11 +151,11 @@ module.exports = {
             });
             // Create bulk commands for creating new cards
             newCards.forEach(newCard => {
-              console.log("newCard", newCard);
               const entry = {
                 insertOne: {
                   document: {
                     multiverseId: newCard.multiverseId,
+                    name: newCard.name,
                     ownedCount: newCard.ownedCount,
                     wishCount: newCard.wishCount
                   }

@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const CardInvSchema = new Schema({
   multiverseId: { type: Number, required: true },
+  name: { type: String, required: true },
   ownedCount: { type: Number, required: true },
   wishCount: { type: Number, required: true },
   needCount: { type: Number, required: true, default: 0 }
