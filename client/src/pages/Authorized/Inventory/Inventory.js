@@ -16,7 +16,8 @@ class Inventory extends Component {
     batchText: "",
     inventory: {
       hasInventory: false
-    }
+    },
+    pageSelect: 1
   };
 
   componentDidMount() {
@@ -31,6 +32,16 @@ class Inventory extends Component {
         inventory: res.data
       });
     });
+  };
+
+  onPageSubmit = event => {
+    event.preventDefault();
+    this.setState({
+      inventory: {
+        hasInventory: false
+      }
+    });
+    this.loadCards(this.state.pageSelect);
   };
 
   handleFirstPageButtonClick = event => {
@@ -83,11 +94,17 @@ class Inventory extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
+    const page = parseInt(this.state.inventory.page);
+    this.setState({
+      inventory: {
+        hasInventory: false
+      }
+    });
     const preparedBatch = this.prepareBatch(this.state.batchText);
     inventoryAPI
       .submitBatch(this.props.user.id, preparedBatch.batch)
       .then(res => {
-        console.log(res);
+        this.loadCards(page);
       });
   };
 
@@ -164,19 +181,19 @@ class Inventory extends Component {
           />
         </Grid>
         <Grid item xs={6} />
-        <Grid item xs={12}>
-          {this.state.inventory.hasInventory ? (
-            <InventoryTable
-              inventory={this.state.inventory}
-              handleFirstPageButtonClick={this.handleFirstPageButtonClick}
-              handleBackButtonClick={this.handleBackButtonClick}
-              handleNextButtonClick={this.handleNextButtonClick}
-              handleLastPageButtonClick={this.handleLastPageButtonClick}
-            />
-          ) : (
-            "Waiting for inventory to load."
-          )}
-        </Grid>
+        {this.state.inventory.hasInventory ? (
+          <InventoryTable
+            inventory={this.state.inventory}
+            onPageSubmit={this.onPageSubmit}
+            handleInputChange={this.handleInputChange}
+            handleFirstPageButtonClick={this.handleFirstPageButtonClick}
+            handleBackButtonClick={this.handleBackButtonClick}
+            handleNextButtonClick={this.handleNextButtonClick}
+            handleLastPageButtonClick={this.handleLastPageButtonClick}
+          />
+        ) : (
+          "Waiting for inventory to update."
+        )}
       </Grid>
     );
   }

@@ -3,6 +3,7 @@ import React from "react";
 // Material UI
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -52,77 +53,95 @@ const InventoryTable = props => {
   );
 
   return (
-    <Paper className={classes.root}>
-      <Table className={classes.table}>
-        <TableHead>
-          <TableRow>
-            <Typography variant="body1">
-              Page: {props.inventory.page}/{props.inventory.totalPages}
-            </Typography>
-            <IconButton
-              onClick={props.handleFirstPageButtonClick}
-              disabled={parseInt(props.inventory.page) === 1}
-              aria-label="First Page"
-            >
-              <FirstPageIcon />
-            </IconButton>
-            <IconButton
-              onClick={props.handleBackButtonClick}
-              disabled={parseInt(props.inventory.page) === 1}
-              aria-label="Previous Page"
-            >
-              <KeyboardArrowLeft />
-            </IconButton>
+    <React.Fragment>
+      <Grid item xs={1}>
+        <Typography variant="body1">
+          Page: {props.inventory.page}/{props.inventory.totalPages}
+        </Typography>
+      </Grid>
+      <Grid item xs={1}>
+        <form onSubmit={props.onPageSubmit}>
+          <input
+            label="Page Select"
+            type="number"
+            name="pageSelect"
+            min="1"
+            max={props.inventory.totalPages}
+            onChange={props.handleInputChange}
+          />
+        </form>
+      </Grid>
+      <Grid item xs={12}>
+        <Paper className={classes.root}>
+          <Table className={classes.table}>
+            <TableHead>
+              <TableRow>
+                <IconButton
+                  onClick={props.handleFirstPageButtonClick}
+                  disabled={parseInt(props.inventory.page) === 1}
+                  aria-label="First Page"
+                >
+                  <FirstPageIcon />
+                </IconButton>
+                <IconButton
+                  onClick={props.handleBackButtonClick}
+                  disabled={parseInt(props.inventory.page) === 1}
+                  aria-label="Previous Page"
+                >
+                  <KeyboardArrowLeft />
+                </IconButton>
 
-            <IconButton
-              onClick={props.handleNextButtonClick}
-              disabled={
-                parseInt(props.inventory.page) ===
-                parseInt(props.inventory.totalPages)
-              }
-              aria-label="Next Page"
-            >
-              <KeyboardArrowRight />
-            </IconButton>
+                <IconButton
+                  onClick={props.handleNextButtonClick}
+                  disabled={
+                    parseInt(props.inventory.page) ===
+                    parseInt(props.inventory.totalPages)
+                  }
+                  aria-label="Next Page"
+                >
+                  <KeyboardArrowRight />
+                </IconButton>
 
-            <IconButton
-              onClick={props.handleLastPageButtonClick}
-              disabled={
-                parseInt(props.inventory.page) ===
-                parseInt(props.inventory.totalPages)
-              }
-              aria-label="Last Page"
-            >
-              <LastPageIcon />
-            </IconButton>
-          </TableRow>
-          <TableRow>
-            <TableCell numeric>Owned</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Type</TableCell>
-            <TableCell>Mana Cost</TableCell>
-            <TableCell numeric>Power</TableCell>
-            <TableCell numeric>Toughness</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map(row => {
-            return (
-              <TableRow key={row.id}>
-                <TableCell numeric component="th" scope="row">
-                  {row.ownedCount}
-                </TableCell>
-                <TableCell>{row.name}</TableCell>
-                <TableCell>{row.type}</TableCell>
-                <TableCell>{row.manaCost}</TableCell>
-                <TableCell numeric>{row.power}</TableCell>
-                <TableCell numeric>{row.toughness}</TableCell>
+                <IconButton
+                  onClick={props.handleLastPageButtonClick}
+                  disabled={
+                    parseInt(props.inventory.page) ===
+                    parseInt(props.inventory.totalPages)
+                  }
+                  aria-label="Last Page"
+                >
+                  <LastPageIcon />
+                </IconButton>
               </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table>
-    </Paper>
+              <TableRow>
+                <TableCell numeric>Owned</TableCell>
+                <TableCell>Name</TableCell>
+                <TableCell>Type</TableCell>
+                <TableCell>Mana Cost</TableCell>
+                <TableCell numeric>Power</TableCell>
+                <TableCell numeric>Toughness</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map(row => {
+                return (
+                  <TableRow key={row.id}>
+                    <TableCell numeric component="th" scope="row">
+                      {row.ownedCount}
+                    </TableCell>
+                    <TableCell>{row.name}</TableCell>
+                    <TableCell>{row.type}</TableCell>
+                    <TableCell>{row.manaCost}</TableCell>
+                    <TableCell numeric>{row.power}</TableCell>
+                    <TableCell numeric>{row.toughness}</TableCell>
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
+        </Paper>
+      </Grid>
+    </React.Fragment>
   );
 };
 
