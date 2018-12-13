@@ -115,8 +115,10 @@ module.exports = {
                       existingCard = {
                         id: user.inventory[i]._id,
                         ownedCount:
-                          user.inventory[i].ownedCount + card.ownedCount,
-                        wishCount: user.inventory[i].wishCount + card.wishCount
+                          user.inventory[i].ownedCount +
+                          parseInt(card.ownedCount),
+                        wishCount:
+                          user.inventory[i].wishCount + parseInt(card.wishCount)
                       };
                       existingCards.push(existingCard);
                     }
