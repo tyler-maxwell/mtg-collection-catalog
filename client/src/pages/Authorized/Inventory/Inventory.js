@@ -5,13 +5,72 @@ import { connect } from "react-redux";
 // Material UI
 import PropTypes from "prop-types";
 import Grid from "@material-ui/core/Grid";
+// Components
 import BatchForm from "../../../components/catalog/BatchForm";
+import InventoryTable from "../../../components/catalog/InventoryTable";
 // API
 import inventoryAPI from "../../../utils/inventoryAPI";
 
 class Inventory extends Component {
   state = {
-    batchText: ""
+    batchText: "",
+    inventory: {
+      hasInventory: false
+    }
+  };
+
+  componentDidMount() {
+    this.loadCards(1);
+  }
+
+  loadCards = page => {
+    console.log("loadCards called");
+    inventoryAPI.getCardsByPage(this.props.user.id, page).then(res => {
+      console.log("res", res);
+      this.setState({
+        inventory: res.data
+      });
+    });
+  };
+
+  handleFirstPageButtonClick = event => {
+    const page = 1;
+    this.setState({
+      inventory: {
+        hasInventory: false
+      }
+    });
+    this.loadCards(page);
+  };
+
+  handleBackButtonClick = event => {
+    const page = parseInt(this.state.inventory.page) - 1;
+    this.setState({
+      inventory: {
+        hasInventory: false
+      }
+    });
+    this.loadCards(page);
+  };
+
+  handleNextButtonClick = event => {
+    const page = parseInt(this.state.inventory.page) + 1;
+    this.setState({
+      inventory: {
+        hasInventory: false
+      }
+    });
+    this.loadCards(page);
+  };
+
+  handleLastPageButtonClick = event => {
+    const page = parseInt(this.state.inventory.totalPages);
+    this.setState({
+      inventory: {
+        hasInventory: false
+      }
+    });
+    this.loadCards(page);
   };
 
   handleInputChange = event => {
@@ -103,6 +162,20 @@ class Inventory extends Component {
             handleInputChange={this.handleInputChange}
             handleFormSubmit={this.handleFormSubmit}
           />
+        </Grid>
+        <Grid item xs={6} />
+        <Grid item xs={12}>
+          {this.state.inventory.hasInventory ? (
+            <InventoryTable
+              inventory={this.state.inventory}
+              handleFirstPageButtonClick={this.handleFirstPageButtonClick}
+              handleBackButtonClick={this.handleBackButtonClick}
+              handleNextButtonClick={this.handleNextButtonClick}
+              handleLastPageButtonClick={this.handleLastPageButtonClick}
+            />
+          ) : (
+            "Waiting for inventory to load."
+          )}
         </Grid>
       </Grid>
     );

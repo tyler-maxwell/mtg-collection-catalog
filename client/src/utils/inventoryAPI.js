@@ -1,10 +1,10 @@
 import axios from "axios";
 
 export default {
+  getCardsByPage: function(id, page) {
+    return axios.get(`/api/inventory/${id}/${page}`);
+  },
   submitBatch: function(id, batch) {
-    console.log();
-    console.log("submitBatch");
-    console.log();
-    return axios.put("/api/inventory/" + id, batch);
+    return axios.put(`/api/inventory/${id}`, batch);
   }
 };

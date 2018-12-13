@@ -2,16 +2,43 @@ const db = require("../database/models");
 const allSets = require("../json");
 
 module.exports = {
-  findAll: function(req, res) {
+  findCardsByPage: function(req, res) {
+    const cardsPerPage = 25;
     const response = {
       hasInventory: false
     };
     db.User.findById(req.params.id)
-      .populate("inventory")
+      .populate({ path: "inventory", options: { sort: { name: 1 } } })
       .then(user => {
         if (user.inventory) {
           response.hasInventory = true;
-          response.inventory = user.inventory;
+          response.page = req.params.page;
+          response.totalPages = Math.ceil(user.inventory.length / cardsPerPage);
+          const index = (req.params.page - 1) * cardsPerPage;
+          response.cards = user.inventory
+            .slice(index, index + cardsPerPage)
+            .map(card => {
+              let updatedCard;
+              let infoFound = false;
+              for (let i = 0; i < allSets.length; i++) {
+                const set = allSets[i];
+                for (let j = 0; j < set.cards.length; j++) {
+                  const cardInfo = set.cards[j];
+                  if (card.multiverseId === cardInfo.multiverseId) {
+                    infoFound = true;
+                    updatedCard = {
+                      ...card._doc,
+                      info: {
+                        ...cardInfo
+                      }
+                    };
+                  }
+                  if (infoFound) break;
+                }
+                if (infoFound) break;
+              }
+              return updatedCard;
+            });
         }
         res.json(response);
       })
