@@ -9,6 +9,8 @@ import {
 // Redux
 import { connect } from "react-redux";
 import * as actions from "./store/actions";
+// Material UI
+import CssBaseline from "@material-ui/core/CssBaseline";
 // Pages
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
@@ -32,6 +34,7 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <CssBaseline />
         <Router>
           <Switch>
             <Route exact path="/" render={props => <Login {...props} />} />
