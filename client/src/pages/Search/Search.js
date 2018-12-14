@@ -1,10 +1,18 @@
 // React
-import React from "react";
+import React from 'react';
+//components
+import Nav from '../../components/Nav';
 
-const Search = props => (
-  <React.Fragment>
-    <h3>This is top level search page.</h3>
-  </React.Fragment>
-);
+const Search = props => {
+  return (
+    <React.Fragment>
+      <Nav
+        isPublic={false}
+        // username={props.user.username}
+        // logOut={() => props.authLogout(props.user.username)}
+      />
+    </React.Fragment>
+  );
+};
 
 export default Search;

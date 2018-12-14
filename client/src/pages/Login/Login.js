@@ -1,22 +1,23 @@
 // React
-import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 // Redux
-import { connect } from "react-redux";
-import * as actions from "../../store/actions";
+import { connect } from 'react-redux';
+import * as actions from '../../store/actions';
 // Material UI
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 // Components
-import { Row, Col, Container } from "../../components/grid";
-import Nav from "../../components/Nav";
+import { Row, Col, Container } from '../../components/grid';
+import Nav from '../../components/Nav';
 
 class Login extends Component {
   constructor() {
     super();
     this.state = {
-      username: "",
-      password: ""
+      username: '',
+      password: '',
+      search: ''
     };
     this.handleLogin = this.handleLogin.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -42,7 +43,11 @@ class Login extends Component {
     } else {
       return (
         <Container>
-          <Nav isPublic={true} />
+          <Nav
+            isPublic={true}
+            onSearch={this.props.onSearch}
+            handleSearch={this.props.handleSearch}
+          />
           <Row>
             <Col size={4} />
             <Col size={4}>
@@ -51,7 +56,7 @@ class Login extends Component {
                 {this.props.loginError ? (
                   <span>{this.props.loginError}</span>
                 ) : (
-                  ""
+                  ''
                 )}
                 <form id="loginForm">
                   <Row>
