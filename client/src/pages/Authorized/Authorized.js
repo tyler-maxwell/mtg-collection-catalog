@@ -1,5 +1,5 @@
 // React
-import React from "react";
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -7,36 +7,36 @@ import {
   Link,
   Redirect,
   withRouter
-} from "react-router-dom";
+} from 'react-router-dom';
 // Redux
-import { connect } from "react-redux";
-import * as actions from "../../store/actions";
+import { connect } from 'react-redux';
+import * as actions from '../../store/actions';
 // Material UI
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
-import Drawer from "@material-ui/core/Drawer";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
-import Typography from "@material-ui/core/Typography";
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
+import Typography from '@material-ui/core/Typography';
 // Components
-import Nav from "../../components/Nav";
-import SidebarButton from "../../components/SidebarButton";
+import Nav from '../../components/Nav';
+import SidebarButton from '../../components/SidebarButton';
 // Sub-pages
-import About from "./About";
-import Inventory from "./Inventory";
-import Wishlist from "./Wishlist";
-import MyAccount from "./MyAccount";
-import Password from "./Password";
+import About from './About';
+import Inventory from './Inventory';
+import Wishlist from './Wishlist';
+import MyAccount from './MyAccount';
+import Password from './Password';
 
 const styles = theme => ({
   root: {
-    display: "flex"
+    display: 'flex'
   },
   drawer: {
     width: 240,
@@ -56,7 +56,7 @@ const Authorized = props => {
   const { classes } = props;
 
   if (!props.isLoggedIn) {
-    return "Waiting for data to load from Redux";
+    return 'Waiting for data to load from Redux';
   } else {
     return (
       <div className={classes.root}>
@@ -64,6 +64,7 @@ const Authorized = props => {
         <Nav
           isPublic={false}
           username={props.user.username}
+          onSearch={props.onSearch}
           logOut={() => props.authLogout(props.user.username)}
         />
         <Drawer
@@ -80,7 +81,7 @@ const Authorized = props => {
           </List>
           <Divider />
           <List>
-            {["Deck 1", "Deck 2", "Deck 3"].map((text, index) => (
+            {['Deck 1', 'Deck 2', 'Deck 3'].map((text, index) => (
               <ListItem button key={text}>
                 <ListItemIcon>
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}

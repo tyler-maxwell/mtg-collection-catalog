@@ -1,5 +1,5 @@
 // Returns info from ../json
-const allSets = require("../json");
+const allSets = require('../json');
 
 module.exports = {
   findByName: function(req, res) {
