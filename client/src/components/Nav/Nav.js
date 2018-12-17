@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
@@ -87,6 +87,7 @@ function SimpleAppBar(props) {
               }}
             />
           </div>
+          <Button variant="contained" onClick={props.handleSearch}><i className="material-icons">search</i></Button>
           <div className={classes.grow} />
           {!isPublic && <SimpleMenu username={username} logOut={logOut} />}
         </Toolbar>
