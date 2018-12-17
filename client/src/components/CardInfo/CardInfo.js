@@ -10,6 +10,7 @@ import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 // Components
 import CardImage from "../CardImage";
+import ManaCost from "../ManaCost";
 
 const styles = theme => ({
   root: {
@@ -28,15 +29,16 @@ function CardInfo(props) {
   return (
     <Grid item xs={12}>
       <Row>
-        <Grid item xs={3} />
+        <Grid item xs={2} />
         <Grid item xs={3}>
           <CardImage multiverseId={props.multiverseId} />
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={5}>
           <Paper>
             <Grid item xs={12}>
               <Typography variant="h6">
                 {props.name} — {props.manaCost}
+                <ManaCost manaCost={props.manaCost} />
               </Typography>
               <Divider />
               <Typography variant="h6">{props.type}</Typography>
@@ -61,12 +63,13 @@ function CardInfo(props) {
                   <React.Fragment>
                     <Typography variant="">{ruling.date}</Typography>
                     <Typography variant="p">{ruling.text}</Typography>
+                    <Divider />
                   </React.Fragment>
                 ))}
             </Grid>
           </Paper>
         </Grid>
-        <Grid item xs={3} />
+        <Grid item xs={2} />
         <Grid item xs={3} />
         <Grid item xs={6}>
           <Paper />
