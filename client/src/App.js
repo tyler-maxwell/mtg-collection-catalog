@@ -46,6 +46,7 @@ class App extends React.Component {
   handleSearch = event => {
     event.preventDefault();
     if (this.state.searchTerm) {
+      // <Redirect to={"search/name/" + this.state.searchTerm} />
       CardSearchAPI.searchCardName(this.state.searchTerm)
         .then(res => {
           let filteredCardNames = Array.from(new Set(res.data));
@@ -83,8 +84,12 @@ class App extends React.Component {
               onSearch={this.onSearch}
             />
             <Route
-              exact-path="/search"
-              render={props => <Search {...props} />}
+              path="/search/name/:name"
+              render={props => <Search 
+                {...props} 
+                onSearch={this.onSearch}
+                handleSearch={this.handleSearch}
+                />}
             />
             {/* <Route render={() => <Redirect to="/authorized" />} /> */}
           </Switch>
