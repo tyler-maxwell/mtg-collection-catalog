@@ -37,8 +37,7 @@ function CardInfo(props) {
           <Paper>
             <Grid item xs={12}>
               <Typography variant="h6">
-                {props.name} — {props.manaCost}
-                <ManaCost manaCost={props.manaCost} />
+                {props.name} — <ManaCost manaCost={props.manaCost} />
               </Typography>
               <Divider />
               <Typography variant="h6">{props.type}</Typography>
