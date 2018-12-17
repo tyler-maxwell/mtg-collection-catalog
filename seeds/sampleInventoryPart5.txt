@@ -1,0 +1,230 @@
+1 Virtus the Veiled
+3 Virulent Sliver
+1 Virulent Swipe
+3 Viscerid Deepwalker
+4 Viscid Lemures
+1 Vitality Charm
+12 Vitaspore Thallid
+11 Vivid Crag
+11 Vivid Creek
+11 Vivid Grove
+11 Vivid Marsh
+11 Vivid Meadow
+1 Vivien's Invocation
+1 Vizier of the Anointed
+1 Vizier of Tumbling Sands
+4 Vizzerdrix
+5 Vodalian Arcanist
+2 Vodalian Merchant
+1 Vodalian Serpent
+2 Vodalian Soldiers
+2 Voice of Grace
+1 Voice of Law
+1 Voice of Truth
+5 Voidmage Apprentice
+3 Voidmage Husher
+2 Voidmage Prodigy
+2 Volcanic Awakening
+2 Volcanic Dragon
+1 Volcanic Rambler
+1 Volcano Hellion
+1 Volley Veteran
+1 Volrath's Curse
+1 Voltaic Construct
+1 Voltaic Key
+6 Voltaic Servant
+1 Vona's Hunger
+1 Voracious Dragon
+4 Voracious Vampire
+1 Vorel of the Hull Clade
+1 Vorrac Battlehorns
+1 Vorstclaw
+1 Vortex Elemental
+12 Voyaging Satyr
+1 Vraska the Unseen
+4 Vulpine Goliath
+2 Vulshok Berserker
+1 Vulshok Sorcerer
+1 Wake Thrasher
+2 Wakedancer
+1 Wakening Sun's Avatar
+4 Walking Corpse
+2 Walking Sponge
+1 Walking Wall
+6 Wall of Air
+2 Wall of Corpses
+2 Wall of Deceit
+3 Wall of Diffusion
+1 Wall of Distortion
+3 Wall of Fire
+1 Wall of Frost
+1 Wall of Heat
+1 Wall of Junk
+1 Wall of Mist
+2 Wall of Omens
+1 Wall of Roots
+2 Wall of Swords
+3 Wall of Vines
+1 Wall of Wood
+1 Wanderguard Sentry
+2 Wandering Eye
+5 Wandering Stream
+4 Wandering Wolf
+4 Waning Wurm
+1 War Cadence
+1 War Dance
+1 War's Toll
+1 Warcry Phoenix
+1 Ward Sliver
+1 Warden of the Wall
+1 Wardscale Dragon
+3 Warlord's Fury
+2 Warmind Infantry
+2 Warp World
+2 Warped Physique
+1 Warriors' Lesson
+1 Warstorm Surge
+3 Warthog
+1 Wasitora, Nekoru Queen
+1 Wasteland Viper
+1 Watchdog
+4 Watercourser
+1 Waterfront Bouncer
+7 Waterknot
+3 Wave of Indifference
+1 Wavecrash Triton
+1 Waveskimmer Aven
+4 Way of the Thief
+1 Wayfarer's Bauble
+1 Waylay
+1 Wayward Swordtooth
+1 Weakness
+1 Weatherlight
+2 Weight of Memory
+2 Weight of the Underworld
+1 Welding Jar
+1 Well of Lost Dreams
+1 Western Paladin
+1 Whip Silk
+7 Whip-Spine Drake
+1 Whipgrass Entangler
+1 Whirling Dervish
+1 Whisper, Blood Liturgist
+2 Whispers of the Muse
+3 White Knight
+1 White Sun's Zenith
+7 Whitemane Lion
+1 Wicker Warcrawler
+1 Wild Cantor
+4 Wild Celebrants
+5 Wild Dogs
+3 Wild Elephant
+3 Wild Griffin
+1 Wild Jhovall
+1 Wild Might
+2 Wild Onslaught
+4 Wild Wurm
+2 Wildfire Emissary
+1 Wildheart Invoker
+3 Wildslayer Elves
+2 Wildwood Rebirth
+1 Willow Elf
+2 Wind Drake
+4 Wind Spirit
+1 Wind Strider
+1 Wind Zendikon
+1 Wind-Scarred Crag
+1 Windborn Muse
+1 Windbrisk Raptor
+2 Windfall
+4 Windgrace Acolyte
+1 Winding Wurm
+1 Windreaper Falcon
+1 Winds of Qal Sisma
+1 Winds of Rath
+2 Wing Shards
+1 Wing Snare
+1 Wingbeat Warrior
+1 Winged Coatl
+2 Winged Sliver
+1 Winter's Grasp
+3 Wipe Away
+5 Wirewood Elf
+1 Wirewood Guardian
+4 Wirewood Pride
+3 Wirewood Savage
+9 Wistful Thinking
+1 Witch's Mist
+1 Witch-Maw Nephilim
+1 Witchbane Orb
+2 Witches' Eye
+1 Withered Wretch
+1 Without Weakness
+1 Wizard Replica
+1 Wizard's Lightning
+1 Woeleecher
+1 Wojek Apothecary
+4 Wojek Halberdiers
+2 Wolfhunter's Quiver
+1 Wolfir Avenger
+2 Woodcloaker
+1 Wooden Sphere
+3 Wooden Stake
+3 Woodland Stream
+1 Woodlot Crawler
+4 Woodripper
+2 Word of Binding
+1 Word of Blasting
+2 Word of Seizing
+1 Words of Wilding
+1 World Shaper
+5 Worldly Counsel
+1 Worldpurge
+3 Wormwood Dryad
+3 Worn Powerstone
+5 Wrap in Flames
+4 Wrap in Vigor
+1 Wreath of Geists
+1 Wretched Anurid
+1 Wurm's Tooth
+1 Xenagos, the Reveler
+2 Yargle, Glutton of Urborg
+1 Yavimaya Barbarian
+2 Yavimaya Dryad
+2 Yavimaya Elder
+1 Yavimaya Enchantress
+3 Yavimaya Granger
+3 Yavimaya Kavu
+5 Yavimaya Sapherd
+4 Yavimaya Wurm
+1 Yavimaya's Embrace
+1 Yawgmoth's Edict
+2 Yew Spirit
+2 Yixlid Jailer
+1 Yoked Ox
+5 Yotian Soldier
+3 Youthful Knight
+1 Zacama, Primal Calamity
+1 Zahid, Djinn of the Lamp
+1 Zanam Djinn
+2 Zap
+2 Zarichi Tiger
+2 Zealot il-Vec
+1 Zebra Unicorn
+1 Zedruu the Greathearted
+2 Zendikar Resurgent
+1 Zendikar's Roil
+1 Zephid's Embrace
+1 Zephyr Falcon
+1 Zerapa Minotaur
+1 Zetalpa, Primal Dawn
+2 Zhalfirin Commander
+2 Zhalfirin Void
+6 Zhur-Taa Swine
+2 Zoetic Cavern
+1 Zof Shade
+1 Zombie Cutthroat
+2 Zombie Musher
+4 Zulaport Enforcer
+1 Zur the Enchanter
+1 Zur's Weirding
