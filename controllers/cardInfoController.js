@@ -1,5 +1,5 @@
 // Returns info from ../json
-const allSets = require('../json');
+const allSets = require("../json");
 
 module.exports = {
   findByName: function(req, res) {
@@ -8,7 +8,7 @@ module.exports = {
     allSets.forEach(set => {
       set.cards.forEach(card => {
         if (card.name.toLowerCase().includes(req.params.name.toLowerCase())) {
-          if (!cardNames.includes(card.name)){
+          if (!cardNames.includes(card.name) && card.multiverseId) {
             cardNames.push(card.name);
             card.set = {};
             card.set.code = set.code;

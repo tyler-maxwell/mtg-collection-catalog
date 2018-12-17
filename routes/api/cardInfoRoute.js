@@ -5,4 +5,5 @@ const cardInfoController = require("../../controllers/cardInfoController");
 
 router.route("/name/:name").get(cardInfoController.findByName);
 
+
 module.exports = router;
